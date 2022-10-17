@@ -1,3 +1,4 @@
+@import "fonts";
 @import "normalize";
 @import "aos";
 @import "preloader";
@@ -16,9 +17,10 @@ $px: 0.0520833333333333;
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
 html{
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
+  font-family: 'FuturaPT-Book', sans-serif;
+  font-size: 10px;
   font-weight: 400;
+  letter-spacing: 0.05em;
 }
 body{
   background-color: #F5F5F5;
@@ -37,10 +39,10 @@ main{
   overflow: hidden;
 }
 .padding-right{
-  padding-right: 136px;
+  padding-right: 100px;
 }
 .padding-left{
-  padding-left: 136px;
+  padding-left: 100px;
 }
 .main-container{
   max-width: 1920px;
@@ -149,13 +151,7 @@ main{
 }
 @import "templates/header";
 @import "templates/preloader";
-@import "templates/banner";
-@import "templates/select";
-@import "templates/power";
-@import "templates/programs";
-@import "templates/person";
-@import "templates/team";
-@import "templates/reviews";
+
 
 @import "templates/main";
 

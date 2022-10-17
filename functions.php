@@ -49,7 +49,7 @@ function avgust_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'avgust' ),
+			'main-menu' => esc_html__( 'Основное меню', 'avgust' ),
 		)
 	);
 
@@ -138,10 +138,10 @@ add_action( 'widgets_init', 'avgust_widgets_init' );
  * Enqueue scripts and styles.
  */
 function avgust_scripts() {
-	wp_enqueue_style( 'avgust-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'avgust-style', get_template_directory_uri() . '/dist/css/style.css', array(), _S_VERSION );
 	wp_style_add_data( 'avgust-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'avgust-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'avgust-navigation', get_template_directory_uri() . '/dist/js/common.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -174,5 +174,29 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title'    => 'Настройки темы',
+        'menu_title'    => 'Настройки темы',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Настройки хедера',
+        'menu_title'    => 'Header',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Настройки футера',
+        'menu_title'    => 'Footer',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+
 }
 

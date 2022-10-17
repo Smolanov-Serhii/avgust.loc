@@ -1,64 +1,57 @@
 .header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100vh;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 173px rgba(191, 217, 235, 0.19);
-  padding: 35px 40px;
-  z-index: 50;
-  &__branding{
-    margin-bottom: 66px;
-  }
-  &__language{
-    padding-left: 0;
-    margin-bottom: 134px;
-    list-style: none;
+  padding: 41vw * $px 0;
+  &__container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    li{
-      margin-right: 10px;
-      &:last-child{
-        margin-right: 0;
-      }
-      a{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 103.4%;
-        color: #A0BCC8;
-        text-decoration: none;
-      }
-      &.current-lang{
-        a{
-          font-weight: 700;
-          color: #213540;
-        }
-      }
-    }
+  }
+  &__logo{
+    width: 500vw * $px;
   }
   &__nav{
-    .menu-item{
-      margin-bottom: 32px;
+    flex: 1;
+    .menu{
+      display: flex;
+      align-items: center;
+      li{
+        margin-right: 40vw * $px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
       a{
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 25px;
-        letter-spacing: 0.04em;
-        color: #213540;
         text-decoration: none;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        color: #191919;
       }
     }
   }
-  &__soc{
-    margin-top: 134px;
+  &__right{
+    width: 500vw * $px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    .language-chooser{
+      display: flex;
+      align-items: center;
+      margin-left: 40vw * $px;
+      a{
+        text-transform: uppercase;
+      }
+    }
     a{
-      margin: 0 7px;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      color: #191919;
       text-decoration: none;
+    }
+  }
+  &__phone{
+    svg{
+      margin-right: 1.2rem;
     }
   }
 }
