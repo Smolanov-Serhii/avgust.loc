@@ -8,6 +8,10 @@ get_header();
 
         <?php get_template_part( 'partials/content', 'banner' ); ?>
 
+        <?php get_template_part( 'partials/content', 'about' ); ?>
+
+        <?php get_template_part( 'partials/content', 'video' ); ?>
+
 
 	</main>
 

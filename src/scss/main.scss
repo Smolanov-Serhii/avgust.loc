@@ -23,10 +23,11 @@ html{
   letter-spacing: 0.05em;
 }
 body{
-  background-color: #F5F5F5;
+  background-color: #FEF4E3;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+
 }
 .locked{
   overflow: hidden;
@@ -152,6 +153,8 @@ main{
 @import "templates/header";
 @import "templates/preloader";
 @import "templates/banner";
+@import "templates/about";
+@import "templates/video";
 
 
 @import "templates/main";

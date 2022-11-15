@@ -13,7 +13,7 @@
     </div>
     <div class="banner__container main-container">
         <div class="banner__title">
-            <h1>Август</h1>
+            <h1><span>А</span>вгус<span>т</span></h1>
         </div>
     </div>
     <div class="banner__desc">

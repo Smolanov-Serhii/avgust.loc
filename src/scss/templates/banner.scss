@@ -59,23 +59,13 @@
     h1,h2{
       font-family: 'Playfair Display SC', serif;
       font-weight: 400;
-      font-size: 25rem;
-      line-height: 14rem;
+      font-size: 250vw * $px;
+      line-height: 140vw * $px;
       text-align: center;
       text-transform: uppercase;
-      color: #191919;
-      &::before, div::after {
-        content: attr(aria-label);
-        -webkit-text-stroke: 1px black;
-        text-stroke: 1px black;
-      }
-      &::before {
-        color: transparent;
-      }
-      &::after {
-        position: absolute;
-        inset: 0;
-        clip-path: ellipse(40% 35%);
+      color: white;
+      span{
+        color: #191919;
       }
     }
   }
