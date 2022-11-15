@@ -1,5 +1,6 @@
 .banner{
   position: relative;
+  min-height: 100vh;
   &:before{
     content: "";
     display: block;
@@ -17,5 +18,65 @@
   }
   &__absolute{
 
+  }
+  &__lt{
+    position: absolute;
+    top: 295vw * $px;
+    left: 298vw * $px;
+  }
+  &__lb{
+    position: absolute;
+    bottom: 123vw * $px;
+    left: 0;
+  }
+  &__rt{
+    position: absolute;
+    top: 397vw * $px;
+    right: 170vw * $px;
+  }
+  &__center{
+    position: absolute;
+    bottom: 70vw * $px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 610vw * $px;
+    }
+  }
+  &__desc{
+    width: 284vw * $px;
+    position: absolute;
+    bottom: 20vw * $px;
+    right: 167vw * $px;
+  }
+  &__title{
+    position: absolute;
+    bottom: 192vw * $px;
+    left: 0;
+    width: 100%;
+    h1,h2{
+      font-family: 'Playfair Display SC', serif;
+      font-weight: 400;
+      font-size: 25rem;
+      line-height: 14rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #191919;
+      &::before, div::after {
+        content: attr(aria-label);
+        -webkit-text-stroke: 1px black;
+        text-stroke: 1px black;
+      }
+      &::before {
+        color: transparent;
+      }
+      &::after {
+        position: absolute;
+        inset: 0;
+        clip-path: ellipse(40% 35%);
+      }
+    }
   }
 }
