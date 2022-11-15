@@ -12,6 +12,8 @@ get_header();
 
         <?php get_template_part( 'partials/content', 'video' ); ?>
 
+        <?php get_template_part( 'partials/content', 'example' ); ?>
+
 
 	</main>
 
