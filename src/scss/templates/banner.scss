@@ -1,0 +1,79 @@
+.banner{
+  position: relative;
+  height: 1042vw * $px;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FEF4E3 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+  &__container{
+
+  }
+  &__absolute{
+
+  }
+  &__lt{
+    position: absolute;
+    bottom: 555vw * $px;
+    left: 298vw * $px;
+  }
+  &__lb{
+    position: absolute;
+    bottom: 123vw * $px;
+    left: 0;
+  }
+  &__rt{
+    position: absolute;
+    bottom: 500vw * $px;
+    right: 170vw * $px;
+  }
+  &__center{
+    position: absolute;
+    bottom: 70vw * $px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 610vw * $px;
+    }
+  }
+  &__button{
+    display: inline-block;
+    position: absolute;
+    bottom: 506vw * $px;
+    right: 415vw * $px;
+    z-index: 3;
+  }
+  &__desc{
+    width: 284vw * $px;
+    position: absolute;
+    bottom: 20vw * $px;
+    right: 167vw * $px;
+  }
+  &__title{
+    position: absolute;
+    bottom: 192vw * $px;
+    left: 0;
+    width: 100%;
+    h1,h2{
+      font-family: 'Playfair Display SC', serif;
+      font-weight: 400;
+      font-size: 250vw * $px;
+      line-height: 140vw * $px;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      span{
+        color: #191919;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.about{
+  padding-top: 203vw * $px;
+  padding-bottom: 235vw * $px;
+  &__container{
+    display: flex;
+  }
+  &__marker{
+    margin-top: 15px;
+    font-family: 'Playfair Display';
+    font-size: 14px;
+    line-height: 16px;
+    font-style: italic;
+    color: #B78D41;
+    display: flex;
+    align-items: center;
+    &:after{
+      content: "";
+      display: block;
+      width: 19px;
+      height: 1px;
+      background-color: #B78D41;
+      margin-left: 8px;
+    }
+  }
+  &__title{
+    font-family: 'Playfair Display';
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #191919;
+    font-weight: 600;
+    margin-bottom: 59vw * $px;
+    i{
+      text-transform: none;
+      font-style: italic;
+    }
+  }
+  &__desc{
+    display: flex;
+    flex-wrap: wrap;
+    .wrapper{
+      width: 50%;
+      padding-right: 40vw * $px;
+    }
+    p{
+      margin-bottom: 16vw * $px;
+    }
+  }
+  &__left, &__right{
+    width: 50%;
+  }
+}

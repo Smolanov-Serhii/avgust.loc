@@ -1,0 +1,13 @@
+.video{
+  position: relative;
+  img{
+    width: 100%;
+  }
+  &__play{
+    width: 168px;
+    height: 168px;
+    position: absolute;
+    top: calc(50% - 84px);
+    left: calc(50% - 84px);
+  }
+}
