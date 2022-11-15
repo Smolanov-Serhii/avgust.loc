@@ -29,6 +29,28 @@ body{
   min-height: 100vh;
 
 }
+
+.rotation {
+  animation: 14s linear 0s normal none infinite running rot;
+  -webkit-animation: 14s linear 0s normal none infinite running rot;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .locked{
   overflow: hidden;
 }

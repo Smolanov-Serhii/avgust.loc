@@ -1,6 +1,6 @@
 .banner{
   position: relative;
-  min-height: 100vh;
+  height: 1042vw * $px;
   &:before{
     content: "";
     display: block;
@@ -21,7 +21,7 @@
   }
   &__lt{
     position: absolute;
-    top: 295vw * $px;
+    bottom: 555vw * $px;
     left: 298vw * $px;
   }
   &__lb{
@@ -31,7 +31,7 @@
   }
   &__rt{
     position: absolute;
-    top: 397vw * $px;
+    bottom: 500vw * $px;
     right: 170vw * $px;
   }
   &__center{
@@ -44,6 +44,13 @@
     img{
       width: 610vw * $px;
     }
+  }
+  &__button{
+    display: inline-block;
+    position: absolute;
+    bottom: 506vw * $px;
+    right: 415vw * $px;
+    z-index: 3;
   }
   &__desc{
     width: 284vw * $px;
