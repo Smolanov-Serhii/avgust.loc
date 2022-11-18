@@ -29,7 +29,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header id="header" class="header default">
-    <div class="header__container main-container">
+    <div class="header__container big-container">
         <div class="header__logo">
             <?php
             the_custom_logo();
