@@ -16,6 +16,10 @@ get_header();
 
         <?php get_template_part( 'partials/content', 'product' ); ?>
 
+        <?php get_template_part( 'partials/content', 'producttitle' ); ?>
+
+        <?php get_template_part( 'partials/content', 'news' ); ?>
+
 
 	</main>
 
