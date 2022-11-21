@@ -1,5 +1,78 @@
 .footer{
+  background-color: #FFFFFF;
+  padding-bottom: 90vw * $px;
   &__container{
-
+    display: flex;
+  }
+  &__branding{
+    width: 30%;
+  }
+  &__logo{
+    margin-bottom: 36vw * $px;
+    display: inline-block;
+  }
+  &__desc{
+    width: 320vw * $px;
+    margin-bottom: 10vw * $px;
+  }
+  &__nav{
+    width: 50%;
+    .menu-futer-menyu-container{
+      height: 100%;
+    }
+    #footer-menu{
+      height: 100%;
+    }
+    ul {
+      list-style-position: inside;
+      -moz-column-count: 2; /* Firefox */
+      -webkit-column-count: 2; /* Safari and Chrome */
+      column-count: 2;
+      height: 200px;
+      a{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 3.05rem;
+        color: #191919;
+        text-decoration: none;
+      }
+    }
+  }
+  &__contacts{
+    width: 25%;
+    text-align: right;
+    p{
+      font-family: 'Futura PT';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 3rem;
+      color: #191919;
+      margin-top: 34vw * $px;
+    }
+  }
+  &__done{
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    color: #191919;
+    margin-bottom: 10vw * $px;
+  }
+  &__copyright{
+    margin-bottom: 0;
+  }
+  &__link{
+    font-family: 'Futura PT';
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+    color: #B78D41;
+    text-decoration: none;
+    margin-bottom: 34vw * $px;
   }
 }
