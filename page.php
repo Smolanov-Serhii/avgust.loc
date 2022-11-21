@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Главная страница */
+/* Template Name: Главная */
 
 get_header();
 ?>
