@@ -68,10 +68,12 @@
     margin-left: 37vw * $px;
     .selectric{
       border: none;
+      background-color: transparent;
       .button{
         width: 10px;
         padding-left: 0;
         padding-right: 0;
+        background-color: transparent;
       }
       .label{
         font-family: 'Futura PT';
@@ -87,6 +89,7 @@
     .selectric-items{
       border: none;
       box-shadow: none;
+      background-color: transparent;
       li{
         font-family: 'Futura PT';
         font-style: normal;
