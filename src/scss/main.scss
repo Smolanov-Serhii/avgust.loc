@@ -27,7 +27,11 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
+  &.error404{
+    .footer{
+      background-color: transparent;
+    }
+  }
 }
 
 .rotation {
@@ -130,6 +134,7 @@ main{
 @import "templates/producttitle";
 @import "templates/news";
 @import "templates/products";
+@import "templates/page-404";
 
 
 @import "templates/main";

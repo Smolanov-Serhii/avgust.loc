@@ -10,51 +10,23 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'avgust' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'avgust' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'avgust' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$avgust_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'avgust' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$avgust_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+	<main id="main" class="main">
+		<section class="page-404">
+            <img class="page-404__tr" src="<?php echo get_template_directory_uri() . '/img/page-404/tr.jpg' ?>" alt="page-404">
+            <img class="page-404__bc" src="<?php echo get_template_directory_uri() . '/img/page-404/bc.jpg' ?>" alt="page-404">
+            <img class="page-404__tl" src="<?php echo get_template_directory_uri() . '/img/page-404/tl.jpg' ?>" alt="page-404">
+            <img class="page-404__bl" src="<?php echo get_template_directory_uri() . '/img/page-404/bl.jpg' ?>" alt="page-404">
+            <h1 class="page-404__title">404</h1>
+            <p>Нажаль такої сторінки не існує... Вас буде автоматично перенаправлено на <a href="<?php echo get_home_url(); ?>">Головну</a> сторінку через <span>5</span> секунд.</p>
+            <div class="page-404__bottom">
+                <div class="page-404__button rotation">
+                    <a href="#">
+                        <img src="<?php echo get_template_directory_uri() . '/img/page-404/shtamp.svg' ?>" alt="center">
+                    </a>
+                </div>
+            </div>
+		</section>
+	</main>
 
 <?php
 get_footer();

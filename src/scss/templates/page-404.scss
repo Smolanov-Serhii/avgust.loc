@@ -1,0 +1,58 @@
+.page-404{
+  background: linear-gradient(0deg, #FEF4E3 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  position: relative;
+  padding-top: 9vh;
+  text-align: center;
+  padding-bottom: 99vw * $px;
+  > img{
+    pointer-events: none;
+  }
+  &__tr{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 504vw * $px;
+  }
+  &__bl{
+    position: absolute;
+    left: 298vw * $px;
+    top: 295vw * $px;
+    width: 157vw * $px;
+    z-index: 2;
+  }
+  &__tl{
+    position: absolute;
+    left: 0;
+    bottom: 339vw * $px;
+    width: 170vw * $px;
+  }
+  &__title{
+    font-family: 'Playfair Display SC', Serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50vh;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    -webkit-text-stroke: 2px #000000;
+    position: relative;
+  }
+  p{
+    max-width: 564vw * $px;
+    text-align: left;
+    margin: auto;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #191919;
+    a{
+      color: #B78D41;
+    }
+  }
+  &__bottom{
+    margin-top: 100vw * $px;
+  }
+}
