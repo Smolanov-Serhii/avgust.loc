@@ -1,3 +1,68 @@
 .producttitle{
+  margin-top: 76vw * $px;
+  margin-bottom: 232vw * $px;
+  &__container{
 
+  }
+  &__absolute{
+    position: absolute;
+  }
+  &__title{
+    font-family: 'Playfair Display SC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11.1rem;
+    line-height: 9.8rem;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 18vw * $px;
+    span{
+      display: block;
+      &:nth-child(odd){
+        text-align: right;
+      }
+      &:nth-child(even){
+        text-align: left;
+      }
+    }
+  }
+  &__content{
+    position: relative;
+  }
+  &__tl{
+    top: 0;
+    left: 0;
+    height: 348vw * $px;
+  }
+  &__br{
+    right: 0;
+    bottom: 164vw * $px;
+    width: 207vw * $px;
+  }
+  &__image{
+    margin-top: 153vw * $px;
+    text-align: center;
+    position: relative;
+    img{
+      height: 745vw * $px;
+    }
+
+  }
+  &__desc{
+    padding-top: 82vw * $px;
+    margin-left: 50%;
+    max-width: 285vw * $px;
+  }
+  &__button{
+    bottom: 61vw * $px;
+    left: 210vw * $px;
+    z-index: 3;
+    position: absolute;
+    img{
+      width: 168vw * $px;
+      height: 168vw * $px;
+    }
+
+
+  }
 }
