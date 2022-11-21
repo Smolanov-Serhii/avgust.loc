@@ -53,9 +53,11 @@
                 </svg>
                 <span>+38 (099) 782-73-20</span>
             </a>
-            <?php
-            qtranxf_generateLanguageSelectCode('short');
-            ?>
+            <div class="header__language">
+                <?php
+                qtranxf_generateLanguageSelectCode('dropdown');
+                ?>
+            </div>
         </div>
     </div>
 </header>

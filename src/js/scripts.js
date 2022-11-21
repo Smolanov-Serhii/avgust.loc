@@ -9,6 +9,8 @@ $(document).ready(function () {
         }
     });
 
+    $('#qtranxs_select_qtranslate-chooser').selectric();
+
 //
 //     var $menu = $(".header");
 //     $(window).scroll(function () {
