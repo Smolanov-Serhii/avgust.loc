@@ -1,3 +1,115 @@
 .news{
+  margin-top: 232vw * $px;
+  margin-bottom: 279vw * $px;
+  .news__container{
 
+  }
+  &__title{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 0;
+    i{
+      font-style: italic;
+      text-transform: lowercase;
+    }
+  }
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__list{
+    margin-top: 42vw * $px;
+    margin-bottom: 93vw * $px;
+  }
+  &__item{
+    border-top: 2px solid #191919;
+    padding: 42vw * $px 0;
+    position: relative;
+    &:hover{
+      .news__prev{
+        opacity: 1;
+      }
+      .news__item-tag{
+        background-color: #B78D41;
+        color: #FFFFFF;
+      }
+      .news__item-date{
+        color: #B78D41;
+      }
+      .news__item-title{
+        a{
+          color: #B78D41;
+        }
+      }
+      .news__item-excerpt{
+        color: #B78D41;
+      }
+    }
+    &-title{
+      margin-bottom: 19vw * $px;
+      a{
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        line-height: 3.5rem;
+        color: #191919;
+        transition: $transition;
+      }
+    }
+    &-excerpt{
+      font-family: 'Futura PT';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      color: #191919;
+      transition: $transition;
+    }
+    &-param{
+      position: absolute;
+      right: 0;
+      top: 50vw * $px;
+      display: flex;
+      flex-direction: column;
+    }
+    &-date{
+      font-family: 'Futura PT';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      text-transform: uppercase;
+      color: #191919;
+      margin-bottom: 20vw * $px;
+      text-align: right;
+      transition: $transition;
+    }
+    &-tag{
+      font-family: 'Playfair Display';
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: #B78D41;
+      padding: 10px 20px;
+      border: 1px solid #B78D41;
+      transition: $transition;
+    }
+  }
+  &__prev{
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    top: -75vw * $px;
+    right: -32vw * $px;
+    transition: $transition;
+    transform: rotate(-15deg);
+    z-index: -1;
+  }
+  &__bottom{
+    display: block;
+    text-align: center;
+  }
 }

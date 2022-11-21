@@ -31,6 +31,7 @@ body{
 }
 
 .rotation {
+  display: inline-block;
   animation: 14s linear 0s normal none infinite running rot;
   -webkit-animation: 14s linear 0s normal none infinite running rot;
 }
