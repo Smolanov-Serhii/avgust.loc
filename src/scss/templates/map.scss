@@ -1,0 +1,37 @@
+.map{
+  background-color: #FFFFFF;
+  padding-bottom: 140vw * $px;
+  &__container{
+
+  }
+  &__map{
+    height: 745vw * $px;
+    width: 100%;
+  }
+  &__title{
+    margin-bottom: 96vw * $px;
+    span{
+      width: 100%;
+      display: block;
+      font-family: 'Playfair Display SC';
+      font-style: italic;
+      font-weight: 700;
+      font-size: 4.8rem;
+      line-height: 6.4rem;
+      text-transform: uppercase;
+      color: #191919;
+      font-feature-settings: normal;
+      i{
+        text-transform: lowercase;
+        font-style: italic;
+      }
+      &:nth-child(odd){
+        text-align: center;
+      }
+      &:nth-child(even){
+        padding-left: 50%;
+        text-align: left;
+      }
+    }
+  }
+}

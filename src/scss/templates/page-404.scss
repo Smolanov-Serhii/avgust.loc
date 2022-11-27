@@ -26,6 +26,13 @@
     bottom: 339vw * $px;
     width: 170vw * $px;
   }
+  &__bc{
+    position: absolute;
+    right: 662vw * $px;
+    top: 607vw * $px;
+    height: 145vw * $px;
+    z-index: 1;
+  }
   &__title{
     font-family: 'Playfair Display SC', Serif;
     font-style: normal;
@@ -34,9 +41,11 @@
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: transparent;
     -webkit-text-stroke: 2px #000000;
     position: relative;
+    margin-bottom: 106vw * $px;
+    font-feature-settings: normal;
   }
   p{
     max-width: 564vw * $px;
