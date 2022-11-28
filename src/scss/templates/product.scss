@@ -1,0 +1,53 @@
+.product{
+  margin-top: 223vw * $px;
+  margin-bottom: 66vw * $px;
+  &__container{
+
+  }
+  &__header{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__name{
+    width: 50%;
+  }
+  &__title{
+    width: 50%;
+    margin-bottom: 0;
+  }
+  &__content{
+    margin-top: 102vw * $px;
+    display: flex;
+    flex-wrap: wrap;
+    &-left{
+      width: 50%;
+    }
+    &-right{
+      width: calc(50% + 169px);
+      margin-right: -169px;
+      img{
+        width: 100%;
+      }
+    }
+    &-tl{
+      margin-top: 96vw * $px;
+      height: 348vw * $px;
+      width: auto;
+    }
+    &-bl{
+      margin-top: 214vw * $px;
+      margin-left: 325vw * $px;
+      height: 207vw * $px;
+      width: auto;
+    }
+  }
+  &__desc{
+    max-width: 285px;
+    margin-top: 127vw * $px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.05em;
+    color: #191919;
+  }
+}

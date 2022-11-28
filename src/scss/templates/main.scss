@@ -1,3 +1,17 @@
 .main{
   flex: 1;
 }
+
+.name-gold{
+  font-family: "Playfair Display";
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  font-style: italic;
+  color: #b78d41;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: flex-end;
+  svg{
+    margin-left: 13px;
+  }
+}

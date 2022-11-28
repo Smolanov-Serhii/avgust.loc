@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Главная страница */
+/* Template Name: Главная */
 
 get_header();
 ?>
@@ -13,6 +13,12 @@ get_header();
         <?php get_template_part( 'partials/content', 'video' ); ?>
 
         <?php get_template_part( 'partials/content', 'example' ); ?>
+
+        <?php get_template_part( 'partials/content', 'product' ); ?>
+
+        <?php get_template_part( 'partials/content', 'producttitle' ); ?>
+
+        <?php get_template_part( 'partials/content', 'news' ); ?>
 
 
 	</main>

@@ -16,7 +16,7 @@
     align-items: center;
   }
   &__logo{
-    width: 500vw * $px;
+    width: 446vw * $px;
   }
   &__nav{
     flex: 1;
@@ -62,6 +62,52 @@
   &__phone{
     svg{
       margin-right: 1.2rem;
+    }
+  }
+  &__language{
+    margin-left: 37vw * $px;
+    .selectric{
+      border: none;
+      background-color: transparent;
+      .button{
+        width: 10px;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: transparent;
+      }
+      .label{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: #191919;
+        margin-left: 0;
+        text-transform: uppercase;
+        margin-right: 19px;
+      }
+    }
+    .selectric-items{
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      li{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 100%;
+        color: #191919;
+        text-transform: uppercase;
+        padding: 5px 10px 5px 0;
+        &:hover{
+          background-color: transparent;
+          color: red;
+        }
+        &.selected{
+          color: red;
+          background-color: transparent;
+        }
+      }
     }
   }
 }

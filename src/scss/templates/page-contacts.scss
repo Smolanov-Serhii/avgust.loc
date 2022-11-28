@@ -1,0 +1,15 @@
+.page-contacts{
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5E5CA 50%, #FFFFFF 100%), #FFFFFF;
+  padding-top: 309vw * $px;
+  padding-bottom: 102vw * $px;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__form{
+    width: 50%;
+  }
+  &__columns{
+    width: 50%;
+  }
+}

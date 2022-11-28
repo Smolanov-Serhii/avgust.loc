@@ -50,6 +50,7 @@ function avgust_setup() {
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Основное меню', 'avgust' ),
+			'footer-menu' => esc_html__( 'Футер меню', 'avgust' ),
 		)
 	);
 
