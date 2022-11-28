@@ -9,7 +9,7 @@ get_header();
         <section class="page-contacts">
             <div class="page-contacts__container main-container">
                 <div class="page-contacts__form">
-
+                    <?php echo do_shortcode('[contact-form-7 id="5" title="Форма Контакты"]');?>
                 </div>
                 <div class="page-contacts__columns">
                     <div class="page-contacts__row">
