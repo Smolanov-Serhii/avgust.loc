@@ -8,8 +8,157 @@
   }
   &__form{
     width: 50%;
+    &-title{
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #191919;
+      margin-bottom: 4.3rem;
+      i{
+        font-style: italic;
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 100%;
+        text-transform: lowercase;
+      }
+    }
+    p{
+      margin-bottom: 7.3rem;
+    }
+    &-desc{
+      margin-bottom: 6.2rem;
+    }
+    label{
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 100%;
+      color: #191919;
+    }
+    input{
+      border: none;
+      border-bottom: 2px solid #191919;
+      background-color: transparent;
+    }
+    textarea{
+      border: 2px solid #191919;
+      background-color: transparent;
+      height: 126px;
+      resize: none;
+      margin-top: 2.3rem;
+    }
+    .checkbox{
+      display: flex;
+      align-items: center;
+      margin-top: 5.5rem;
+      font-family: 'Futura PT';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: #191919;
+      #expect{
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #191919;
+        &.checked{
+          background-color: black;
+        }
+      }
+      .wpcf7-list-item{
+        margin-left: 0;
+        margin-right: 2rem;
+        input{
+          display: none;
+        }
+      }
+      span{
+        display: inline-block;
+      }
+      br{
+        display: none;
+      }
+    }
+    .submit{
+      display: inline-flex;
+      align-items: center;
+      .wpcf7-spinner{
+        order: 3;
+      }
+      input{
+        order: 1;
+      }
+      &:after{
+        order: 2;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-image: url('../../img/page-contacts/arow.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    .wpcf7-submit{
+      margin-right: 1.6rem;
+      font-family: 'Playfair Display';
+      font-size: 2.5rem;
+      line-height: 2.9rem;
+      color: #B78D41;
+      border-bottom: none;
+      text-decoration: underline;
+    }
   }
   &__columns{
     width: 50%;
+  }
+  &__title{
+    font-family: 'Playfaic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 3.8rem;
+    i{
+      font-style: italic;
+      text-transform: lowercase;
+    }
+  }
+  &__mail{
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: #B78D41;
+    text-decoration: none;
+  }
+
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10.7rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__column{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__tel{
+    margin-bottom: 1.4rem;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #191919;
+    text-decoration: none;
   }
 }

@@ -44,12 +44,11 @@ $(document).ready(function () {
 //     });
 //
 //
-//     if ($('.faq').length) {
-//         $(".faq__item-header").click(function () {
-//             $(this).closest('.faq__item').toggleClass('active');
-//             $(this).closest('.faq__item').find('.faq__item-content').fadeToggle(300);
-//         });
-//     }
+    if ($('.page-contacts').length) {
+        $("#expand-toggle").click(function () {
+            $('#expect').toggleClass('checked');
+        });
+    }
 //
 //     $(".header__mobile-burger").click(function () {
 //         $(this).toggleClass('active');
