@@ -1,0 +1,67 @@
+.content-header{
+  padding-top: 227vw * $px;
+  background: linear-gradient(0deg, #FEF4E3 0%, rgba(255, 255, 255, 0) 130%), #FFFFFF;
+  &__container{
+
+  }
+  &__top{
+    position: relative;
+    overflow: hidden;
+  }
+  &__bottom{
+    margin-top: 155vw * $px;
+    display: flex;
+    flex-wrap: wrap;
+    &-image{
+      width: 50%;
+      transform: translateY(-304vw * $px);
+      img{
+        width: 285vw * $px;
+        height: auto;
+      }
+    }
+    .about__desc{
+      width: 50%;
+    }
+  }
+  &__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    &-main{
+      width: 50%;
+    }
+  }
+  &__button{
+    position: absolute;
+    top: 40vw * $px;
+    left: calc(50% - ((168vw * $px) / 2));
+    z-index: 3;
+  }
+  &__title{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12rem;
+    line-height: 14rem;
+    text-transform: uppercase;
+    color: #191919;
+    display: flex;
+    flex-direction: column;
+    padding: 124vw * $px 0 200vw * $px 0;
+    z-index: 1;
+    position: relative;
+    span{
+      text-align: left;
+      &:first-child{
+        margin-left: 13rem;
+      }
+      &:last-child{
+        text-align: center;
+      }
+    }
+  }
+}

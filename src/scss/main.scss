@@ -124,6 +124,8 @@ main{
     font-size: 14px;
   }
 }
+
+
 @import "templates/header";
 @import "templates/preloader";
 @import "templates/banner";
@@ -137,6 +139,7 @@ main{
 @import "templates/page-404";
 @import "templates/page-contacts";
 @import "templates/map";
+@import "templates/content-header";
 
 
 @import "templates/main";

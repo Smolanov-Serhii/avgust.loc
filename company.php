@@ -6,12 +6,13 @@ get_header();
 
     <main id="main" class="main">
 
-        <section class="page-company">
+        <?php get_template_part( 'partials/content', 'content-header' ); ?>
 
-        </section>
     </main>
 
 <?php
 
 get_footer();
+
+?>
 
