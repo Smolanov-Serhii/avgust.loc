@@ -8,6 +8,10 @@ get_header();
 
         <?php get_template_part( 'partials/content', 'content-header' ); ?>
 
+        <?php get_template_part( 'partials/content', 'company-2col' ); ?>
+
+        <?php get_template_part( 'partials/content', 'company-2row' ); ?>
+
     </main>
 
 <?php
