@@ -1,6 +1,6 @@
 <section class="content-company-2row">
     <div class="content-company-2row__container main-container">
-        <h2 class="content-company-2row__title">
+        <h2 class="content-company-2row__title big-title">
             <span>Преимущества</span>
             <span>компании</span>
         </h2>

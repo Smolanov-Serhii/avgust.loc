@@ -124,6 +124,16 @@ main{
     font-size: 14px;
   }
 }
+.big-title{
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11.1rem;
+  line-height: 11.8rem;
+  text-transform: uppercase;
+  color: #191919;
+  margin-bottom: 1.125vw;
+}
 
 
 @import "templates/header";

@@ -1,10 +1,10 @@
 <section class="content-company-2col">
-    <div class="content-company-2col__container main-container">
-        <h2 class="content-company-2col__title">
-            ЧОму саме <span>компанія «Август»</span>
+    <div class="content-company-2col__container">
+        <h2 class="content-company-2col__title section-title main-container">
+            ЧОму саме <i>компанія «Август»</i>
         </h2>
         <div class="content-company-2col__wrapper">
-            <div class="content-company-2col__col">
+            <div class="content-company-2col__col padding-left">
                 <ul>
                     <li>Кондитерская фабрика “Кондитер Т-Престиж” основанная более 20 лет назад, является на сегодня одним из наиболее динамично развивающихся предприятий.</li>
                     <li>Использующих, как наиболее передовые технологии в производстве кондитерских изделий, так и традиционные рецепты приготовления домашней выпечки.</li>

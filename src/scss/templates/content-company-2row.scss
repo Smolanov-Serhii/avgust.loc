@@ -1,4 +1,14 @@
 .content-company-2row{
   background: linear-gradient(180deg, #FEF4E3 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
   padding-bottom: 93vw * $px;
+  margin-top: 224vw * $px;
+  &__title{
+    margin-bottom: 122vw * $px;
+    span{
+      display: block;
+      &:first-child{
+        text-align: right;
+      }
+    }
+  }
 }
