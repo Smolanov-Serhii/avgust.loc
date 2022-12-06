@@ -18,12 +18,12 @@
                     </h3>
                     <p>ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів для кондитерської, хлібопекарської, молочної промисловості та виробництва морозива.</p>
                 </li>
-                <li>
+                <div class="content-company-2row__item padding-left padding-right content-company-2row__item-else">
                     <img class="content-company-2row__item-img" src="<?php echo get_template_directory_uri() . '/img/content-company-2row/top.jpg' ?>" alt="main">
-                </li>
-                <li>
+                </div>
+                <div class="content-company-2row__item padding-right content-company-2row__item-else">
                     <img class="content-company-2row__item-img" src="<?php echo get_template_directory_uri() . '/img/content-company-2row/bottom.jpg' ?>" alt="main">
-                </li>
+                </div>
                 <li class="content-company-2row__item">
                     <h3 class="content-company-2row__item-title">
                         Ми виробляємо великий

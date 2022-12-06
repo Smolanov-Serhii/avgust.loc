@@ -11,4 +11,45 @@
       }
     }
   }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 25%;
+    &:not(&-else){
+      padding-right: 39vw * $px;
+      margin-bottom: 120vw * $px;
+    }
+    &:before {
+      display: block;
+      content: counter(list-item) "\a0\a0";
+      font-family: 'Playfair Display';
+      font-weight: 600;
+      font-size: 6.4rem;
+      line-height: 6.4rem;
+      text-align: left;
+      text-transform: uppercase;
+      color: #B78D41;
+      font-feature-settings: normal;
+      margin-bottom: 3.1rem;
+    }
+    &-else{
+      width: 50%;
+      &:before{
+        display: none;
+      }
+    }
+    &:nth-child(4){
+      margin-left: -169px;
+      width: calc(50% + 169px);
+    }
+    &-title{
+      font-family: 'Playfair Display';
+      font-size: 3rem;
+      line-height: 3.5rem;
+      color: #191919;
+      margin-bottom: 3.1rem;
+    }
+  }
 }
