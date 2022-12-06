@@ -38,5 +38,12 @@
                 </li>
             </ul>
         </div>
+        <div class="news__bottom">
+            <div class="news__button rotation">
+                <a href="<?php echo get_home_url() . '/products'; ?>">
+                    <img src="https://avgust.front-end-dev.com.ua/wp-content/themes/avgust/img/news/shtamp.svg" alt="center">
+                </a>
+            </div>
+        </div>
     </div>
 </section>
