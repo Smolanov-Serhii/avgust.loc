@@ -1,0 +1,50 @@
+.content-company-2col{
+  &__title{
+    display: flex;
+    flex-direction: column;
+  }
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__col{
+    width: 50%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    &.padding-left{
+      padding-top: 70vw * $px;
+      padding-bottom: 70vw * $px;
+      padding-right: 148vw * $px;
+    }
+    ul{
+      list-style: none;
+      li{
+        padding-left: 50vw * $px;
+        position: relative;
+        margin-bottom: 57vw * $px;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #191919;
+      }
+      li::before {
+        position: absolute;
+        top: -1.8rem;
+        left: 0;
+        content: counter(list-item)"\a0\a0";
+        font-family: 'Playfair Display';
+        font-weight: 600;
+        font-size: 6.4rem;
+        line-height: 6.4rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #B78D41;
+        font-feature-settings: normal;
+      }
+    }
+  }
+}

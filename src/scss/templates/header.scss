@@ -6,6 +6,25 @@
   padding: 41vw * $px 0;
   z-index: 50;
   transition: $transition;
+  &__search{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    input{
+      border: none;
+      border-bottom: 2px solid #191919;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      color: #191919;
+      background-color: transparent;
+    }
+    button{
+      border: none;
+      background-color: transparent;
+    }
+  }
   &.moved{
     background-color: white;
     padding: 10vw * $px 0;
@@ -39,7 +58,6 @@
     }
   }
   &__right{
-    width: 500vw * $px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
