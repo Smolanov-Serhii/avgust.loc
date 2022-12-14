@@ -325,3 +325,35 @@ register_post_type('recipes', [
     'query_var' => true,
 ]);
 
+add_filter(  'gettext',  'change_post_name'  );
+add_filter(  'ngettext',  'change_post_name'  );
+function change_post_name( $translated ) {
+    $translated = str_ireplace(  'Записи',  'Новости',  $translated );
+    return $translated;
+}
+
+function change_post_menu_label() {
+    global $menu, $submenu;
+    $menu[5][0] = 'Новости';
+    $submenu['edit.php'][5][0] = 'Новости';
+    $submenu['edit.php'][10][0] = 'Добавить новость';
+    $submenu['edit.php'][16][0] = 'Новостные метки';
+    echo '';
+}
+add_action( 'admin_menu', 'change_post_menu_label' );
+function change_post_object_label() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Новости';
+    $labels->singular_name = 'Новости';
+    $labels->add_new = 'Добавить новость';
+    $labels->add_new_item = 'Добавить новость';
+    $labels->edit_item = 'Редактировать новость';
+    $labels->new_item = 'Добавить новость';
+    $labels->view_item = 'Посмотреть новость';
+    $labels->search_items = 'Найти новость';
+    $labels->not_found = 'Не найдено';
+    $labels->not_found_in_trash = 'Корзина пуста';
+}
+add_action( 'init', 'change_post_object_label' );
+
