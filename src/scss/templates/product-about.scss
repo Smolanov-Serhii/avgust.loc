@@ -1,11 +1,18 @@
-.product-about{
-  padding-bottom: 90vw * $px;
-  &__container{
-    display: flex;
+.product{
+  &-about{
+    padding-bottom: 90vw * $px;
+    &__container{
+      display: flex;
+    }
   }
   &__block{
-    column-width: 50%;
-    column-count: 2;
-    column-gap: 40px;
+    &-column{
+      column-width: 50%;
+      column-count: 2;
+      column-gap: 40px;
+      p{
+        margin-bottom: 1em;
+      }
+    }
   }
 }

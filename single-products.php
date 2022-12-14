@@ -116,6 +116,21 @@ $post_id = get_the_ID();
                 </div>
             </div>
         </section>
+        <section class="product-bottom">
+            <div class="product-bottom__container main-container">
+                <h2 class="product-bottom__title">
+                    <?php echo the_field("zagolovok_opys_vnyzu", $post_id); ?>
+                </h2>
+                <div class="product-bottom__wrapper">
+                    <div class="product-bottom__block product__w50 product__block-column">
+                        <?php echo the_field("opys_v_2_kolonky_opys_vnyzu", $post_id); ?>
+                    </div>
+                    <div class="product-bottom-pluses product__w50">
+                        <?php echo the_field("perelik_perevag", $post_id); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
 	</main>
 
 <?php
