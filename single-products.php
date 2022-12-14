@@ -67,7 +67,34 @@ $post_id = get_the_ID();
                         Смаки Наповнювачів з натуральними ягодами або фруктами
                     </h2>
                     <div class="product__block">
-
+                        <?php
+                        if( have_rows('perelik_smakiv') ):
+                            while( have_rows('perelik_smakiv') ) : the_row();
+                                $title = get_sub_field('nazva_produktu');
+                                $img = get_sub_field('zobrazhennya_produktu');
+                                $lnk = get_sub_field('posylannya_na_zapys');
+                                ?>
+                                <p class="product__block-item">
+                                    <?php
+                                        if($lnk){
+                                            ?>
+                                            <a href="#">
+                                                <?php echo $title; ?>
+                                            </a>
+                                            <?php
+                                        }
+                                        else{
+                                            ?>
+                                            <?php echo $title; ?>
+                                            <?php
+                                        }
+                                    ?>
+                                </p>
+                            <?php
+                            endwhile;
+                        else :
+                        endif;
+                        ?>
                     </div>
                 </div>
             </div>
@@ -81,10 +108,10 @@ $post_id = get_the_ID();
                 </div>
                 <div class="product-else__wrapper product__w50">
                     <h2 class="product__block-title block-title">
-                        Вкусная начинка – вкусный <i>продукт</i>
+                        <?php echo the_field("zagolovok_opys_produktu", $post_id); ?>
                     </h2>
-                    <div class="product__block product__block-column">
-
+                    <div class="product-about__block product__block-column">
+                        <?php echo the_field("opys_v_dvi_kolonky_opys_produktu", $post_id); ?>
                     </div>
                 </div>
             </div>

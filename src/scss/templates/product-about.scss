@@ -1,0 +1,11 @@
+.product-about{
+  padding-bottom: 90vw * $px;
+  &__container{
+    display: flex;
+  }
+  &__block{
+    column-width: 50%;
+    column-count: 2;
+    column-gap: 40px;
+  }
+}
