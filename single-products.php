@@ -55,6 +55,40 @@ $post_id = get_the_ID();
                 </div>
             </div>
         </section>
+        <section class="product-else">
+            <div class="product-else__container main-container">
+                <div class="product__w50">
+                    <a href="" class="about__marker">
+                        Про компанію
+                    </a>
+                </div>
+                <div class="product-else__wrapper product__w50">
+                    <h2 class="product__block-title block-title">
+                        Смаки Наповнювачів з натуральними ягодами або фруктами
+                    </h2>
+                    <div class="product__block">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-about">
+            <div class="product-about__container main-container">
+                <div class="product__w50">
+                    <a href="" class="about__marker">
+                        Про компанію
+                    </a>
+                </div>
+                <div class="product-else__wrapper product__w50">
+                    <h2 class="product__block-title block-title">
+                        Вкусная начинка – вкусный <i>продукт</i>
+                    </h2>
+                    <div class="product__block product__block-column">
+
+                    </div>
+                </div>
+            </div>
+        </section>
 	</main>
 
 <?php
