@@ -325,35 +325,115 @@ register_post_type('recipes', [
     'query_var' => true,
 ]);
 
-add_filter(  'gettext',  'change_post_name'  );
-add_filter(  'ngettext',  'change_post_name'  );
-function change_post_name( $translated ) {
-    $translated = str_ireplace(  'Записи',  'Новости',  $translated );
-    return $translated;
+register_post_type('news', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Новости', // основное название для типа записи
+        'singular_name' => 'Новость', // название для одной записи этого типа
+        'add_new' => 'Добавить новость', // для добавления новой записи
+        'add_new_item' => 'Добавление новости', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редактировать новость', // для редактирования типа записи
+        'new_item' => 'Новая новость', // текст новой записи
+        'view_item' => 'Посмотреть новость', // для просмотра записи этого типа.
+        'search_items' => 'Искать новость', // для поиска по этим типам записи
+        'not_found' => 'не найлено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Новости', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'news-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-welcome-write-blog',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+add_action( 'init', 'mayak_taxonomy_register_news' );
+function mayak_taxonomy_register_news(){
+    $labels = array(
+        'name'                     => 'Рубрики', // основное название во множественном числе
+        'singular_name'            => 'Рубрики', // название единичного элемента таксономии
+        'menu_name'                => 'Рубрики', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Все рубрики',
+        'edit_item'                => 'Изменить рубрику',
+        'view_item'                => 'Просмотр рубрики', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Обновить рубрику',
+        'add_new_item'             => 'Добавить рубрику',
+        'new_item_name'            => 'Название новой',
+        'parent_item'              => 'Родительская рубрика', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Родительская рубрика:',
+        'search_items'             => 'Искать рубрику',
+        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте рубрики запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить рубрику',
+        'choose_from_most_used'    => 'Выбрать из часто используемых рубрик',
+        'not_found'                => 'Рубрику не найдено',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Рубрики',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('news-category', array('news'), $args);
 }
 
-function change_post_menu_label() {
-    global $menu, $submenu;
-    $menu[5][0] = 'Новости';
-    $submenu['edit.php'][5][0] = 'Новости';
-    $submenu['edit.php'][10][0] = 'Добавить новость';
-    $submenu['edit.php'][16][0] = 'Новостные метки';
-    echo '';
+add_action('admin_menu', 'remove_menus_ssh');
+function remove_menus_ssh(){
+    global $menu;
+    $restricted = array(
+//        __('Dashboard'),  //главная страница админки (консоль управления)
+        __('Posts'),      //пункт меню "Записи"
+//        __('Media'),      //пункт меню "Медиафайлы" (картинки, видео и пр.)
+//        __('Links'),      //в общем-то не нужный, пункт меню "Ссылки" - настраивается единожды
+//        __('Pages'),      //пункт меню "Страницы"
+//        __('Appearance'), //пункт меню "Внешний вид"
+//        __('Tools'),      //пункт меню "инструменты" — "импорт", "экспорт" и проч.
+//        __('Users'),      //пользователи сайта
+//        __('Settings'),   //пункт меню "Настройки". Просто необходимо скрыть...
+        __('Comments'),   //комментарии
+//        __('Plugins')     //пункт меню "Плагины"
+    );
+    end ($menu);
+    while (prev($menu)){
+        $value = explode(' ', $menu[key($menu)][0]);
+        if( in_array( ($value[0] != NULL ? $value[0] : "") , $restricted ) ){
+            unset($menu[key($menu)]);
+        }
+    }
 }
-add_action( 'admin_menu', 'change_post_menu_label' );
-function change_post_object_label() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Новости';
-    $labels->singular_name = 'Новости';
-    $labels->add_new = 'Добавить новость';
-    $labels->add_new_item = 'Добавить новость';
-    $labels->edit_item = 'Редактировать новость';
-    $labels->new_item = 'Добавить новость';
-    $labels->view_item = 'Посмотреть новость';
-    $labels->search_items = 'Найти новость';
-    $labels->not_found = 'Не найдено';
-    $labels->not_found_in_trash = 'Корзина пуста';
-}
-add_action( 'init', 'change_post_object_label' );
+
 
