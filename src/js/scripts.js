@@ -116,27 +116,17 @@ $(document).ready(function () {
 //         });
 //     }
 //
-//     if ($('#app').length) {
-//         // import SwiperGL from 'swiper-gl.esm.js';
-//         var section = new Swiper("#app > .swiper", {
-//             direction: "vertical",
-//             slidesPerView: 1,
-//             spaceBetween: 30,
-//             mousewheel: true,
-//             allowTouchMove: false,
-//             effect: 'fade',
-//             fadeEffect: {
-//                 crossFade: true
-//             },
-//         });
-//     }
-//
-//     if ($('section.team').length) {
-//         var team = new Swiper("section.team .swiper-container", {
-//             slidesPerView: 3,
-//             spaceBetween: 60,
-//         });
-//     }
+
+    if ($('.popular__list').length) {
+        var popular = new Swiper(".popular__list.swiper-container", {
+            slidesPerView: 4,
+            loop: true,
+            spaceBetween: 40,
+            autoplay: {
+                delay: 2000,
+            },
+        });
+    }
 //
 //     if ($('section.reviews').length) {
 //         var reviews = new Swiper("section.reviews .swiper-container", {

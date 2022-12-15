@@ -1,0 +1,36 @@
+.popular{
+  background-color: #fff;
+  padding-bottom: 70vw * $px;
+  &__container{
+
+  }
+  &__header{
+    display: flex;
+    margin-bottom: 93vw * $px;
+  }
+  &__title{
+    margin-bottom: 0;
+    i{
+      text-transform: lowercase;
+      font-style: italic;
+    }
+  }
+  &__list{
+    margin-bottom: 100vw * $px;
+  }
+  &__item{
+    &-img{
+      margin-bottom: 26vw * $px;
+    }
+    a{
+      text-decoration: none;
+    }
+    &-title{
+      font-family: 'Futura PT';
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      color: #191919;
+    }
+  }
+}

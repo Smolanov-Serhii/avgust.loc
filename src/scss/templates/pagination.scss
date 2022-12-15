@@ -1,0 +1,36 @@
+.pagination{
+  padding-bottom: 104vw * $px;
+  &__list{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  &__item{
+    margin-right: 2.2rem;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    color: #191919;
+    &.current{
+      color: #B78D41;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    &-lnk{
+      &:hover{
+        color: #B78D41;
+        svg{
+          path{
+            fill: #B78D41;
+          }
+        }
+      }
+    }
+  }
+}
