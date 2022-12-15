@@ -1,0 +1,50 @@
+.recipes-single{
+  background: linear-gradient(0deg, #FEF4E3 0%, #FFFFFF 65.1%), #FFFFFF;
+  padding-top: 213vw * $px;
+  .recipes__banner{
+    position: relative;
+    .recipes__lnk{
+      position: absolute;
+      top: calc(50% - 84px);
+      left: calc(50% - 84px);
+    }
+  }
+  &__header{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about__marker{
+    &:after{
+      display: none;
+    }
+    svg{
+      margin-right: 2.1rem;
+    }
+  }
+  &__title{
+    text-align: left;
+  }
+  &__content{
+    margin-top: 126vw * $px;
+    display: flex;
+    flex-wrap: wrap;
+    &-title{
+
+    }
+    &-column{
+      margin-top: 3.7rem;
+      column-width: 50%;
+      column-count: 2;
+      column-gap: 40px;
+      margin-bottom: 13.2rem;
+      p{
+        margin-bottom: 1em;
+      }
+    }
+  }
+  &__interest{
+    .news__bottom{
+      padding-bottom: 70vw * $px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.interest{
+  background: linear-gradient(180deg, #FEF4E3 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  &__container{
+
+  }
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 77vw * $px;
+  }
+  &__title{
+    margin-bottom: 0;
+  }
+  &__marker{
+    font-family: 'Playfair Display';
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    text-decoration-line: underline;
+    color: #B78D41;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    svg{
+      margin-left: 1.3rem;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 40px);
+    margin-right: -40px;
+  }
+  &__item{
+    width: calc(50% - 40px);
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 78vw * $px;
+    &:nth-child(4n+3), &:nth-child(4n){
+      flex-direction: row-reverse;
+    }
+    &-image{
+      width: calc(50% - 20px);
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-content{
+      width: calc(50% - 20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-title{
+      font-family: 'Futura PT';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 3.1rem;
+      color: #191919;
+      margin-bottom: 2.8rem;
+    }
+    &-desc{
+      font-family: 'Futura PT';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: #191919;
+      margin-bottom: 2rem;
+    }
+    &-lnk{
+      font-family: 'Playfair Display';
+      font-size: 2.5rem;
+      line-height: 2.9rem;
+      text-decoration-line: underline;
+      color: #B78D41;
+      display: flex;
+      align-items: center;
+      font-style: italic;
+      svg{
+        margin-left: 1.3rem;
+      }
+    }
+  }
+}

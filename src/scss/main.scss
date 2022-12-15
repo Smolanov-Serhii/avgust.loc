@@ -89,6 +89,11 @@ main{
   padding-left: 40px;
   padding-right: 40px;
 }
+.full-container{
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
 .section-title{
   font-family: 'Playfair Display';
   font-size: 40px;
@@ -175,6 +180,11 @@ main{
 @import "templates/product-else";
 @import "templates/product-about";
 @import "templates/product-bottom";
+@import "templates/interest";
+@import "templates/popular";
+@import "templates/page-recipes";
+@import "templates/pagination";
+@import "templates/recipes-single";
 
 
 @import "templates/main";
