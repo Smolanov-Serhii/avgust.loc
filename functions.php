@@ -177,27 +177,183 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-if( function_exists('acf_add_options_page') ) {
-
-    acf_add_options_page(array(
-        'page_title'    => 'Настройки темы',
-        'menu_title'    => 'Настройки темы',
-        'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Настройки хедера',
-        'menu_title'    => 'Header',
-        'parent_slug'   => 'theme-general-settings',
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Настройки футера',
-        'menu_title'    => 'Footer',
-        'parent_slug'   => 'theme-general-settings',
-    ));
-
+//if( function_exists('acf_add_options_page') ) {
+//
+//    acf_add_options_page(array(
+//        'page_title'    => 'Настройки темы',
+//        'menu_title'    => 'Настройки темы',
+//        'menu_slug'     => 'theme-general-settings',
+//        'capability'    => 'edit_posts',
+//        'redirect'      => false
+//    ));
+//
+//    acf_add_options_sub_page(array(
+//        'page_title'    => 'Настройки хедера',
+//        'menu_title'    => 'Header',
+//        'parent_slug'   => 'theme-general-settings',
+//    ));
+//
+//    acf_add_options_sub_page(array(
+//        'page_title'    => 'Настройки футера',
+//        'menu_title'    => 'Footer',
+//        'parent_slug'   => 'theme-general-settings',
+//    ));
+//
+//}
+register_post_type('products', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Продукты', // основное название для типа записи
+        'singular_name' => 'Продукт', // название для одной записи этого типа
+        'add_new' => 'Добавить продукт', // для добавления новой записи
+        'add_new_item' => 'Добавление нового', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редактировать продукт', // для редактирования типа записи
+        'new_item' => 'Новый продукт', // текст новой записи
+        'view_item' => 'Посмотреть продукт', // для просмотра записи этого типа.
+        'search_items' => 'Искать продукт', // для поиска по этим типам записи
+        'not_found' => 'не найлено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Продукты', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'product-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-products',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+add_action( 'init', 'mayak_taxonomy_register' );
+function mayak_taxonomy_register(){
+    $labels = array(
+        'name'                     => 'Категории', // основное название во множественном числе
+        'singular_name'            => 'Категория', // название единичного элемента таксономии
+        'menu_name'                => 'Категории', // Название в меню. По умолчанию: name.
+        'all_items'                => 'Все категории',
+        'edit_item'                => 'Изменить категорию',
+        'view_item'                => 'Просмотр категорий', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+        'update_item'              => 'Обновить категорию',
+        'add_new_item'             => 'Добавить категорию',
+        'new_item_name'            => 'Название новой',
+        'parent_item'              => 'Родительская категория', // только для таксономий с иерархией
+        'parent_item_colon'        => 'Родительская категория:',
+        'search_items'             => 'Искать категорию',
+        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+        'separate_items_with_commas' => 'Разделяйте категории запятыми',
+        'add_or_remove_items'      => 'Добавить или удалить категорию',
+        'choose_from_most_used'    => 'Выбрать из часто используемых категорий',
+        'not_found'                => 'Категория не найден',
+        'back_to_items'            => '← Назад к полам',
+    );
+    $args = array(
+        'labels'                => $labels,
+        'label'                 => 'Категории',
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_rest'          => false,
+        'rest_base'             => 'url_rest',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_tagcloud'         => true,
+        'show_in_quick_edit'    => true,
+        'meta_box_cb'           => null,
+        'show_admin_column'     => true,
+        'description'           => '',
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'query_var'             => $taxonomy,
+        'rewrite'               => true,
+        'sort'                  => true,
+        '_builtin'              => false,
+    );
+    register_taxonomy('product-category', array('products' , 'recipes'), $args);
 }
+
+register_post_type('recipes', [
+    'label' => null,
+    'labels' => [
+        'name' => 'Рецепты', // основное название для типа записи
+        'singular_name' => 'Рецепт', // название для одной записи этого типа
+        'add_new' => 'Добавить рецепт', // для добавления новой записи
+        'add_new_item' => 'Добавление рецепта', // заголовка у вновь создаваемой записи в админ-панели.
+        'edit_item' => 'Редактировать рецепт', // для редактирования типа записи
+        'new_item' => 'Новый рецепт', // текст новой записи
+        'view_item' => 'Посмотреть рецепт', // для просмотра записи этого типа.
+        'search_items' => 'Искать рецепт', // для поиска по этим типам записи
+        'not_found' => 'не найлено', // если в результате поиска ничего не было найдено
+        'not_found_in_trash' => 'Not found in the basket', // если не было найдено в корзине
+        'parent_item_colon' => '', // для родителей (у древовидных типов)
+        'menu_name' => 'Рецепты', // название меню
+    ],
+    'description' => '',
+    'public' => true,
+    'taxonomies'		 => array( 'product-category' ),
+    // 'publicly_queryable'  => null, // зависит от public
+    // 'exclude_from_search' => null, // зависит от public
+    // 'show_ui'             => null, // зависит от public
+    // 'show_in_nav_menus'   => null, // зависит от public
+    'show_in_menu' => null, // показывать ли в меню адмнки
+    // 'show_in_admin_bar'   => null, // зависит от show_in_menu
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => null,
+    'menu_icon' => 'dashicons-food',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => ['title','editor','thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'has_archive' => true,
+    'rewrite' => true,
+    'query_var' => true,
+]);
+
+add_filter(  'gettext',  'change_post_name'  );
+add_filter(  'ngettext',  'change_post_name'  );
+function change_post_name( $translated ) {
+    $translated = str_ireplace(  'Записи',  'Новости',  $translated );
+    return $translated;
+}
+
+function change_post_menu_label() {
+    global $menu, $submenu;
+    $menu[5][0] = 'Новости';
+    $submenu['edit.php'][5][0] = 'Новости';
+    $submenu['edit.php'][10][0] = 'Добавить новость';
+    $submenu['edit.php'][16][0] = 'Новостные метки';
+    echo '';
+}
+add_action( 'admin_menu', 'change_post_menu_label' );
+function change_post_object_label() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Новости';
+    $labels->singular_name = 'Новости';
+    $labels->add_new = 'Добавить новость';
+    $labels->add_new_item = 'Добавить новость';
+    $labels->edit_item = 'Редактировать новость';
+    $labels->new_item = 'Добавить новость';
+    $labels->view_item = 'Посмотреть новость';
+    $labels->search_items = 'Найти новость';
+    $labels->not_found = 'Не найдено';
+    $labels->not_found_in_trash = 'Корзина пуста';
+}
+add_action( 'init', 'change_post_object_label' );
 

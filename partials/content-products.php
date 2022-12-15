@@ -12,97 +12,20 @@
             </div>
         </div>
         <div class="products__list">
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
-            <a href="#" class="products__item">
-                <span class="products__item-prev">
-                    <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                    <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
-                </span>
-                <h3 class="products__item-title">Гелі для декорування (Декогелі)</h3>
-            </a>
+            <?php
+            if(have_posts()) : while(have_posts()) : the_post();
+                ?>
+                    <a href="<?php the_permalink();?>" class="products__item">
+                    <span class="products__item-prev">
+                        <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
+                        <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
+                    </span>
+                        <h3 class="products__item-title"><?php the_title();?>></h3>
+                    </a>
+                <?php
+            endwhile; endif;
+            ?>
+
             <div class="products__item"></div>
             <div class="products__item products__item-desc">
                 <span class="products__item-prev">
