@@ -1,14 +1,16 @@
 <?php
-/* Template Name: Новини */
+/* Template Name: Карьера */
 
 get_header();
 ?>
 
     <main id="main" class="main">
 
-        <section class="page-vacancies">
+        <?php get_template_part( 'partials/content', 'banner' ); ?>
 
-        </section>
+        <?php get_template_part( 'partials/content', 'about' ); ?>
+
+        <?php get_template_part( 'partials/content', 'video' ); ?>
 
 
     </main>
