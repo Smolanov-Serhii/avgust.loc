@@ -124,7 +124,7 @@
     opacity: 0;
     top: -75vw * $px;
     right: -32vw * $px;
-    transition: $transition;
+    transition: 0.6s ease-in;
     transform: rotate(-15deg);
     z-index: 0;
   }

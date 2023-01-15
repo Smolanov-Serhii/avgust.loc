@@ -1,6 +1,9 @@
 .banner{
   position: relative;
   height: 1042vw * $px;
+  .mouse-parallax-bg{
+    transition: all 0.1s ease;
+  }
   &:before{
     content: "";
     display: block;
@@ -23,24 +26,32 @@
     position: absolute;
     bottom: 555vw * $px;
     left: 298vw * $px;
+    width: 157vw * $px;
+    z-index: 0;
   }
   &__lb{
     position: absolute;
     bottom: 123vw * $px;
     left: 0;
+    width: 170vw * $px;
+    z-index: 0;
   }
   &__rt{
     position: absolute;
     bottom: 500vw * $px;
     right: 170vw * $px;
+    width: 118vw * $px;
+    z-index: 0;
   }
   &__center{
     position: absolute;
     bottom: 70vw * $px;
-    left: 0;
-    width: 100%;
+    left: calc(50% - (305vw * $px));
+    right: auto;
+    width: 610vw * $px;
     display: flex;
     justify-content: center;
+    z-index: 0;
     img{
       width: 610vw * $px;
     }

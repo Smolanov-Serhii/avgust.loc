@@ -1,6 +1,6 @@
 <section class="news">
     <div class="news__container main-container">
-        <div class="news__header">
+        <div class="news__header" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
             <h2 class="news__title">
                 Останні <i>новини</i>
             </h2>
@@ -15,7 +15,7 @@
         </div>
         <div class="news__content">
             <ul class="news__list">
-                <li class="news__item">
+                <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
                     <h3 class="news__item-title">
                         <a href="#">Виробляємо великий асортимент</a>
                     </h3>
@@ -32,7 +32,7 @@
                     </div>
                     <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
                 </li>
-                <li class="news__item">
+                <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
                     <h3 class="news__item-title">
                         <a href="#">Асортимент</a>
                     </h3>
@@ -49,7 +49,7 @@
                     </div>
                     <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
                 </li>
-                <li class="news__item">
+                <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
                     <h3 class="news__item-title">
                         <a href="#">Ми виробляємо великий </a>
                     </h3>
@@ -66,7 +66,7 @@
                     </div>
                     <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
                 </li>
-                <li class="news__item">
+                <li class="news__item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1200">
                     <h3 class="news__item-title">
                         <a href="#">Ми виробляємо великий асортимент</a>
                     </h3>
@@ -83,7 +83,7 @@
                     </div>
                     <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
                 </li>
-                <li class="news__item">
+                <li class="news__item" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1600">
                     <h3 class="news__item-title">
                         <a href="#">Великий асортимент</a>
                     </h3>
