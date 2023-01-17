@@ -145,6 +145,11 @@ main{
   margin: auto;
   padding-left: 40px;
   padding-right: 40px;
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 }
 .full-container{
   width: 100%;
@@ -183,7 +188,7 @@ main{
 .big-title{
   font-family: "Playfair Display";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 11.1rem;
   line-height: 11.8rem;
   text-transform: uppercase;

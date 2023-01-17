@@ -2,11 +2,14 @@
   margin-top: 232vw * $px;
   padding-bottom: 112vw * $px;
   background: linear-gradient(180deg, #FFF6E7 74.48%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  @media all and (max-width: 768px){
+    padding-bottom: 92px;
+  }
   .news__container{
 
   }
   &__title{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
     font-size: 40px;
     line-height: 47px;
     text-transform: uppercase;
@@ -29,6 +32,9 @@
   &__item{
     padding: 42vw * $px 0;
     position: relative;
+    @media all and (max-width: 768px){
+      padding: 50px 0;
+    }
     &:before{
       content: "";
       display: block;
@@ -41,32 +47,37 @@
       position: absolute;
       transition: $transition;
     }
-    &:hover{
-      &:before{
-        background-color: #B78D41;
-      }
-      .news__prev{
-        opacity: 1;
-      }
-      .news__item-tag{
-        background-color: #B78D41;
-        color: #FFFFFF;
-      }
-      .news__item-date{
-        color: #B78D41;
-      }
-      .news__item-title{
-        a{
+    @media all and (min-width: 768px){
+      &:hover{
+        &:before{
+          background-color: #B78D41;
+        }
+        .news__prev{
+          opacity: 1;
+        }
+        .news__item-tag{
+          background-color: #B78D41;
+          color: #FFFFFF;
+        }
+        .news__item-date{
           color: #B78D41;
         }
-      }
-      .news__item-excerpt{
-        color: #B78D41;
+        .news__item-title{
+          a{
+            color: #B78D41;
+          }
+        }
+        .news__item-excerpt{
+          color: #B78D41;
+        }
       }
     }
     &-title{
       margin-bottom: 19vw * $px;
       z-index: 1;
+      @media all and (max-width: 768px){
+        margin-bottom: 29px;
+      }
       a{
         text-decoration: none;
         font-family: 'Playfair Display', serif;
@@ -74,6 +85,9 @@
         line-height: 3.5rem;
         color: #191919;
         transition: $transition;
+        @media all and (max-width: 768px){
+          font-size: 18px;
+        }
       }
     }
     &-excerpt{
@@ -85,6 +99,10 @@
       color: #191919;
       transition: $transition;
       z-index: 1;
+      @media all and (max-width: 768px){
+       font-size: 16px;
+        line-height: 22px;
+      }
     }
     &-param{
       position: absolute;
@@ -93,6 +111,13 @@
       display: flex;
       flex-direction: column;
       z-index: 1;
+      @media all and (max-width: 768px){
+        position: static;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 30px;
+      }
     }
     &-date{
       font-family: 'Futura PT';
@@ -106,6 +131,12 @@
       text-align: right;
       transition: $transition;
       z-index: 1;
+      @media all and (max-width: 768px){
+        margin-left: 20px;
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 14px;
+      }
     }
     &-tag{
       font-family: 'Playfair Display';
@@ -116,6 +147,9 @@
       border: 1px solid #B78D41;
       transition: $transition;
       z-index: 1;
+      @media all and (max-width: 768px){
+        font-size: 14px;
+      }
     }
   }
   &__prev{

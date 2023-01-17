@@ -1,6 +1,9 @@
 .producttitle{
   margin-top: 76vw * $px;
   margin-bottom: 232vw * $px;
+  @media all and (max-width: 500px){
+
+  }
   &__container{
 
   }
@@ -8,9 +11,9 @@
     position: absolute;
   }
   &__title{
-    font-family: 'Playfair Display SC', serif;
+    font-family: 'Playfair Display';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 11.1rem;
     line-height: 11.8rem;
     text-transform: uppercase;
@@ -18,6 +21,27 @@
     margin-bottom: 18vw * $px;
     span{
       display: block;
+      @media all and (max-width: 1400px){
+        font-size: 90px;
+        line-height: 96px;
+      }
+      @media all and (max-width: 1200px){
+        font-size: 80px;
+        line-height: 86px;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 70px;
+        line-height: 74px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 50px;
+        text-align: left!important;
+        line-height: 52px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 30px;
+        line-height: 36px;
+      }
       &:nth-child(odd){
         text-align: right;
       }
@@ -28,23 +52,40 @@
   }
   &__content{
     position: relative;
+    @media all and (max-width: 768px){
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__tl{
     top: 0;
     left: 0;
     height: 348vw * $px;
+    @media all and (max-width: 768px){
+      display: none;
+    }
   }
   &__br{
     right: 0;
     bottom: 164vw * $px;
     width: 207vw * $px;
+    @media all and (max-width: 768px){
+      display: none;
+    }
   }
   &__image{
     margin-top: 153vw * $px;
     text-align: center;
     position: relative;
+    @media all and (max-width: 500px){
+      margin-bottom: 208px;
+    }
     img{
       height: 745vw * $px;
+      @media all and (max-width: 500px){
+        width: 100%;
+        height: auto;
+      }
     }
 
   }
@@ -52,12 +93,27 @@
     padding-top: 82vw * $px;
     margin-left: 50%;
     max-width: 285vw * $px;
+    @media all and (max-width: 1024px){
+      max-width: 400vw * $px
+    }
+    @media all and (max-width: 900px){
+      max-width: 50%;
+    }
+    @media all and (max-width: 768px){
+      max-width: none;
+      margin-left: 0;
+    }
   }
   &__button{
     bottom: 61vw * $px;
     left: 210vw * $px;
     z-index: 3;
     position: absolute;
+    @media all and (max-width: 500px){
+      bottom: -94px;
+      right: 0;
+      left: auto;
+    }
     img{
       width: 168px;
       height: 168px;

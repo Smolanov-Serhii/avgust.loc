@@ -1,6 +1,10 @@
 .product{
   margin-top: 223vw * $px;
   margin-bottom: 66vw * $px;
+  @media all and (max-width: 500px){
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
   &__container{
 
   }
@@ -10,10 +14,16 @@
   }
   &__name{
     width: 50%;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
   }
   &__title{
     width: 50%;
     margin-bottom: 0;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
     span{
       display: inline-block;
     }
@@ -22,14 +32,36 @@
     margin-top: 102vw * $px;
     display: flex;
     flex-wrap: wrap;
+    @media all and (max-width: 768px){
+      position: relative;
+      padding-bottom: 100px;
+    }
+    @media all and (max-width: 500px){
+      position: relative;
+      padding-bottom: 0;
+      margin-top: 60px;
+    }
     &-left{
       width: 50%;
+      @media all and (max-width: 500px){
+        display: none;
+      }
     }
     &-right{
       width: calc(50% + 169px);
       margin-right: -169px;
+      @media all and (max-width: 500px){
+        width: 100%;
+        margin-right: 0;
+      }
       img{
         width: 100%;
+        @media all and (max-width: 500px){
+          width: calc(100% + 40px);
+          margin-right: -20px;
+          margin-left: -20px;
+          max-width: none;
+        }
       }
     }
     &-tl{
@@ -52,5 +84,21 @@
     line-height: 2.4rem;
     letter-spacing: 0.05em;
     color: #191919;
+    @media all and (max-width: 768px){
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      max-width: none;
+      margin-left: 0;
+    }
+    @media all and (max-width: 500px){
+      position: static;
+      p{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

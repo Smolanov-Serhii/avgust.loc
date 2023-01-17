@@ -3,20 +3,40 @@
   padding-bottom: 90vw * $px;
   &__container{
     display: flex;
+    @media all and (max-width: 768px){
+      flex-wrap: wrap;
+    }
   }
   &__branding{
     width: 30%;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
   }
   &__logo{
     margin-bottom: 36vw * $px;
     display: inline-block;
+    @media all and (max-width: 768px){
+      margin-bottom: 36px;
+    }
   }
   &__desc{
     width: 320vw * $px;
     margin-bottom: 10vw * $px;
+    @media all and (max-width: 768px){
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    @media all and (max-width: 500px){
+      font-size: 12px;
+    }
   }
   &__nav{
     width: 50%;
+    @media all and (max-width: 768px){
+      width: 100%;
+      margin-top: 70px;
+    }
     .menu-futer-menyu-container{
       height: 100%;
     }
@@ -29,6 +49,13 @@
       -webkit-column-count: 2; /* Safari and Chrome */
       column-count: 2;
       height: 200px;
+      @media all and (max-width: 500px){
+        column-count: 1;
+        height: auto;
+        li:nth-child(4){
+          margin-bottom: 30px;
+        }
+      }
       a{
         font-family: 'Futura PT';
         font-style: normal;
@@ -37,12 +64,22 @@
         line-height: 3.05rem;
         color: #191919;
         text-decoration: none;
+        @media all and (max-width: 500px){
+          font-size: 16px;
+          line-height: 30px;
+        }
       }
     }
   }
   &__contacts{
     width: 25%;
     text-align: right;
+    @media all and (max-width: 768px){
+      width: 100%;
+      margin-top: 74px;
+      text-align: left;
+    }
+
     p{
       font-family: 'Futura PT';
       font-style: normal;
@@ -51,6 +88,9 @@
       line-height: 3rem;
       color: #191919;
       margin-top: 34vw * $px;
+      @media all and (max-width: 500px){
+        font-size: 16px;
+      }
     }
   }
   &__done{
@@ -61,6 +101,9 @@
     line-height: 3rem;
     color: #191919;
     margin-bottom: 10vw * $px;
+    @media all and (max-width: 500px){
+      font-size: 16px;
+    }
   }
   &__copyright{
     margin-bottom: 0;
@@ -74,5 +117,8 @@
     color: #B78D41;
     text-decoration: none;
     margin-bottom: 34vw * $px;
+    @media all and (max-width: 500px){
+      font-size: 20px;
+    }
   }
 }

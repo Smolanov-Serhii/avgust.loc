@@ -68,6 +68,14 @@
     @media all and (max-width: 1400px){
       width: 250vw * $px;
     }
+    @media all and (max-width: 500px){
+      width: auto;
+      height: 80%;
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
   }
   &__nav{
     flex: 1;
