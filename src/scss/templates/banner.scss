@@ -1,6 +1,13 @@
+
 .banner{
   position: relative;
   height: 1042vw * $px;
+  @media all and (max-width: 1024px){
+    height: auto;
+  }
+  @media all and (max-width: 500px){
+
+  }
   .mouse-parallax-bg{
     transition: all 0.1s ease;
   }
@@ -28,6 +35,11 @@
     left: 298vw * $px;
     width: 157vw * $px;
     z-index: 0;
+    @media all and (max-width: 500px){
+      width: 54px;
+      left: -10px;
+      bottom: 55%;
+    }
   }
   &__lb{
     position: absolute;
@@ -35,6 +47,9 @@
     left: 0;
     width: 170vw * $px;
     z-index: 0;
+    @media all and (max-width: 500px){
+      display: none;
+    }
   }
   &__rt{
     position: absolute;
@@ -42,6 +57,11 @@
     right: 170vw * $px;
     width: 118vw * $px;
     z-index: 0;
+    @media all and (max-width: 500px){
+      top: 19%;
+      width: 41px;
+      right: -20px;
+    }
   }
   &__center{
     position: absolute;
@@ -52,8 +72,20 @@
     display: flex;
     justify-content: center;
     z-index: 0;
+    @media all and (max-width: 1024px){
+      position: static;
+      margin: auto;
+      padding: 10vh 0 0 0;
+    }
+    @media all and (max-width: 500px){
+      width: 187vw * $pxm;
+      padding-top: 21vh;
+    }
     img{
       width: 610vw * $px;
+      @media all and (max-width: 500px){
+        width: 100%;
+      }
     }
   }
   &__button{
@@ -62,18 +94,43 @@
     bottom: 506vw * $px;
     right: 415vw * $px;
     z-index: 3;
+    @media all and (max-width: 500px){
+      width: 115px;
+      height: 115px;
+      right: 20px;
+      bottom: 13%;
+    }
   }
   &__desc{
     width: 284vw * $px;
     position: absolute;
     bottom: 20vw * $px;
     right: 167vw * $px;
+    @media all and (max-width: 1024px){
+      position: static;
+      margin-top: 90px;
+      padding-right: 75px;
+      padding-left: 75px;
+      width: auto;
+    }
+    @media all and (max-width: 768px){
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @media all and (max-width: 500px){
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-top: 122px;
+    }
   }
   &__title{
     position: absolute;
     bottom: 192vw * $px;
     left: 0;
     width: 100%;
+    @media all and (max-width: 500px){
+      bottom: 37%;
+    }
     h1,h2{
       font-family: 'Playfair Display SC', serif;
       font-weight: 400;
@@ -82,6 +139,9 @@
       text-align: center;
       text-transform: uppercase;
       color: white;
+      @media all and (max-width: 500px){
+        font-size: 77vw * $pxm;
+      }
       span{
         color: #191919;
       }

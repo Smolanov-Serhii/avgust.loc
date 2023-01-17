@@ -9,5 +9,11 @@
     position: absolute;
     top: calc(50% - 84px);
     left: calc(50% - 84px);
+    @media all and (max-width: 500px){
+      width: 114px;
+      height: 114px;
+      top: calc(50% - 57px);
+      left: calc(50% - 57px);
+    }
   }
 }

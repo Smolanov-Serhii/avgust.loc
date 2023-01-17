@@ -132,4 +132,12 @@
     display: block;
     text-align: center;
   }
+  &__button{
+    width: 168px;
+    height: 168px;
+    @media all and (max-width: 500px){
+      width: 114px;
+      height: 114px;
+    }
+  }
 }

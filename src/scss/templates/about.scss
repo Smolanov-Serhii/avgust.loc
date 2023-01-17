@@ -3,6 +3,9 @@
   padding-bottom: 235vw * $px;
   &__container{
     display: flex;
+    @media all and (max-width: 768px){
+      flex-wrap: wrap;
+    }
   }
   &__marker{
     margin-top: 15px;
@@ -13,6 +16,9 @@
     color: #B78D41;
     display: flex;
     align-items: center;
+    @media all and (max-width: 768px){
+      margin-bottom: 44px;
+    }
     &:after{
       content: "";
       display: block;
@@ -29,7 +35,9 @@
     font-weight: 600;
     margin-bottom: 59vw * $px;
     span{
-      display: block;
+      @media all and (min-width: 501px){
+        display: block;
+      }
     }
     i{
       text-transform: none;
@@ -42,12 +50,24 @@
     .wrapper{
       width: 50%;
       padding-right: 40vw * $px;
+      @media all and (max-width: 600px){
+        width: 100%;
+      }
     }
     p{
       margin-bottom: 16vw * $px;
+      @media all and (max-width: 1024px){
+        margin-bottom: 17px;
+      }
+      @media all and (max-width: 500px){
+        margin-bottom: 16px;
+      }
     }
   }
   &__left, &__right{
     width: 50%;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
   }
 }

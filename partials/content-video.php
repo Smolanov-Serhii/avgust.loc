@@ -1,6 +1,18 @@
 <section class="video">
     <div class="video__player">
-        <img src="<?php echo get_template_directory_uri() . '/img/video/bg.jpg' ?>" alt="center">
+        <?php
+            if(get_field('vydeo_fajl', $post_id)){
+                ?>
+                    <video autoplay="" muted="" loop="" id="myVideo">
+                        <source src="<?php echo the_field('vydeo_fajl', $post_id) ?>" type="video/mp4">
+                    </video>
+                <?php
+            } else {
+                ?>
+                <img src="<?php echo the_field('oblozhka_vmesto_vydeo', $post_id) ?>" alt="center">
+                <?php
+            }
+        ?>
         <a href="#" class="video__play rotation">
             <img src="<?php echo get_template_directory_uri() . '/img/video/play.svg' ?>" alt="center">
         </a>

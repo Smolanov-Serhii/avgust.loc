@@ -59,10 +59,12 @@
     z-index: 3;
     position: absolute;
     img{
-      width: 168vw * $px;
-      height: 168vw * $px;
+      width: 168px;
+      height: 168px;
+      @media all and (max-width: 500px){
+        width: 115px;
+        height: 115px;
+      }
     }
-
-
   }
 }
