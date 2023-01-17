@@ -2,7 +2,7 @@ $(document).ready(function () {
     var $menu = $("#header");
     $(window).scroll(function() {
         var winScrollTop = $(this).scrollTop();
-               if ( $(this).scrollTop() > 100 && $menu.hasClass("default")  && $(window).innerWidth() > 1020 ){
+               if ( $(this).scrollTop() > 100 && $menu.hasClass("default")){
             $menu.removeClass("default").addClass("moved");
         } else if($(this).scrollTop() <= 100 && $menu.hasClass("moved")) {
             $menu.removeClass("moved").addClass("default");
