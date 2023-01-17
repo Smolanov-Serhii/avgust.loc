@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="footer" class="footer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+	<footer id="footer" class="footer">
         <div class="footer__container big-container">
             <div class="footer__branding">
                 <a class="footer__logo" href="<?php echo get_home_url(); ?>">
