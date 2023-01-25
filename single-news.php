@@ -10,7 +10,7 @@ $post_id = get_the_ID();
             <div class="recipes-single__container">
                 <div class="recipes-single__header main-container">
                     <div class="product__w50">
-                        <a class="about__marker" href="<?php echo get_home_url() . '/products'; ?>">
+                        <a class="about__marker" href="https://avgust.front-end-dev.com.ua/ru/novyny/">
                             <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.21097 11L6.05729 10.1067L2.29119 6.13165L19 6.13165L19 4.86831L2.29119 4.86831L6.05729 0.893307L5.21097 1.20547e-06L-4.80823e-07 5.50002L5.21097 11Z" fill="#B78D41"/>
                             </svg>
@@ -21,12 +21,8 @@ $post_id = get_the_ID();
                         <?php echo the_field("zagolovok_stranycz", $post_id); ?>
                     </h1>
                 </div>
-
                 <div class="recipes__banner big-container">
-                    <?php the_post_thumbnail();?>
-                    <a href="<?php echo get_home_url() . '/products'; ?>" class="recipes__lnk rotation">
-                        <img src="<?php echo get_template_directory_uri() . '/img/page-recipes/shtamp.svg' ?>" alt="center">
-                    </a>
+                    <img src="<?php echo the_field("yzobrazhenye_na_stranycze", $post_id)?>" alt="<?php echo the_field("zagolovok_stranycz", $post_id); ?>">
                 </div>
                 <div class="recipes-single__content main-container">
                     <div class="recipes-single__content-left product__w50">
@@ -34,12 +30,15 @@ $post_id = get_the_ID();
                     </div>
                     <div class="recipes-single__content-right product__w50">
                         <div class="recipes-single__content-title block-title">
-                            Вкусная начинка – вкусный <i>продукт</i>
+                            <?php echo the_field("produkt_dlya_reczeptu", $post_id); ?>
                         </div>
-                        <div class="recipes-single__content-column">
+                        <div class="recipes-single__content-column recipes-single__first-block">
                             <?php echo the_field("opysanye_stranycz", $post_id); ?>
                         </div>
-
+                        <img src="<?php echo the_field("vtoroe_yzobrazhenye", $post_id)?>" alt="<?php echo the_field("zagolovok_stranycz", $post_id); ?>">
+                        <div class="recipes-single__content-column">
+                            <?php echo the_field("vtoroj_blok_opysanye", $post_id); ?>
+                        </div>
                     </div>
                 </div>
             </div>

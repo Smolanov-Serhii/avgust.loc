@@ -7,9 +7,17 @@
   &__header{
     display: flex;
     margin-bottom: 93vw * $px;
+    @media all and (max-width: 900px){
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__title{
     margin-bottom: 0;
+    @media all and (max-width: 900px){
+      margin-top: 24px;
+    }
     i{
       text-transform: lowercase;
       font-style: italic;
@@ -17,10 +25,17 @@
   }
   &__list{
     margin-bottom: 100vw * $px;
+    @media all and (max-width: 500px){
+      margin-bottom: 107px;
+    }
   }
   &__item{
     &-img{
       margin-bottom: 26vw * $px;
+      @media all and (max-width: 900px){
+        width: 100%;
+        height: auto;
+      }
     }
     a{
       text-decoration: none;
@@ -28,9 +43,14 @@
     &-title{
       font-family: 'Futura PT';
       font-weight: 500;
-      font-size: 1.6rem;
+      font-size: 16px;
       line-height: 2.1rem;
       color: #191919;
+    }
+  }
+  .news__bottom{
+    @media all and (max-width: 500px){
+      margin-bottom: 90px;
     }
   }
 }

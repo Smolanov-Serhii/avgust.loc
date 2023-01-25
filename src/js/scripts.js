@@ -183,6 +183,26 @@ $(document).ready(function () {
             autoplay: {
                 delay: 2000,
             },
+            breakpoints: {
+                // when window width is >= 320px
+                240: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                440: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                500: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                // when window width is >= 640px
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            }
         });
     }
 //

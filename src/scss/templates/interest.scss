@@ -8,9 +8,17 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 77vw * $px;
+    @media all and (max-width: 900px){
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
   &__title{
     margin-bottom: 0;
+    @media all and (max-width: 900px){
+      margin-top: 24px;
+    }
   }
   &__marker{
     font-family: 'Playfair Display';
@@ -37,11 +45,29 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 78vw * $px;
-    &:nth-child(4n+3), &:nth-child(4n){
-      flex-direction: row-reverse;
+    @media all and (max-width: 1024px){
+      width: 100%;
+      &:nth-child(even){
+        flex-direction: row-reverse;
+      }
+    }
+    @media all and (min-width: 1025px){
+      &:nth-child(4n+3), &:nth-child(4n){
+        flex-direction: row-reverse;
+      }
+    }
+    @media all and (max-width: 500px){
+      &:nth-child(even){
+        flex-direction: row;
+      }
+      flex-wrap: wrap;
+      margin-bottom: 98px;
     }
     &-image{
       width: calc(50% - 20px);
+      @media all and (max-width: 500px){
+        width: 100%;
+      }
       img{
         width: 100%;
         height: auto;
@@ -52,6 +78,9 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @media all and (max-width: 500px){
+        width: 100%;
+      }
     }
     &-title{
       font-family: 'Futura PT';
@@ -61,6 +90,14 @@
       line-height: 3.1rem;
       color: #191919;
       margin-bottom: 2.8rem;
+      @media all and (max-width: 768px){
+        font-size: 24px;
+        line-height: 129%;
+      }
+      @media all and (max-width: 500px){
+        margin-top: 58px;
+        font-weight: 600;
+      }
     }
     &-desc{
       font-family: 'Futura PT';
@@ -70,6 +107,10 @@
       line-height: 2.4rem;
       color: #191919;
       margin-bottom: 2rem;
+      @media all and (max-width: 768px){
+        font-size: 18px;
+        line-height: 133%;
+      }
     }
     &-lnk{
       font-family: 'Playfair Display';
@@ -80,6 +121,10 @@
       display: flex;
       align-items: center;
       font-style: italic;
+      @media all and (max-width: 768px){
+        font-size: 25px;
+        line-height: 120%;
+      }
       svg{
         margin-left: 1.3rem;
       }

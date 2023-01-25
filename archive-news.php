@@ -13,7 +13,7 @@ hgf
                         Останні <i>новини</i>
                     </h2>
                     <div class="news__lnk">
-                        <a href="#" class="name-gold">
+                        <a href="https://avgust.front-end-dev.com.ua/ru/novyny/" class="name-gold">
                             Всі новини
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
@@ -25,7 +25,7 @@ hgf
                     <ul class="news__list">
                         <li class="news__item">
                             <h3 class="news__item-title">
-                                <a href="#">Виробляємо великий асортимент</a>
+                                <a href="https://avgust.front-end-dev.com.ua/ru/news/new1/">Виробляємо великий асортимент</a>
                             </h3>
                             <div class="news__item-excerpt">
                                 ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
@@ -42,7 +42,7 @@ hgf
                         </li>
                         <li class="news__item">
                             <h3 class="news__item-title">
-                                <a href="#">Асортимент</a>
+                                <a href="https://avgust.front-end-dev.com.ua/ru/news/new1/">Асортимент</a>
                             </h3>
                             <div class="news__item-excerpt">
                                 ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
@@ -59,7 +59,7 @@ hgf
                         </li>
                         <li class="news__item">
                             <h3 class="news__item-title">
-                                <a href="#">Ми виробляємо великий </a>
+                                <a href="https://avgust.front-end-dev.com.ua/ru/news/new1/">Ми виробляємо великий </a>
                             </h3>
                             <div class="news__item-excerpt">
                                 ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
@@ -76,7 +76,7 @@ hgf
                         </li>
                         <li class="news__item">
                             <h3 class="news__item-title">
-                                <a href="#">Ми виробляємо великий асортимент</a>
+                                <a href="https://avgust.front-end-dev.com.ua/ru/news/new1/">Ми виробляємо великий асортимент</a>
                             </h3>
                             <div class="news__item-excerpt">
                                 ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
@@ -93,7 +93,7 @@ hgf
                         </li>
                         <li class="news__item">
                             <h3 class="news__item-title">
-                                <a href="#">Великий асортимент</a>
+                                <a href="https://avgust.front-end-dev.com.ua/ru/news/new1/">Великий асортимент</a>
                             </h3>
                             <div class="news__item-excerpt">
                                 ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...

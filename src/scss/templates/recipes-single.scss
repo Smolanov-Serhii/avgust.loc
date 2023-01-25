@@ -3,6 +3,15 @@
   padding-top: 213vw * $px;
   .recipes__banner{
     position: relative;
+    @media all and (max-width: 500px){
+      margin-right: -20px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
     .recipes__lnk{
       position: absolute;
       top: calc(50% - 84px);
@@ -28,6 +37,14 @@
     margin-top: 126vw * $px;
     display: flex;
     flex-wrap: wrap;
+    img{
+      @media all and (max-width: 500px){
+        margin-right: -20px;
+        margin-left: -20px;
+        width: calc(100% + 40px);
+        max-width: none;
+      }
+    }
     &-title{
 
     }
@@ -40,7 +57,14 @@
       p{
         margin-bottom: 1em;
       }
+      @media all and (max-width: 500px){
+        column-count: 1;
+        column-gap: 0;
+      }
     }
+  }
+  &__first-block{
+    margin-bottom: 3.7rem;
   }
   &__interest{
     .news__bottom{

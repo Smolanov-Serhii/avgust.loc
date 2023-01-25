@@ -1,5 +1,13 @@
 .pagination{
   padding-bottom: 104vw * $px;
+  @media all and (max-width: 768px){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media all and (max-width: 500px){
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
   &__list{
     display: flex;
     justify-content: center;
@@ -12,8 +20,8 @@
     font-family: 'Futura PT';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 14px;
+    line-height: 120%;
     text-transform: uppercase;
     color: #191919;
     &.current{

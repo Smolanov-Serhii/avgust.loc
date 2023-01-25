@@ -3,13 +3,25 @@
     padding-bottom: 90vw * $px;
     &__container{
       display: flex;
+      @media all and (max-width: 768px){
+        flex-wrap: wrap;
+      }
     }
   }
   &__block{
+    @media all and (max-width: 500px){
+      margin-right: -20px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
     &-column{
       column-width: 50%;
       column-count: 2;
       column-gap: 40px;
+      @media all and (max-width: 768px){
+        column-count: 1;
+        column-width: 100%;
+      }
       p{
         margin-bottom: 1em;
       }

@@ -1,14 +1,30 @@
 .product{
   padding-bottom: 130vw * $px;
+
   &-else {
     background: linear-gradient(0deg, #FEF4E3 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
     padding-bottom: 80vw * $px;
+    position: relative;
+    @media all and (max-width: 900px){
+      padding-top: 142px;
+    }
+    @media all and (max-width: 500px){
+      background-color: #FEF4E3;
+      z-index: -1;
+    }
     &__container{
       display: flex;
+      @media all and (max-width: 768px){
+        flex-wrap: wrap;
+      }
     }
   }
   &__block{
     border: 1px solid #B78D41;
+    @media all and (max-width: 500px){
+      border-left: none;
+      border-right: none;
+    }
     &-item{
       border-bottom: 1px solid #B78D41;
       padding: 1.1rem 2.6rem;
@@ -25,6 +41,11 @@
       }
       &:nth-child(even){
         background-color: rgba(183, 141, 65, 0.03);
+      }
+      &:nth-child(odd){
+        @media all and (max-width: 500px){
+          background-color: #FFFFFF;
+        }
       }
       p,a{
         margin-bottom: 0;

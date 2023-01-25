@@ -10,15 +10,38 @@
       text-transform: uppercase;
       color: #191919;
       text-align: center;
+      @media all and (max-width: 1200px){
+        font-size: 36px;
+        line-height: 133%;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 32px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 28px;
+        text-align: left;
+      }
+      @media all and (max-width: 500px){
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
     &__wrapper{
       display: flex;
       margin-bottom: 139vw * $px;
       flex-direction: column;
       align-items: flex-end;
+      @media all and (max-width: 900px){
+        margin-bottom: 76px;
+      }
     }
     &-pluses{
       margin-top: 140vw * $px;
+      @media all and (max-width: 500px){
+        margin-right: -20px;
+        margin-left: -20px;
+        width: calc(100% + 40px);
+      }
       ul, ol{
         margin-bottom: 0;
         background-color: #FFFFFF;
