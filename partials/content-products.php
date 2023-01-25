@@ -11,10 +11,30 @@
                 </svg>
             </div>
         </div>
-        <div class="products__list">
+        <div class="products__form">
+            <?php echo do_shortcode('[searchandfilter id="137"]');?>
+        </div>
+        <div class="products__list" id="result">
             <?php
-            if(have_posts()) : while(have_posts()) : the_post();
-                ?>
+            $args = array(
+                'post_type' => 'product',
+                'relation' => 'OR',
+                'showposts' => "-1", //сколько показать статей
+                'search_filter_id' => 137, //сколько показать статей
+                'orderby' => "menu_order", //сортировка по дате
+                'caller_get_posts' => 1);
+            $my_query = new wp_query($args);
+            if ($my_query->have_posts()) {
+                while ($my_query->have_posts()) {
+                    $my_query->the_post();
+                    $postpers_id = get_the_ID();
+                    $image = get_field('fotografiya_dlya_straniczy_vseh_trenerov', $postpers_id);
+                    $name = get_field('imya_speczialista', $postpers_id);
+                    $services = get_the_terms( $postpers_id, 'trenirovki' );
+                    $dopimg = get_field( 'fotografiya_speczialista' );
+                    $secondimg = $dopimg[0]["fotografiya_speczialista"];
+                    ?>
+
                     <a href="<?php the_permalink();?>" class="products__item">
                     <span class="products__item-prev">
                         <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
@@ -22,10 +42,10 @@
                     </span>
                         <h3 class="products__item-title"><?php the_title();?>></h3>
                     </a>
-                <?php
-            endwhile; endif;
-            ?>
 
+                <?php }
+            }
+            wp_reset_query(); ?>
             <div class="products__item"></div>
             <div class="products__item products__item-desc">
                 <span class="products__item-prev">
