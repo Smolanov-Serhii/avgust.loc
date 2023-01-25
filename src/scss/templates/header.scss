@@ -6,6 +6,93 @@
   padding: 41vw * $px 0;
   z-index: 50;
   transition: $transition;
+  &.menu-show{
+    background-color: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  @media all and (max-width: 1024px){
+    padding: 20px 0;
+  }
+  @media all and (max-width: 500px){
+    padding: 4px 0;
+  }
+  &__mob-menu{
+    position: fixed;
+    right: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
+    min-width: 320px;
+    background: linear-gradient(180deg, #FEF4E3 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+    box-shadow: -8px 6px 20px rgba(0, 0, 0, 0.25);
+    z-index: 49;
+    padding: 80px 40px 80px 40px;
+    transform: translateX(120%);
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &.show{
+      transform: translateX(0);
+    }
+    @media all and (max-width: 500px){
+      width: 100%;
+    }
+    .header__nav{
+      display: block;
+      flex: 1;
+      .menu{
+        flex-direction: column;
+        align-items: center;
+        li{
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+        a{
+          font-size: 20px;
+        }
+      }
+    }
+    .header__search{
+      display: block;
+      margin-top: 60px;
+      flex: none;
+      .header__search-group{
+        text-align: center;
+      }
+      input{
+        font-size: 16px;
+      }
+    }
+    .header__right{
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 40px;
+      flex: none;
+    }
+    .header__phone{
+      margin-top: 20px;
+      font-size: 20px;
+      svg{
+        display: none;
+      }
+      span{
+        font-weight: 400;
+      }
+    }
+    .header__language{
+      margin-left: 0;
+      .active{
+        a{
+          font-weight: 600;
+        }
+      }
+      a{
+        font-size: 20px;
+        margin: 0 4px;
+        font-weight: 400;
+      }
+    }
+  }
   &__search{
     flex: 1;
     display: flex;
@@ -31,6 +118,9 @@
   &.moved{
     background-color: white;
     padding: 10vw * $px 0;
+    @media all and (max-width: 1024px){
+      padding: 10px 0;
+    }
   }
   &__burger{
     display: none;

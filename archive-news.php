@@ -3,7 +3,7 @@
 
 get_header();
 ?>
-hgf
+
     <main id="main" class="main">
 
         <section class="news">

@@ -108,11 +108,16 @@ $(document).ready(function () {
         });
     }
 //
-//     $(".header__mobile-burger").click(function () {
-//         $(this).toggleClass('active');
-//         $('body').toggleClass('locked');
-//         $('.header__container').fadeToggle().css('display', 'flex');
-//     });
+    $(".header__burger").click(function () {
+        var HeaderHeight = $('#header').outerHeight();
+        $('.header__mob-menu').toggleClass('show');
+        console.log(HeaderHeight);
+        $(this).toggleClass('active');
+        $('body').toggleClass('locked');
+        $('#header').toggleClass('menu-show');
+        $('.header__mob-menu').css({'top': HeaderHeight});
+        $('.header__mob-menu').css({'height':  window.innerHeight - HeaderHeight});
+    });
 //     if ($('.banner').length) {
 //         var banner = new Swiper(".banner .swiper-container", {
 //             slidesPerView: 1,
