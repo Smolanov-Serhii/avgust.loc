@@ -107,4 +107,45 @@
   .big-title{
     margin-bottom: 0;
   }
+  &__form{
+    padding: 7.8rem 8.8rem 6rem 8.8rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #B78D41;
+    margin-top: 3.9rem;
+    ul{
+      ul{
+        column-count: 4;
+        li{
+          margin-bottom: 1.8rem;
+          label{
+            font-family: 'Playfair Display';
+            font-size: 1.6rem;
+            line-height: 100%;
+            color: #191919;
+            display: flex;
+            align-items: center;
+            font-style: italic;
+            .sf-count{
+              display: none;
+            }
+            &:before{
+              width: 20px;
+              height: 20px;
+              content: "";
+              display: block;
+              margin-right: 2rem;
+              border: 2px solid #191919;
+            }
+          }
+          input{
+            display: none;
+          }
+          input:checked + label:before{
+            background-color: #B78D41;
+            border: 2px solid #B78D41;
+          }
+        }
+      }
+    }
+  }
 }
