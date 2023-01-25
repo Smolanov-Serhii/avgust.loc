@@ -10,6 +10,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    @media all and (max-width: 768px){
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
   &__title{
   margin-bottom: 0;
@@ -17,6 +21,9 @@
   &__filter{
     display: flex;
     align-items: center;
+    @media all and (max-width: 768px){
+      margin-bottom: 24px;
+    }
   }
   &__list{
     margin-top: 77vw * $px;
@@ -58,6 +65,9 @@
       align-items: flex-start;
       .products__item-prev{
         height: 348vw * $px;
+        @media all and (max-width: 500px){
+          height: auto;
+        }
       }
       .products__item-bg{
         height: 348vw * $px;
@@ -105,6 +115,9 @@
         width: 100%;
         height: 100%;
         transition: $transition;
+        @media all and (max-width: 500px){
+          display: none;
+        }
       }
       .products__item-bg{
         object-fit: cover;
@@ -127,27 +140,60 @@
       }
     }
   }
+  .add-item{
+    @media all and (max-width: 500px){
+      display: none;
+    }
+  }
   .big-title{
-    margin-bottom: 0;
+    margin-top: 42vw * $px;
+    margin-bottom: 93vw * $px;
+    @media all and (max-width: 500px){
+      margin-bottom: 56px;
+    }
   }
   &__form{
     padding: 7.8rem 8.8rem 6rem 8.8rem;
     background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid #B78D41;
     margin-top: 3.9rem;
+    @media all and (max-width: 1400px){
+      padding: 50px 50px 34px 50px;
+    }
+    @media all and (max-width: 1200px){
+      padding: 30px 30px 14px 30px;
+    }
+    @media all and (max-width: 500px){
+      padding: 20px 20px 4px 20px;
+    }
     ul{
+      > li{
+        padding: 0;
+      }
       ul{
         column-count: 4;
+        @media all and (max-width: 1400px){
+          column-count: 2;
+          height: auto;
+        }
+        @media all and (max-width: 768px){
+          column-count: 1;
+        }
         li{
           margin-bottom: 1.8rem;
+          padding: 0;
           label{
+            padding-left: 0!important;
             font-family: 'Playfair Display';
-            font-size: 1.6rem;
+            font-size: 16px!important;
             line-height: 100%;
             color: #191919;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             font-style: italic;
+            @media all and (max-width: 500px){
+              font-size: 14px!important;
+            }
             .sf-count{
               display: none;
             }

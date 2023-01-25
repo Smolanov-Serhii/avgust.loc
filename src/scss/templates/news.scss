@@ -24,6 +24,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media all and (max-width: 768px){
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+  &__lnk{
+    @media all and (max-width: 768px){
+      margin-bottom: 24px;
+    }
   }
   &__list{
     margin-top: 42vw * $px;

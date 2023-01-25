@@ -46,7 +46,7 @@
                 <?php }
             }
             wp_reset_query(); ?>
-            <div class="products__item"></div>
+            <div class="products__item add-item"></div>
             <div class="products__item products__item-desc">
                 <span class="products__item-prev">
                     <div class="products__item-bg">
@@ -60,5 +60,12 @@
             <span>Хлібопекарська</span>
             <span>Молочна</span>
         </h2>
+    </div>
+    <div class="news__bottom">
+        <div class="news__button rotation">
+            <a href="<?php echo get_home_url() . '/products'; ?>">
+                <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
+            </a>
+        </div>
     </div>
 </section>
