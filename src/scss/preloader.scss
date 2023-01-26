@@ -6,11 +6,11 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background: #e0e0e0;
   z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #FEF4E3;
 }
 .preloader__row {
   position: relative;
@@ -42,9 +42,7 @@
 }
 
 @keyframes preloader-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+
 }
 
 @keyframes preloader-bounce {
@@ -60,7 +58,7 @@
 }
 
 .loaded_hiding .preloader {
-  transition: 0.3s opacity;
+  transition: 1s opacity;
   opacity: 0;
 }
 

@@ -1,15 +1,16 @@
 .preloader {
-  /*фиксированное позиционирование*/
   position: fixed;
-  /* координаты положения */
+  width: 100vw;
+  height: 100vh;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  /* фоновый цвет элемента */
-  background: #e0e0e0;
-  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
   z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FEF4E3;
 }
 .preloader__row {
   position: relative;
@@ -27,7 +28,7 @@
   position: absolute;
   display: inline-block;
   top: 0;
-  background-color: #EC1C24;
+  background-color: #7A0080;
   border-radius: 100%;
   width: 35px;
   height: 35px;
@@ -41,9 +42,7 @@
 }
 
 @keyframes preloader-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+
 }
 
 @keyframes preloader-bounce {
@@ -59,7 +58,7 @@
 }
 
 .loaded_hiding .preloader {
-  transition: 0.3s opacity;
+  transition: 1s opacity;
   opacity: 0;
 }
 
