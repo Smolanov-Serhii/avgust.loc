@@ -15,7 +15,7 @@ $(document).ready(function () {
         var SwiperLb = new Swiper("#swiper__lb", {
             slidesPerView: 1,
             loop: true,
-            spaceBetween: 0,
+            spaceBetween: 20,
             initialSlide: 2,
             speed: 600,
             autoplay: {
@@ -25,7 +25,7 @@ $(document).ready(function () {
         var SwiperLt = new Swiper("#swiper__lt", {
             slidesPerView: 1,
             loop: true,
-            spaceBetween: 0,
+            spaceBetween: 20,
             initialSlide: 3,
             speed: 600,
             noSwiping: true,
@@ -37,7 +37,7 @@ $(document).ready(function () {
         var Swiperrt = new Swiper("#swiper__rt", {
             slidesPerView: 1,
             loop: true,
-            spaceBetween: 0,
+            spaceBetween: 20,
             initialSlide: 4,
             speed: 600,
             noSwiping: true,
@@ -49,7 +49,7 @@ $(document).ready(function () {
         var Swiperct = new Swiper("#swiper__ct", {
             slidesPerView: 1,
             loop: true,
-            spaceBetween: 0,
+            spaceBetween: 20,
             speed: 600,
             noSwiping: true,
             allowTouchMove: false,

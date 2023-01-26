@@ -11,6 +11,10 @@
   .mouse-parallax-bg{
     transition: all 0.1s ease;
   }
+  .swiper-slide{
+    display: flex;
+    align-items: flex-end;
+  }
   &:before{
     content: "";
     display: block;
