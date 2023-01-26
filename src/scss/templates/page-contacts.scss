@@ -5,9 +5,16 @@
   &__container{
     display: flex;
     flex-wrap: wrap;
+    @media all and (max-width: 1024px){
+      flex-direction: column-reverse;
+    }
   }
   &__form{
     width: 50%;
+    @media all and (max-width: 1024px){
+      width: 100%;
+      margin-top: 60px;
+    }
     &-title{
       font-family: 'Playfair Display';
       font-style: normal;
@@ -17,6 +24,22 @@
       text-transform: uppercase;
       color: #191919;
       margin-bottom: 4.3rem;
+      @media all and (max-width: 1200px){
+        font-size: 36px;
+        line-height: 133%;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 32px;
+        text-align: left;
+      }
+      @media all and (max-width: 768px){
+        font-size: 28px;
+        text-align: left;
+      }
+      @media all and (max-width: 500px){
+        font-size: 24px;
+        line-height: 32px;
+      }
       i{
         font-style: italic;
         font-weight: 400;
@@ -36,11 +59,18 @@
       font-size: 2rem;
       line-height: 100%;
       color: #191919;
+      @media all and (max-width: 1024px){
+        width: 100%;
+        display: block;
+      }
     }
     input{
       border: none;
       border-bottom: 2px solid #191919;
       background-color: transparent;
+      @media all and (max-width: 1024px){
+        width: 100%;
+      }
     }
     textarea{
       border: 2px solid #191919;
@@ -48,6 +78,9 @@
       height: 126px;
       resize: none;
       margin-top: 2.3rem;
+      @media all and (max-width: 1024px){
+        width: 100%;
+      }
     }
     .checkbox{
       display: flex;
@@ -84,8 +117,16 @@
     .submit{
       display: inline-flex;
       align-items: center;
+      @media all and (max-width: 1024px){
+        p{
+          margin-bottom: 0;
+        }
+      }
       .wpcf7-spinner{
         order: 3;
+        @media all and (max-width: 1024px){
+          display: none;
+        }
       }
       input{
         order: 1;
@@ -114,6 +155,9 @@
   }
   &__columns{
     width: 50%;
+    @media all and (max-width: 1024px){
+      width: 100%;
+    }
   }
   &__title{
     font-family: 'Playfaic';
@@ -124,6 +168,9 @@
     text-transform: uppercase;
     color: #191919;
     margin-bottom: 3.8rem;
+    @media all and (max-width: 768px){
+      margin-bottom: 14px;
+    }
     i{
       font-style: italic;
       text-transform: lowercase;
@@ -143,6 +190,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10.7rem;
+    @media all and (max-width: 768px){
+      margin-bottom: 0;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -151,6 +201,10 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    @media all and (max-width: 768px){
+      width: 100%;
+      margin-top: 40px;
+    }
   }
   &__tel{
     margin-bottom: 1.4rem;

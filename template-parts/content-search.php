@@ -9,27 +9,12 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<!--	<header class="entry-header">-->
-<!--		--><?php //the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-<!---->
-<!--		--><?php //if ( 'post' === get_post_type() ) : ?>
-<!--		<div class="entry-meta">-->
-<!--			--><?php
-//			avgust_posted_on();
-//			avgust_posted_by();
-//			?>
-<!--		</div><!-- .entry-meta -->-->
-<!--		--><?php //endif; ?>
-<!--	</header><!-- .entry-header -->-->
-
-	<?php avgust_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php avgust_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+    <h3 class="news__item-title">
+        <a href="<?php the_permalink();?>"><?php the_title();?></a>
+    </h3>
+    <div class="news__item-excerpt">
+        <?php the_excerpt();?>
+    </div>
+    <?php the_post_thumbnail('medium', array( 'class' => 'news__prev' ));?>
+</li>

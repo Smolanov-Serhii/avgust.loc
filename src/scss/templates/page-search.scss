@@ -1,0 +1,50 @@
+.page-search{
+  background: linear-gradient(0deg, #FEF4E3 73.96%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  padding-top: 213vw * $px;
+  .news{
+    margin-top: 0;
+    background: none;
+    &__title{
+      margin-bottom: 4.2rem;
+      @media all and (max-width: 768px){
+        margin-bottom: 30px;
+      }
+    }
+    &__item{
+      padding: 3.5rem 0;
+      @media all and (max-width: 768px){
+        padding: 20px 0;
+      }
+      &-title{
+        margin-bottom: 9px;
+      }
+    }
+  }
+  #search-form{
+    input{
+      border: none;
+      border-bottom: 2px solid #191919;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      color: #191919;
+      background-color: transparent;
+    }
+    button{
+      border: none;
+      background-color: transparent;
+    }
+  }
+  .nav-previous a{
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: #b78d41;
+    @media all and (max-width: 768px){
+      font-size: 18px;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

@@ -7,6 +7,9 @@
   &__map{
     height: 745vw * $px;
     width: 100%;
+    @media all and (max-width: 768px){
+      height: 400px;
+    }
   }
   &__title{
     margin-bottom: 96vw * $px;
@@ -21,16 +24,38 @@
       text-transform: uppercase;
       color: #191919;
       font-feature-settings: normal;
+      @media all and (max-width: 1200px){
+        font-size: 36px;
+        line-height: 133%;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 32px;
+        text-align: left;
+      }
+      @media all and (max-width: 768px){
+        font-size: 28px;
+        text-align: left;
+      }
+      @media all and (max-width: 500px){
+        font-size: 24px;
+        line-height: 32px;
+      }
       i{
         text-transform: lowercase;
         font-style: italic;
       }
       &:nth-child(odd){
         text-align: center;
+        @media all and (max-width: 1024px){
+          text-align: left;
+        }
       }
       &:nth-child(even){
         padding-left: 50%;
         text-align: left;
+        @media all and (max-width: 1024px){
+          padding-left: 0;
+        }
       }
     }
   }

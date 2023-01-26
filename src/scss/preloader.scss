@@ -1,11 +1,16 @@
 .preloader {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   background: #e0e0e0;
   z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .preloader__row {
   position: relative;

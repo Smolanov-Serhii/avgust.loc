@@ -31,15 +31,14 @@
         window.setTimeout(function () {
             document.body.classList.add('loaded');
             document.body.classList.remove('loaded_hiding');
-        }, 500);
+        }, 2000);
     }
 </script>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div class="preloader">
-    <div class="preloader__row">
-        <div class="preloader__item"></div>
-        <div class="preloader__item"></div>
+    <div class="news__button rotation">
+        <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
     </div>
 </div>
 <header id="header" class="header default">

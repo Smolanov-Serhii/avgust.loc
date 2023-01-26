@@ -10,10 +10,6 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'avgust' ); ?></h1>
-	</header><!-- .page-header -->
-
 	<div class="page-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
@@ -35,15 +31,29 @@
 			?>
 
 			<p class="section-title">За вашим запитом нічого не <i>знайдено</i>.</p>
+            <form role="search" method="get" id="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="input-group mb-3">
+                <div class="header__search-group">
+                    <input type="search" class="form-control border-0" placeholder="Пошук" aria-label="search nico" name="s" id="search-input" value="<?php echo esc_attr( get_search_query() ); ?>">
+                    <button>
+                        <img class="content-company-2col__img" src="<?php echo get_template_directory_uri() . '/img/header/search.svg' ?>" alt="search">
+                    </button>
+                </div>
+            </form>
 			<?php
-			get_search_form();
-
 		else :
 			?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'avgust' ); ?></p>
+        <form role="search" method="get" id="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="input-group mb-3">
+            <div class="header__search-group">
+                <input type="search" class="form-control border-0" placeholder="Пошук" aria-label="search nico" name="s" id="search-input" value="<?php echo esc_attr( get_search_query() ); ?>">
+                <button>
+                    <img class="content-company-2col__img" src="<?php echo get_template_directory_uri() . '/img/header/search.svg' ?>" alt="search">
+                </button>
+            </div>
+        </form>
 			<?php
-			get_search_form();
+
 
 		endif;
 		?>
