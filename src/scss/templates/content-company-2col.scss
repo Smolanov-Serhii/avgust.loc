@@ -6,9 +6,15 @@
   &__wrapper{
     display: flex;
     flex-wrap: wrap;
+    @media all and (max-width: 1024px){
+      flex-direction: row-reverse;
+    }
   }
   &__col{
     width: 50%;
+    @media all and (max-width: 1024px){
+      width: 100%;
+    }
     img{
       width: 100%;
       height: auto;
@@ -30,6 +36,9 @@
         font-size: 1.6rem;
         line-height: 2.2rem;
         color: #191919;
+        @media all and (max-width: 1024px){
+          padding-left: 50px;
+        }
       }
       li::before {
         position: absolute;
