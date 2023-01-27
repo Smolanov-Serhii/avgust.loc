@@ -167,6 +167,7 @@
       border: 1px solid #B78D41;
       transition: $transition;
       z-index: 1;
+      text-decoration: none;
       @media all and (max-width: 768px){
         font-size: 14px;
       }

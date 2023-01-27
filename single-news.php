@@ -60,91 +60,46 @@ $post_id = get_the_ID();
                 </div>
                 <div class="news__content">
                     <ul class="news__list">
-                        <li class="news__item">
-                            <h3 class="news__item-title">
-                                <a href="#">Виробляємо великий асортимент</a>
-                            </h3>
-                            <div class="news__item-excerpt">
-                                ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
-                            </div>
-                            <div class="news__item-param">
-                                <div class="news__item-date">
-                                    15 квітня
-                                </div>
-                                <div class="news__item-tag">
-                                    Новини
-                                </div>
-                            </div>
-                            <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
-                        </li>
-                        <li class="news__item">
-                            <h3 class="news__item-title">
-                                <a href="#">Асортимент</a>
-                            </h3>
-                            <div class="news__item-excerpt">
-                                ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
-                            </div>
-                            <div class="news__item-param">
-                                <div class="news__item-date">
-                                    15 квітня
-                                </div>
-                                <div class="news__item-tag">
-                                    Новини
-                                </div>
-                            </div>
-                            <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
-                        </li>
-                        <li class="news__item">
-                            <h3 class="news__item-title">
-                                <a href="#">Ми виробляємо великий </a>
-                            </h3>
-                            <div class="news__item-excerpt">
-                                ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
-                            </div>
-                            <div class="news__item-param">
-                                <div class="news__item-date">
-                                    15 квітня
-                                </div>
-                                <div class="news__item-tag">
-                                    Новини
-                                </div>
-                            </div>
-                            <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
-                        </li>
-                        <li class="news__item">
-                            <h3 class="news__item-title">
-                                <a href="#">Ми виробляємо великий асортимент</a>
-                            </h3>
-                            <div class="news__item-excerpt">
-                                ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
-                            </div>
-                            <div class="news__item-param">
-                                <div class="news__item-date">
-                                    15 квітня
-                                </div>
-                                <div class="news__item-tag">
-                                    Новини
-                                </div>
-                            </div>
-                            <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
-                        </li>
-                        <li class="news__item">
-                            <h3 class="news__item-title">
-                                <a href="#">Великий асортимент</a>
-                            </h3>
-                            <div class="news__item-excerpt">
-                                ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів...
-                            </div>
-                            <div class="news__item-param">
-                                <div class="news__item-date">
-                                    15 квітня
-                                </div>
-                                <div class="news__item-tag">
-                                    Новини
-                                </div>
-                            </div>
-                            <img class="news__prev" src="<?php echo get_template_directory_uri() . '/img/news/prev.jpg' ?>" alt="Виробляємо великий асортимент">
-                        </li>
+                        <?php
+                        $args = array(
+                            'post_type' => array(
+                                'post_type' => 'news',
+                                'showposts' => "5",
+                            ),
+                            'orderby' => "date",
+                            'caller_get_posts' => 1);
+                        $my_query = new wp_query($args);
+                        if ($my_query->have_posts()) {
+                            while ($my_query->have_posts()) {
+                                $my_query->the_post();
+                                $postpers_id = get_the_ID();
+                                $excerpt = get_field('kratkoe_opysanye_na_rozvodyashhuyu', $postpers_id);
+                                $post_type = get_post_type( $postpers_id );
+                                ?>
+
+                                <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                                    <h3 class="news__item-title">
+                                        <a href="<?php the_permalink();?>">
+                                            <?php the_title();?>
+                                        </a>
+                                    </h3>
+                                    <div class="news__item-excerpt">
+                                        <?php echo $excerpt;?>
+                                    </div>
+                                    <div class="news__item-param">
+                                        <div class="news__item-date">
+                                            <?php the_date('d F');?>
+                                        </div>
+                                        <a href="<?php echo get_home_url() . '/news'; ?>" class="news__item-tag">
+                                            <?php echo the_field('slovo_novosty', 'option') ?>
+                                        </a>
+                                    </div>
+                                    <?php the_post_thumbnail('medium', array( 'class' => 'news__prev' ));?>
+                                </li>
+
+                            <?php }
+                        }
+                        wp_reset_query(); ?>
                     </ul>
                     <div class="news__bottom">
                         <div class="news__button rotation">
