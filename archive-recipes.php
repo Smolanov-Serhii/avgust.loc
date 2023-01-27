@@ -11,7 +11,7 @@ $post_id = get_the_ID();
             <div class="interest__container main-container">
                 <div class="interest__header">
                     <h2 class="interest__title section-title">
-                        Цікаві Рецепти
+                        <?php echo the_field('zagolovok_straniczy', 58) ?>
                     </h2>
                     <div class="interest__marker">
                         молочні термостабільні
@@ -21,234 +21,44 @@ $post_id = get_the_ID();
                     </div>
                 </div>
                 <div class="interest__list">
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img1.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img2.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img3.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img4.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img1.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img2.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img3.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img4.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img1.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img2.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img3.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="interest__item">
-                        <div class="interest__item-image">
-                            <img src="<?php echo get_template_directory_uri() . '/img/interest/img4.jpg' ?>" alt="Сирний наповнювач">
-                        </div>
-                        <div class="interest__item-content">
-                            <h3 class="interest__item-title">
-                                Сирний наповнювач
-                            </h3>
-                            <p class="interest__item-desc">
-                                Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
-                            </p>
-                            <a href="https://avgust.front-end-dev.com.ua/ru/recipes/pokrashhena-reczeptura-gelevyh-termostabilnyh-napovnyuvachiv/" class="interest__item-lnk">
-                                Читати далі
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                    <?php
+                    $args = array(
+                        'post_type' => array(
+                            'post_type' => 'recipes',
+                            'showposts' => "-1",
+                        ),
+                        'orderby' => "ASC",
+                        'caller_get_posts' => 1);
+                    $my_query = new wp_query($args);
+                    if ($my_query->have_posts()) {
+                        while ($my_query->have_posts()) {
+                            $my_query->the_post();
+                            $postpers_id = get_the_ID();
+                            $excerpt = get_field('kratkoe_opysanye_na_rozvodyashhuyu', $postpers_id);
+                            $post_type = get_post_type( $postpers_id );
+                            ?>
+                            <div class="interest__item">
+                                <div class="interest__item-image">
+                                    <img src="<?php echo the_field('kvadratne_zobrazhennya_dlya_czikavi_reczepty', $postpers_id) ?>" alt="<?php echo $excerpt;?>">
+                                </div>
+                                <div class="interest__item-content">
+                                    <h3 class="interest__item-title">
+                                        <?php the_title();?>
+                                    </h3>
+                                    <p class="interest__item-desc">
+                                        <?php echo $excerpt;?>
+                                    </p>
+                                    <a href="<?php the_permalink();?>" class="interest__item-lnk">
+                                        <?php echo the_field('tekst_chitati_dali', 'option') ?>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php }
+                    }
+                    wp_reset_query(); ?>
                 </div>
                 <div class="pagination main-container">
                     <div class="pagination__list">

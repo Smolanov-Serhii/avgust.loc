@@ -14,7 +14,7 @@ $post_id = get_the_ID();
                             <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.21097 11L6.05729 10.1067L2.29119 6.13165L19 6.13165L19 4.86831L2.29119 4.86831L6.05729 0.893307L5.21097 1.20547e-06L-4.80823e-07 5.50002L5.21097 11Z" fill="#B78D41"/>
                             </svg>
-                            Всі новини
+                            <?php echo the_field('nadpis_vse_novosti', 75) ?>
                         </a>
                     </div>
                     <h1 class="recipes-single__title section-title product__w50">
@@ -47,11 +47,11 @@ $post_id = get_the_ID();
             <div class="news__container main-container">
                 <div class="news__header">
                     <h2 class="news__title">
-                        Останні <i>новини</i>
+                        <?php echo the_field('nadpis_ostanni_novini', 75) ?>
                     </h2>
                     <div class="news__lnk">
                         <a href="#" class="name-gold">
-                            Всі новини
+                            <?php echo the_field('nadpis_vse_novosti', 75) ?>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
                             </svg>

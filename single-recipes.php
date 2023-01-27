@@ -81,7 +81,7 @@ $post_id = get_the_ID();
                                         Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:
                                     </p>
                                     <a href="<?php the_permalink();?>" class="interest__item-lnk">
-                                        Читати далі
+                                        <?php echo the_field('tekst_chitati_dali', 'option') ?>
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
                                         </svg>
