@@ -1,8 +1,11 @@
+<?php
+    $post_id = get_the_ID();
+?>
 <section class="products">
     <div class="products__container main-container">
         <div class="products__header">
             <h1 class="products__title section-title">
-                Продукція
+                <?php echo the_field('zagolovok_straniczy', 17) ?>
             </h1>
             <div class="products__filter name-gold">
                 молочні термостабільні
@@ -37,28 +40,26 @@
 
                     <a href="<?php the_permalink();?>" class="products__item">
                     <span class="products__item-prev">
-                        <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="Гелі для декорування (Декогелі)">
-                        <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="Гелі для декорування (Декогелі)">
+                        <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="<?php the_title();?>">
+                        <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="<?php the_title();?>">
                     </span>
-                        <h3 class="products__item-title"><?php the_title();?>></h3>
+                        <h3 class="products__item-title"><?php the_title();?></h3>
                     </a>
 
                 <?php }
             }
             wp_reset_query(); ?>
-            <div class="products__item add-item"></div>
+<!--            <div class="products__item add-item"></div>-->
             <div class="products__item products__item-desc">
                 <span class="products__item-prev">
                     <div class="products__item-bg">
-                        <p>Компанія август пропонує високоякісні інгредієнти власного виробництва для наступних галузей харчової промисловості:</p>
+                        <p><?php echo the_field('opisanie_bloka_posle_produktov', 17) ?></p>
                     </div>
                 </span>
             </div>
         </div>
         <h2 class="producttitle__title big-title">
-            <span>Кондитерська</span>
-            <span>Хлібопекарська</span>
-            <span>Молочна</span>
+            <?php echo the_field('bolshoj_zagolovok_snizu', 17) ?>
         </h2>
     </div>
     <div class="news__bottom">

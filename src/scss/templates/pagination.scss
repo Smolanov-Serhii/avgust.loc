@@ -1,5 +1,7 @@
 .pagination{
   padding-bottom: 104vw * $px;
+  width: 100%;
+  display: block;
   @media all and (max-width: 768px){
     padding-top: 40px;
     padding-bottom: 40px;
@@ -8,12 +10,12 @@
     padding-top: 0;
     padding-bottom: 120px;
   }
-  &__list{
+  &__list, .nav-links{
     display: flex;
     justify-content: center;
     align-items: baseline;
   }
-  &__item{
+  &__item, .page-numbers{
     margin-right: 2.2rem;
     text-decoration: none;
     display: inline-block;

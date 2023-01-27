@@ -18,6 +18,11 @@
       &-title{
         margin-bottom: 9px;
       }
+      &-excerpt{
+        p{
+          margin-bottom: 0;
+        }
+      }
     }
   }
   #search-form{
