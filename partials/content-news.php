@@ -17,13 +17,10 @@
             <ul class="news__list">
                 <?php
                 $args = array(
-                    'post_type' => array(
-                        'post_type' => 'news',
-                        'teams' => 'recipes',
-                        'showposts' => "6",
-                    ),
-                    'orderby' => "ASC",
-                    'caller_get_posts' => 1);
+                    'post_type' => 'news',
+                    'showposts' => "6",
+                    'orderby' => 'post_date',
+                );
                 $my_query = new wp_query($args);
                 if ($my_query->have_posts()) {
                     while ($my_query->have_posts()) {
