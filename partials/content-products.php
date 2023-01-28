@@ -31,16 +31,12 @@
                 while ($my_query->have_posts()) {
                     $my_query->the_post();
                     $postpers_id = get_the_ID();
-                    $image = get_field('fotografiya_dlya_straniczy_vseh_trenerov', $postpers_id);
-                    $name = get_field('imya_speczialista', $postpers_id);
-                    $services = get_the_terms( $postpers_id, 'trenirovki' );
-                    $dopimg = get_field( 'fotografiya_speczialista' );
-                    $secondimg = $dopimg[0]["fotografiya_speczialista"];
+                    $image = get_field('kartinka_na_rozvoryashhuyu_kvadratnaya', $postpers_id);
                     ?>
 
                     <a href="<?php the_permalink();?>" class="products__item">
                     <span class="products__item-prev">
-                        <img class="products__item-bg" src="<?php echo get_template_directory_uri() . '/img/products/item.jpg' ?>" alt="<?php the_title();?>">
+                        <img class="products__item-bg" src="<?php echo $image; ?>" alt="<?php the_title();?>">
                         <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="<?php the_title();?>">
                     </span>
                         <h3 class="products__item-title"><?php the_title();?></h3>
