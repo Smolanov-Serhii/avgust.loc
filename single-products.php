@@ -194,7 +194,7 @@ $post_id = get_the_ID();
                 <div class="popular__list swiper-container main-container">
                     <div class="popular__wrapper swiper-wrapper">
                         <?php
-                        $post_objects = get_field('interesnye_reczepty_perechen', $post_id);
+                        $post_objects = get_field('populyarnaya_produkcziya', $post_id);
                         if( $post_objects ): ?>
                             <?php foreach( $post_objects as $post): ?>
                                 <?php setup_postdata($post); ?>
@@ -203,7 +203,7 @@ $post_id = get_the_ID();
                                 $image = get_field('kartinka_na_rozvoryashhuyu_kvadratnaya', $postpers_id);
                                 ?>
                                 <div class="popular__item swiper-slide">
-                                    <a href="#">
+                                    <a href="<?php the_permalink();?>>">
                                         <img class="popular__item-img" src="<?php echo $image; ?>" alt="<?php the_title();?>">
                                         <h3 class="popular__item-title"><?php the_title();?></h3>
                                     </a>
@@ -212,37 +212,6 @@ $post_id = get_the_ID();
                             <?php wp_reset_postdata(); // ВАЖНО - сбросьте значение $post object чтобы избежать ошибок в дальнейшем коде ?>
                         <?php endif;
                         ?>
-                        <div class="popular__item swiper-slide">
-                            <a href="#">
-                                <img class="popular__item-img" src="<?php echo get_template_directory_uri() . '/img/popular/img2.jpg' ?>" alt="Сирний наповнювач">
-                                <h3 class="popular__item-title">Гелі для декорування (Декогелі)</h3>
-                            </a>
-                        </div>
-                        <div class="popular__item swiper-slide">
-                            <a href="#">
-                                <img class="popular__item-img" src="<?php echo get_template_directory_uri() . '/img/popular/img1.jpg' ?>" alt="Сирний наповнювач">
-                                <h3 class="popular__item-title">Гелі для декорування (Декогелі)</h3>
-                            </a>
-                        </div>
-                        <div class="popular__item swiper-slide">
-                            <a href="#">
-                                <img class="popular__item-img" src="<?php echo get_template_directory_uri() . '/img/popular/img2.jpg' ?>" alt="Сирний наповнювач">
-                                <h3 class="popular__item-title">Гелі для декорування (Декогелі)</h3>
-                            </a>
-                        </div>
-                        <div class="popular__item swiper-slide">
-                            <a href="#">
-                                <img class="popular__item-img" src="<?php echo get_template_directory_uri() . '/img/popular/img1.jpg' ?>" alt="Сирний наповнювач">
-                                <h3 class="popular__item-title">Гелі для декорування (Декогелі)</h3>
-                            </a>
-                        </div>
-                        <div class="popular__item swiper-slide">
-                            <a href="#">
-                                <img class="popular__item-img" src="<?php echo get_template_directory_uri() . '/img/popular/img2.jpg' ?>" alt="Сирний наповнювач">
-                                <h3 class="popular__item-title">Гелі для декорування (Декогелі)</h3>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="news__bottom">
