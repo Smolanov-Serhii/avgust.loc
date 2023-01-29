@@ -43,7 +43,7 @@ get_header();
                     ?>
                 </div>
             </div>
-            <div class="page-clients__desc padding-left">
+            <div class="page-clients__desc">
                 <div class="news__bottom">
                     <div class="news__button rotation">
                         <a href="<?php echo get_home_url() . '/products'; ?>">
