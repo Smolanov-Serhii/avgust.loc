@@ -31,7 +31,7 @@
         window.setTimeout(function () {
             document.body.classList.add('loaded');
             document.body.classList.remove('loaded_hiding');
-        }, 2000);
+        }, 0);
     }
 </script>
 <body <?php body_class(); ?>>
@@ -39,6 +39,12 @@
 <div class="preloader">
     <div class="news__button rotation">
         <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
+    </div>
+</div>
+<div class="preloader__bg" style="opacity: 0; pointer-events: none; transform: scale(4); transition: 2s ease-in;">
+    <img src="<?php echo get_template_directory_uri() . '/img/header/start.jpg' ?>" alt="center">
+    <div class="preloader__title">
+        АВГУСТ
     </div>
 </div>
 <header id="header" class="header default">
