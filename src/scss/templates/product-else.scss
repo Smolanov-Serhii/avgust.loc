@@ -43,6 +43,7 @@
         background-color: rgba(183, 141, 65, 0.03);
       }
       &:nth-child(odd){
+        background-color: #FFFFFF;
         @media all and (max-width: 500px){
           background-color: #FFFFFF;
         }

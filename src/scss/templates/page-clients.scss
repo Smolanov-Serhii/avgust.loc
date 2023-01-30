@@ -1,3 +1,50 @@
 .page-clients{
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FBF1DF 16.15%, #FBF1DF 86.98%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  &__banner{
+    padding-top: 228vw * $px;
+    padding-bottom: 235vw * $px;
+    &-container{
+      position: relative;
+    }
+    .banner__button{
+      position: absolute;
+      top: 0;
+      right: 231vw * $px;
+      bottom: auto;
+    }
+    .main-img{
+      position: absolute;
+      left: 336vw * $px;
+      top: calc(50% - (348vw * $px) / 2);
+      width: 288vw * $px;
+      height: auto;
+    }
+    .right-img{
+      position: absolute;
+      right: 0;
+      bottom: -90vw * $px;
+      height: 192vw * $px;
+      width: auto;
+    }
+  }
+  &__title{
+    font-family: 'Playfair Display SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120vw * $px;
+    line-height: 140vw * $px;
+    text-transform: uppercase;
+    color: #191919;
+    position: relative;
+    z-index: 1;
+    span{
+      display: block;
+      &:first-child{
+        text-align: left;
+      }
+      &:last-child{
+        text-align: center;
+      }
+    }
+  }
 }
