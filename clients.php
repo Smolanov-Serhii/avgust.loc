@@ -59,6 +59,34 @@ $post_id = get_the_ID();
                 </div>
             </div>
             <div class="page-clients__desc">
+                <div class="page-clients__desc-header main-container">
+                    <div class="wrapper">
+                        <img src="<?php echo the_field("kartinka_nad_zagolovkom", $post_id); ?>" alt="center">
+                        <h2><?php echo the_field("zagolovok_bloka_opisaniya", $post_id); ?></h2>
+                    </div>
+                </div>
+                <div class="container main-container">
+                    <div class="page-clients__desc-first">
+                        <img src="<?php echo the_field("kartinka_pod_zagolovkom", $post_id); ?>" alt="center">
+                        <div class="wrapper">
+                            <?php echo the_field("pervoe_opisanie", $post_id); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-clients__desc-second">
+                    <div class="main-container">
+                        <div class="wrapper">
+                            <?php echo the_field("vtoroe_opisanie", $post_id); ?>
+                        </div>
+                    </div>
+                    <img src="<?php echo the_field("bolshaya_kartinka", $post_id); ?>" alt="center">
+                </div>
+                <div class="page-clients__desc-third main-container">
+                    <img src="<?php echo the_field("nizhnyaya_kartinka", $post_id); ?>" alt="center">
+                    <div class="wrapper">
+                        <?php echo the_field("trete_opisanie", $post_id); ?>
+                    </div>
+                </div>
                 <div class="news__bottom">
                     <div class="news__button rotation">
                         <a href="<?php echo get_home_url() . '/products'; ?>">
