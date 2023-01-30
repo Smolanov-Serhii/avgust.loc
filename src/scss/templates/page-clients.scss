@@ -1,5 +1,8 @@
 .page-clients{
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FBF1DF 16.15%, #FBF1DF 86.98%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  .news__bottom{
+    padding-bottom: 104vw * $px;
+  }
   &__banner{
     padding-top: 228vw * $px;
     padding-bottom: 235vw * $px;
@@ -238,6 +241,60 @@
         margin-top: -187vw * $px;
         width: 1110vw * $px;
         height: auto;
+      }
+    }
+    &-third{
+      position: relative;
+      padding-left: calc(50% + 20px);
+      margin-bottom: 182vw * $px;
+      margin-top: 201vw * $px;
+      img{
+        position: absolute;
+        left: 344vw * $px;
+        top: 117vw * $px;
+        width: 118vw * $px;
+      }
+      .wrapper{
+        padding: 42vw * $px 27vw * $px 42vw * $px 38vw * $px;
+        background-color: #FFFFFF;
+        h3{
+          font-family: 'Playfair Display';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24vw * $px;
+          line-height: 32vw * $px;
+          text-transform: uppercase;
+          color: #191919;
+          max-width: 340vw * $px;
+          margin-bottom: 30vw * $px;
+          i{
+            font-style: italic;
+            text-transform: lowercase;
+          }
+        }
+        ul{
+          padding-left: 7px;
+        }
+        p{
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        li{
+          font-weight: 400;
+          font-size: 16vw * $px;
+          line-height: 138.52%;
+          margin-bottom: 0;
+          color: #B78D41;
+          padding-left: 22px;
+          &::marker{
+            content: '+';
+            margin-right: 15px;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
