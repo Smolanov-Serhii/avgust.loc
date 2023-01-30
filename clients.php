@@ -13,6 +13,9 @@ $post_id = get_the_ID();
                     </h1>
                     <img class="main-img" src="<?php echo the_field("czentralnaya_kartinka", $post_id); ?>" alt="center">
                     <img class="right-img" src="<?php echo the_field("pravaya_kartinka", $post_id); ?>" alt="right">
+                    <div class="page-clients__title white" style="background-image: url(<?php echo get_template_directory_uri() . '/img/page-clients/white.jpg' ?>)">
+                        <?php echo the_field("zagolovok_bloka", $post_id); ?>
+                    </div>
                     <div class="banner__button rotation">
                         <a href="<?php echo get_home_url() . '/products'; ?>">
                             <img src="<?php echo get_template_directory_uri() . '/img/banner/button.svg' ?>" alt="center">

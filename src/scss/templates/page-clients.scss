@@ -3,14 +3,32 @@
   &__banner{
     padding-top: 228vw * $px;
     padding-bottom: 235vw * $px;
+    @media all and (max-width: 1024px){
+
+    }
     &-container{
       position: relative;
+      @media all and (max-width: 768px){
+        text-align: center;
+      }
     }
     .banner__button{
       position: absolute;
       top: 0;
       right: 231vw * $px;
       bottom: auto;
+      @media all and (max-width: 1024px){
+        right: 0;
+        top: auto;
+        bottom: -350vw * $px;
+      }
+      @media all and (max-width: 768px){
+        bottom: -10.875vw;
+        right: 17vw;
+      }
+      @media all and (max-width: 500px){
+        right: 0;
+      }
     }
     .main-img{
       position: absolute;
@@ -18,6 +36,15 @@
       top: calc(50% - (348vw * $px) / 2);
       width: 288vw * $px;
       height: auto;
+      @media all and (max-width: 1024px){
+        width: 400vw * $px;
+      }
+      @media all and (max-width: 768px){
+        position: static;
+      }
+      @media all and (max-width: 500px){
+        width: 100%;
+      }
     }
     .right-img{
       position: absolute;
@@ -25,6 +52,9 @@
       bottom: -90vw * $px;
       height: 192vw * $px;
       width: auto;
+      @media all and (max-width: 500px){
+        display: none;
+      }
     }
   }
   &__title{
@@ -37,6 +67,27 @@
     color: #191919;
     position: relative;
     z-index: 1;
+    @media all and (max-width: 500px){
+      font-size: 36px;
+      line-height: 116%;
+    }
+    &.white{
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      mix-blend-mode: plus-lighter;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-position: 336vw * $px center;
+      background-size: 288vw * $px 100%;
+      @media all and (max-width: 1024px){
+        background-size: 400vw * $px 100%;
+      }
+      @media all and (max-width: 768px){
+        display: none;
+      }
+    }
     span{
       display: block;
       &:first-child{
@@ -44,6 +95,9 @@
       }
       &:last-child{
         text-align: center;
+        @media all and (max-width: 768px){
+          text-align: left;
+        }
       }
     }
   }
