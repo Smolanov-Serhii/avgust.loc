@@ -85,7 +85,10 @@ $post_id = get_the_ID();
     </div>
     <div class="banner__container main-container">
         <div class="banner__title" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="700">
-            <h1><?php echo the_field('zagolovok_banera', $post_id) ?></h1>
+            <div class="wrapper">
+                <div class="white" style="background-image: url(<?php echo get_template_directory_uri() . '/img/banner/white.png' ?>)"><?php echo the_field('zagolovok_banera', $post_id) ?></div>
+                <h1><?php echo the_field('zagolovok_banera', $post_id) ?></h1>
+            </div>
         </div>
     </div>
     <div class="banner__desc" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
