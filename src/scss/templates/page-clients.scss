@@ -109,10 +109,16 @@
     &-header{
       .wrapper{
         padding-left: 332vw * $px;
+        @media all and (max-width: 768px){
+          padding-left: 0;
+        }
         img{
           float: left;
           margin-right: 96vw * $px;
           margin-bottom: 110vw * $px;
+          @media all and (max-width: 1024px){
+            display: none;
+          }
         }
         h2{
           padding-top: 254vw * $px;
@@ -123,6 +129,12 @@
           text-transform: uppercase;
           font-weight: 600;
           margin-bottom: 0;
+          @media all and (max-width: 1024px){
+            padding-top: 0;
+          }
+          @media all and (max-width: 768px){
+            padding-bottom: 40px;
+          }
           i{
             font-style: italic;
             text-transform: lowercase;
@@ -136,10 +148,22 @@
       padding-left: calc(50% + 20px);
       padding-top: 89vw * $px;
       margin-bottom: 174vw * $px;
+      @media all and (max-width: 768px){
+        padding-left: 0;
+      }
       img{
         position: absolute;
         left: 0;
         top: 0;
+        @media all and (max-width: 768px){
+          position: static;
+          width: 50%;
+          display: block;
+          margin: auto auto 40px auto;
+        }
+        @media all and (max-width: 500px){
+          width: 100%;
+        }
       }
       .wrapper{
         padding: 42vw * $px 27vw * $px 42vw * $px 38vw * $px;
@@ -149,11 +173,14 @@
           font-style: normal;
           font-weight: 700;
           font-size: 24vw * $px;
-          line-height: 32vw * $px;
+          line-height: 133%;
           text-transform: uppercase;
           color: #191919;
           max-width: 340vw * $px;
           margin-bottom: 30vw * $px;
+          @media all and (max-width: 1024px){
+            font-size: 2.4rem;
+          }
           i{
             font-style: italic;
             text-transform: lowercase;
@@ -174,6 +201,9 @@
           margin-bottom: 0;
           color: #B78D41;
           padding-left: 22px;
+          @media all and (max-width: 1024px){
+            font-size: 14px;
+          }
           &::marker{
             content: '+';
             margin-right: 15px;
@@ -186,12 +216,19 @@
     }
     &-second{
       text-align: right;
+      @media all and (max-width: 768px){
+        display: flex;
+        flex-direction: column-reverse;
+      }
       .wrapper{
         padding: 42vw * $px 27vw * $px 42vw * $px 38vw * $px;
         background-color: #FFFFFF;
-        width: calc(50% - 20px);
+        width: calc(50% + 20px);
         position: relative;
         text-align: left;
+        @media all and (max-width: 768px){
+          width: 100%;
+        }
         p{
           &:last-child{
             margin-bottom: 0;
@@ -205,10 +242,13 @@
           font-style: normal;
           font-weight: 700;
           font-size: 24vw * $px;
-          line-height: 32vw * $px;
+          line-height: 133%;
           text-transform: uppercase;
           color: #191919;
           margin-bottom: 30vw * $px;
+          @media all and (max-width: 1024px){
+            font-size: 2.4rem;
+          }
           i{
             font-style: italic;
             text-transform: lowercase;
@@ -224,6 +264,9 @@
           margin-bottom: 0;
           color: #B78D41;
           padding-left: 22px;
+          @media all and (max-width: 1024px){
+            font-size: 14px;
+          }
           &:last-child{
             margin-bottom: 0;
           }
@@ -241,6 +284,13 @@
         margin-top: -187vw * $px;
         width: 1110vw * $px;
         height: auto;
+        @media all and (max-width: 768px){
+          margin: 0 auto 40px auto;
+          width: 50%;
+        }
+        @media all and (max-width: 500px){
+          width: 100%;
+        }
       }
     }
     &-third{
@@ -248,11 +298,26 @@
       padding-left: calc(50% + 20px);
       margin-bottom: 182vw * $px;
       margin-top: 201vw * $px;
+      @media all and (max-width: 768px){
+        padding-left: 50px;
+      }
+      @media all and (max-width: 500px){
+        padding-left: 20px;
+      }
       img{
         position: absolute;
         left: 344vw * $px;
         top: 117vw * $px;
         width: 118vw * $px;
+        @media all and (max-width: 768px){
+          position: static;
+          width: 50%;
+          display: block;
+          margin: auto auto 40px auto;
+        }
+        @media all and (max-width: 500px){
+          width: 100%;
+        }
       }
       .wrapper{
         padding: 42vw * $px 27vw * $px 42vw * $px 38vw * $px;
@@ -262,11 +327,15 @@
           font-style: normal;
           font-weight: 700;
           font-size: 24vw * $px;
-          line-height: 32vw * $px;
+          line-height: 133%;
           text-transform: uppercase;
           color: #191919;
           max-width: 340vw * $px;
           margin-bottom: 30vw * $px;
+          @media all and (max-width: 1024px){
+            font-size: 2.4rem;
+            max-width: none;
+          }
           i{
             font-style: italic;
             text-transform: lowercase;
@@ -287,6 +356,9 @@
           margin-bottom: 0;
           color: #B78D41;
           padding-left: 22px;
+          @media all and (max-width: 1024px){
+            font-size: 14px;
+          }
           &::marker{
             content: '+';
             margin-right: 15px;
