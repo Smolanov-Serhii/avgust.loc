@@ -46,15 +46,64 @@
                                 <?php
                                 if($post_type == "news"){
                                     ?>
-                                        <a href="<?php echo get_home_url() . '/news'; ?>" class="news__item-tag">
-                                            <?php echo the_field('slovo_novosty', 'option') ?>
-                                        </a>
+                                    <a href="<?php echo get_home_url() . '/news'; ?>" class="news__item-tag">
+                                        <?php echo the_field('slovo_novosty', 'option') ?>
+                                    </a>
                                     <?php
                                 } else if ($post_type == "recipes"){
                                     ?>
-                                        <a href="<?php echo get_home_url() . '/recipes'; ?>" class="news__item-tag">
-                                            <?php echo the_field('slovo_reczept', 'option') ?>
-                                        </a>
+                                    <a href="<?php echo get_home_url() . '/recipes'; ?>" class="news__item-tag">
+                                        <?php echo the_field('slovo_reczept', 'option') ?>
+                                    </a>
+                                    <?php
+                                }?>
+
+                            </div>
+                            <?php the_post_thumbnail('medium', array( 'class' => 'news__prev' ));?>
+                        </li>
+
+                    <?php }
+                }
+                wp_reset_query();
+                $args = array(
+                    'post_type' => 'recipes',
+                    'showposts' => "6",
+                    'orderby' => 'post_date',
+                );
+                $my_query = new wp_query($args);
+                if ($my_query->have_posts()) {
+                    while ($my_query->have_posts()) {
+                        $my_query->the_post();
+                        $postpers_id = get_the_ID();
+                        $excerpt = get_field('kratkoe_opysanye_na_rozvodyashhuyu', $postpers_id);
+                        $post_type = get_post_type( $postpers_id );
+                        ?>
+
+                        <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                            <h3 class="news__item-title">
+                                <a href="<?php the_permalink();?>">
+                                    <?php the_title();?>
+                                </a>
+                            </h3>
+                            <div class="news__item-excerpt">
+                                <?php echo $excerpt;?>
+                            </div>
+                            <div class="news__item-param">
+                                <div class="news__item-date">
+                                    <?php the_date('d F');?>
+                                </div>
+                                <?php
+                                if($post_type == "news"){
+                                    ?>
+                                    <a href="<?php echo get_home_url() . '/news'; ?>" class="news__item-tag">
+                                        <?php echo the_field('slovo_novosty', 'option') ?>
+                                    </a>
+                                    <?php
+                                } else if ($post_type == "recipes"){
+                                    ?>
+                                    <a href="<?php echo get_home_url() . '/recipes'; ?>" class="news__item-tag">
+                                        <?php echo the_field('slovo_reczept', 'option') ?>
+                                    </a>
                                     <?php
                                 }?>
 
@@ -66,6 +115,12 @@
                 }
                 wp_reset_query(); ?>
             </ul>
+            <script>
+                var ul = document.querySelector('.news__list');
+                for (var i = ul.children.length; i >= 0; i--) {
+                    ul.appendChild(ul.children[Math.random() * i | 0]);
+                }
+            </script>
             <div class="news__bottom">
                 <div class="news__button rotation">
                     <a href="<?php echo get_home_url() . '/products'; ?>">
