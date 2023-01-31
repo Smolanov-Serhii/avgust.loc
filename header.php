@@ -41,12 +41,20 @@
         <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
     </div>
 </div>
-<div class="preloader__bg" style="opacity: 0; pointer-events: none; transform: scale(4) translateY(-50%); transition: 2s ease-in;">
-    <img src="<?php echo get_template_directory_uri() . '/img/header/start.jpg' ?>" alt="center">
-</div>
-<div class="preloader__title">
-    АВГУСТ
-</div>
+<?php
+if ( is_front_page() ) :
+    ?>
+    <div class="preloader__bg" style="opacity: 0; pointer-events: none; transform: scale(4) translateY(-50%); transition: 2s ease-in;">
+        <img src="<?php echo get_template_directory_uri() . '/img/header/start.jpg' ?>" alt="center">
+    </div>
+    <div class="preloader__title">
+        АВГУСТ
+    </div>
+    <?php
+else :
+
+endif;
+?>
 <header id="header" class="header default">
     <div class="header__container big-container">
         <div class="header__logo">
