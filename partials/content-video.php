@@ -13,7 +13,7 @@
                 <?php
             }
         ?>
-        <a href="#" class="video__play rotation">
+        <a href="<?php echo get_home_url() . '/products'; ?>" class="video__play rotation">
             <img src="<?php echo get_template_directory_uri() . '/img/video/play.svg' ?>" alt="center">
         </a>
     </div>
