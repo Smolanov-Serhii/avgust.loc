@@ -19,10 +19,18 @@
     line-height: 140vw * $px;
     text-transform: uppercase;
     position: fixed;
-    top: 60vh;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(4) translateY(-50%);
+    transition: 2s ease-in;
   }
   &__bg{
     position: fixed;
@@ -96,6 +104,11 @@
 }
 .loaded .preloader__bg{
   animation: preloader-bg 3s ease;
+}
+.loaded .preloader__title{
+  animation: preloader-bg 2.5s ease;
+  animation-delay: 0.3s;
+  z-index: 999999;
 }
 @keyframes preloader-bg {
   0% {
