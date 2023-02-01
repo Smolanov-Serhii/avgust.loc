@@ -78,7 +78,7 @@ $post_id = get_the_ID();
                                     <?php
                                         if($lnk){
                                             ?>
-                                            <a href="#">
+                                            <a href="<?php echo $lnk; ?>">
                                                 <?php echo $title; ?>
                                             </a>
                                             <?php
@@ -116,6 +116,19 @@ $post_id = get_the_ID();
                 </div>
             </div>
         </section>
+            <?php
+            if(get_field('fajl_video', $post_id)){
+                ?>
+                <section class="product-video main-container">
+                    <div class="product-video__container">
+                        <video autoplay="" muted="" loop="" id="myVideo">
+                            <source src="<?php echo the_field('fajl_video', $post_id) ?>" type="video/mp4">
+                        </video>
+                    </div>
+                </section>
+                <?php
+            }
+            ?>
         <section class="product-bottom">
             <div class="product-bottom__container main-container">
                 <h2 class="product-bottom__title">
