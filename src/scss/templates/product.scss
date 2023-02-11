@@ -44,15 +44,18 @@
     &-left{
       width: 50%;
       @media all and (max-width: 500px){
-        display: none;
+        width: 100%;
       }
     }
     &-right{
       width: calc(50% + 169px);
+      height: 745vw * $px;
       margin-right: -169px;
       @media all and (max-width: 500px){
         width: 100%;
         margin-right: 0;
+        height: auto;
+        margin-top: 30px;
       }
       img{
         width: 100%;
@@ -67,13 +70,23 @@
     &-tl{
       margin-top: 96vw * $px;
       height: 348vw * $px;
-      width: auto;
+      width: 285vw * $px;
+      @media all and (max-width: 500px){
+        width: 100%;
+        height: auto;
+      }
     }
     &-bl{
       margin-top: 214vw * $px;
       margin-left: 325vw * $px;
       height: 207vw * $px;
-      width: auto;
+      width: 170vw * $px;
+      @media all and (max-width: 500px){
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 30px;
+      }
     }
   }
   &__desc{
