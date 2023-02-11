@@ -177,6 +177,39 @@
       align-items: center;
       li{
         margin-right: 40vw * $px;
+        &.menu-item-has-children{
+          position: relative;
+          > a{
+            display: flex;
+            align-items: center;
+          }
+          > a:after{
+            content: "";
+            width: 6px;
+            height: 6px;
+            border: 2px solid #B78D41;
+            margin-left: 10px;
+            transform: rotate(45deg);
+            border-left: none;
+            border-top: none;
+          }
+          &:hover{
+            .sub-menu{
+              display: block;
+            }
+          }
+          .sub-menu{
+            padding: 20px;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -20px;
+            background-color: white;
+            a{
+              white-space: nowrap;
+            }
+          }
+        }
         &:last-child{
           margin-right: 0;
         }
@@ -230,7 +263,6 @@
         background-color: transparent;
       }
       .label{
-        font-family: 'Futura PT';
         font-style: normal;
         font-weight: 600;
         font-size: 1.6rem;
@@ -245,7 +277,7 @@
       box-shadow: none;
       background-color: transparent;
       li{
-        font-family: 'Futura PT';
+        font-family: "FuturaPT-Book";
         font-style: normal;
         font-weight: 500;
         font-size: 1.6rem;

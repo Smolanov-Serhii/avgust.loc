@@ -37,6 +37,7 @@ $selectric-font-size:       16px !default;                                      
     color: $selectric-text-color;
     height: $selectric-inner-height;
     user-select: none;
+    font-family: "FuturaPT-Demi";
     @media all and (max-width: 500px) {
       font-size: 16px;
     }

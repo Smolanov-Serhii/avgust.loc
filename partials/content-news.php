@@ -5,7 +5,7 @@
                 <?php echo the_field('nadpis_ostanni_novini', 75) ?>
             </h2>
             <div class="news__lnk">
-                <a href="https://avgust.front-end-dev.com.ua/ru/novyny/" class="name-gold">
+                <a href="<?php echo get_home_url() . '/news'; ?>" class="name-gold">
                     <?php echo the_field('nadpis_vse_novosti', 75) ?>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>

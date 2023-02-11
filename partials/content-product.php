@@ -2,9 +2,9 @@
     <div class="product__container main-container">
         <div class="product__header">
             <div class="product__name">
-                <div class="about__marker" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <a href="<?php echo get_home_url() . '/russkij-kompaniya'; ?>" class="about__marker" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     Про компанію
-                </div>
+                </a>
             </div>
             <h2 class="product__title section-title">
                 <span data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">Ми виробляємо великий</span>

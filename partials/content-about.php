@@ -1,9 +1,9 @@
 <section class="about">
     <div class="about__container main-container">
         <div class="about__left">
-            <div class="about__marker" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+            <a href="<?php echo get_home_url() . '/russkij-kompaniya'; ?>" class="about__marker" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 Про компанію
-            </div>
+            </a>
         </div>
         <div class="about__right">
             <h2 class="about__title section-title">

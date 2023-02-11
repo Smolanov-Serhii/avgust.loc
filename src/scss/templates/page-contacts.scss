@@ -117,12 +117,17 @@
     .submit{
       display: inline-flex;
       align-items: center;
+      p{
+        margin-bottom: 0;
+        line-height: 100%;
+      }
       @media all and (max-width: 1024px){
         p{
           margin-bottom: 0;
         }
       }
       .wpcf7-spinner{
+        display: none;
         order: 3;
         @media all and (max-width: 1024px){
           display: none;
