@@ -49,8 +49,12 @@
     }
     &-right{
       width: calc(50% + 169px);
-      height: 745vw * $px;
       margin-right: -169px;
+      a{
+        display: block;
+        height: 745vw * $px;
+        width: 100%;
+      }
       @media all and (max-width: 500px){
         width: 100%;
         margin-right: 0;
@@ -71,6 +75,7 @@
       margin-top: 96vw * $px;
       height: 348vw * $px;
       width: 285vw * $px;
+      display: block;
       @media all and (max-width: 500px){
         width: 100%;
         height: auto;
@@ -81,6 +86,7 @@
       margin-left: 325vw * $px;
       height: 207vw * $px;
       width: 170vw * $px;
+      display: block;
       @media all and (max-width: 500px){
         width: 100%;
         height: auto;

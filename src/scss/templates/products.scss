@@ -218,3 +218,16 @@
     }
   }
 }
+.products-template-default{
+  background: linear-gradient(0deg, #FFFFFF 15.73%, #FFF4E0 25.52%, #FFF4E0 76.04%, #FFFFFF 100%), #FFFFFF;
+  .products-single, .popular, .interest, .footer, .products-single__header, .product-else{
+    background: none;
+  }
+  .products-single__header{
+    .products-single__img{
+      img{
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
