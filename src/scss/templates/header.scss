@@ -199,14 +199,21 @@
             }
           }
           .sub-menu{
-            padding: 20px;
+            padding: 20px 33px;
             display: none;
             position: absolute;
             top: 100%;
-            left: -20px;
-            background-color: white;
+            left: -46px;
+            background-color: #FEF4E3;
+            li{
+              margin-right: 0;
+            }
             a{
               white-space: nowrap;
+              font-family: 'FuturaPT-Book';
+              color: #191919;
+              line-height: 237%;
+              font-weight: 400;
             }
           }
         }
@@ -220,6 +227,8 @@
         font-size: 1.6rem;
         line-height: 2.1rem;
         color: #191919;
+        font-family: 'FuturaPT-Demi';
+        padding: 8px 0;
       }
     }
   }

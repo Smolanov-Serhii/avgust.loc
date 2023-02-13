@@ -26,15 +26,36 @@
       border-right: none;
     }
     &-item{
+      position: relative;
+      &:hover{
+        img{
+          opacity: 1;
+        }
+      }
+      img{
+        position: absolute;
+        pointer-events: none;
+        right: 10px;
+        top: -10px;
+        transform: rotate(-15deg);
+        z-index: 1;
+        opacity: 0;
+        transition: $transition;
+      }
+      p, a{
+        display: block;
+        font-family: 'FuturaPT-Book';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #191919;
+        position: relative;
+        z-index: 2;
+      }
       border-bottom: 1px solid #B78D41;
       padding: 1.1rem 2.6rem;
       margin-bottom: 0;
-      font-family: 'Futura PT';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1.6rem;
-      line-height: 2.2rem;
-      color: #191919;
       &:hover{
         font-weight: 500;
         color: #B78D41;

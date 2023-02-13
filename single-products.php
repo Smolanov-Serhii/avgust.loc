@@ -91,6 +91,11 @@ $post_id = get_the_ID();
                                                 <?php echo $title; ?>
                                                 <?php
                                             }
+                                            if($img){
+                                                ?>
+                                                <img src="<?php echo $img; ?>" alt="<?php echo $title; ?>">
+                                                <?php
+                                            }
                                             ?>
                                         </p>
                                     <?php
