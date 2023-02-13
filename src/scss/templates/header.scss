@@ -179,9 +179,15 @@
         margin-right: 40vw * $px;
         &.menu-item-has-children{
           position: relative;
+          @media all and (max-width: 1024px){
+            margin-bottom: 0;
+          }
           > a{
             display: flex;
             align-items: center;
+            @media all and (max-width: 1024px){
+              display: none;
+            }
           }
           > a:after{
             content: "";
@@ -195,25 +201,37 @@
           }
           &:hover{
             .sub-menu{
-              display: block;
+              @media all and (min-width: 1025px){
+                display: block;
+              }
             }
           }
           .sub-menu{
-            padding: 20px 33px;
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: -46px;
-            background-color: #FEF4E3;
+            @media all and (min-width: 1025px){
+              padding: 20px 33px;
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: -46px;
+              background-color: #FEF4E3;
+            }
+            @media all and (max-width: 1024px){
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
             li{
               margin-right: 0;
             }
             a{
-              white-space: nowrap;
-              font-family: 'FuturaPT-Book';
-              color: #191919;
-              line-height: 237%;
-              font-weight: 400;
+
+              @media all and (min-width: 1025px){
+                white-space: nowrap;
+                font-family: 'FuturaPT-Book';
+                color: #191919;
+                line-height: 237%;
+                font-weight: 400;
+              }
             }
           }
         }
