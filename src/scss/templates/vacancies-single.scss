@@ -20,6 +20,8 @@
   .products-single__img{
     width: 50%;
     height: 745vw * $px;
+    margin-bottom: 213vw * $px;
+    max-height: 770px;
     @media all and (max-width: 900px){
       order: 1;
       width: 100%;
