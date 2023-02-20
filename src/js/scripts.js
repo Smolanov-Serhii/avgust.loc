@@ -36,6 +36,7 @@ $(document).ready(function () {
     });
 
     $('#qtranxs_select_qtranslate-chooser').selectric();
+    // $('.news__lnk select').selectric();
 
     if ($('section.banner').length) {
         var SwiperLb = new Swiper("#swiper__lb", {

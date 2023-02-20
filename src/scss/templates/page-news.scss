@@ -1,0 +1,22 @@
+.post-type-archive-news, .tax-news-category{
+    .main{
+        display: flex;
+        flex-direction: column;
+        > section{
+            flex: 1;
+        }
+    }
+    .news__lnk{
+        ul{
+            background-color: #FEF4E3;
+        }
+        .sf-input-select{
+            font-size: 20px;
+            padding: 8px 31px;
+            background: #FEF4E3;
+            option{
+
+            }
+        }
+    }
+}
