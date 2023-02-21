@@ -14,7 +14,7 @@
             }
         ?>
         <a href="<?php echo get_home_url() . '/products'; ?>" class="video__play rotation">
-            <img src="<?php echo get_template_directory_uri() . '/img/video/play.svg' ?>" alt="center">
+            <img src="<?php echo the_field('pechat_perejty_v_katalog', 'option') ?>" alt="center">
         </a>
     </div>
 </section>

@@ -16,7 +16,7 @@
                 <img src="<?php echo get_template_directory_uri() . '/img/producttitle/big.jpg'?>" alt="center" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500">
                 <div class="producttitle__button rotation">
                     <a href="<?php echo get_home_url() . '/products'; ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/img/producttitle/shtamp.svg' ?>" alt="center">
+                        <img src="<?php echo the_field('pechat_perejty_v_katalog', 'option') ?>" alt="center">
                     </a>
                 </div>
             </div>

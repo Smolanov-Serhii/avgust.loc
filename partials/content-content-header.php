@@ -9,7 +9,7 @@
             </h1>
             <div class="content-header__image">
                 <a class="content-header__button rotation" href="<?php echo get_home_url() . '/products'; ?>">
-                    <img class="content-header__image-shtamp" src="<?php echo get_template_directory_uri() . '/img/content-header/shtamp.svg' ?>" alt="main">
+                    <img class="content-header__image-shtamp" src="<?php echo the_field('pechat_perejty_v_katalog', 'option') ?>" alt="main">
                 </a>
                 <?php
                     if (get_field("vydeo_esly_est", $post_id)){

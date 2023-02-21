@@ -61,7 +61,7 @@ $post_id = get_the_ID();
     </div>
     <div class="banner__button rotation">
         <a href="<?php echo get_home_url() . '/products'; ?>">
-            <img src="<?php echo get_template_directory_uri() . '/img/banner/button.svg' ?>" alt="center">
+            <img src="<?php echo the_field('pechat_perejty_v_katalog', 'option') ?>" alt="center">
         </a>
     </div>
     <div class="banner__center" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="300">

@@ -40,6 +40,9 @@ $post_id = get_the_ID();
                             <div class="interest__item">
                                 <div class="interest__item-image">
                                     <img src="<?php echo the_field('kvadratne_zobrazhennya_dlya_czikavi_reczepty', $postpers_id) ?>" alt="<?php echo $excerpt;?>">
+                                    <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo the_field("kartynka_v_banner", $post_id); ?>">
+                                        <source data-src="<?php echo the_field("vydeo_na_razvodyashhuyu", $postpers_id); ?>" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="interest__item-content">
                                     <h3 class="interest__item-title">

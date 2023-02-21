@@ -26,7 +26,28 @@ $post_id = get_the_ID();
                 </div>
                 <div class="recipes-single__content main-container">
                     <div class="recipes-single__content-left product__w50">
+                        <div class="media-soc-lnk">
+                            <h2 class="block-title">
+                                Поділитись:
+                            </h2>
+                            <!-- Facebook -->
+                            <a target="_blank" rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>">
+                                <img src="<?php echo get_template_directory_uri() . '/img/icons/fb.svg' ?>" alt="facebook">
+                            </a>
 
+                            <!-- Instagram -->
+                            <a target="_blank" rel="nofollow" href="https://www.instagram.com/?url=<?php the_permalink(); ?>">
+
+                                <img src="<?php echo get_template_directory_uri() . '/img/icons/insta.svg' ?>" alt="instagram">
+                            </a>
+
+                            <!-- Telegram -->
+                            <a target="_blank" rel="nofollow" href="https://telegram.me/share/url?url=<?php the_permalink(); ?>">
+                                <img src="<?php echo get_template_directory_uri() . '/img/icons/telefram.svg' ?>" alt="telegram">
+                            </a>
+
+
+                        </div>
                     </div>
                     <div class="recipes-single__content-right product__w50">
                         <div class="recipes-single__content-title block-title">

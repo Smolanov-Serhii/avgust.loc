@@ -50,7 +50,7 @@ else :
     ?>
     <div class="preloader">
         <div class="news__button rotation">
-            <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
+            <img src="<?php echo the_field('pechat_perejty_v_katalog', 'option') ?>" alt="center">
         </div>
     </div>
     <?php

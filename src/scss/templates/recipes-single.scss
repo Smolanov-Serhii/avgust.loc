@@ -1,3 +1,32 @@
+.media-soc-lnk{
+  display: flex;
+  flex-wrap: wrap;
+  @media all and (max-width: 768px){
+    margin-bottom: 40px;
+  }
+  h2{
+    width: 100%;
+    margin-bottom: 3.7rem;
+  }
+  a{
+    margin-right: 19px;
+    display: inline-block!important;
+    @media all and (max-width: 500px){
+      width: 40px;
+      height: auto;
+    }
+    img{
+      width: 45px;
+      height: 45px;
+      @media all and (max-width: 500px){
+        width: 40px;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
 .recipes-single{
   background: linear-gradient(0deg, #FEF4E3 0%, #FFFFFF 65.1%), #FFFFFF;
   padding-top: 213vw * $px;
