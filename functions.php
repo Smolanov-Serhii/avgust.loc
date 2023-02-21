@@ -403,49 +403,139 @@ register_post_type('news', [
 ]);
 add_action( 'init', 'mayak_taxonomy_register_news' );
 function mayak_taxonomy_register_news(){
-    $labels = array(
-        'name'                     => 'Рубрики', // основное название во множественном числе
-        'singular_name'            => 'Рубрики', // название единичного элемента таксономии
-        'menu_name'                => 'Рубрики', // Название в меню. По умолчанию: name.
-        'all_items'                => 'Все рубрики',
-        'edit_item'                => 'Изменить рубрику',
-        'view_item'                => 'Просмотр рубрики', // текст кнопки просмотра записи на сайте (если поддерживается типом)
-        'update_item'              => 'Обновить рубрику',
-        'add_new_item'             => 'Добавить рубрику',
-        'new_item_name'            => 'Название новой',
-        'parent_item'              => 'Родительская рубрика', // только для таксономий с иерархией
-        'parent_item_colon'        => 'Родительская рубрика:',
-        'search_items'             => 'Искать рубрику',
-        'popular_items'            => 'Популярные категории', // для таксономий без иерархий
-        'separate_items_with_commas' => 'Разделяйте рубрики запятыми',
-        'add_or_remove_items'      => 'Добавить или удалить рубрику',
-        'choose_from_most_used'    => 'Выбрать из часто используемых рубрик',
-        'not_found'                => 'Рубрику не найдено',
-        'back_to_items'            => '← Назад к полам',
-    );
-    $args = array(
-        'labels'                => $labels,
-        'label'                 => 'Рубрики',
-        'public'                => true,
-        'publicly_queryable'    => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'show_in_nav_menus'     => true,
-        'show_in_rest'          => false,
-        'rest_base'             => 'url_rest',
-        'rest_controller_class' => 'WP_REST_Terms_Controller',
-        'show_tagcloud'         => true,
-        'show_in_quick_edit'    => true,
-        'meta_box_cb'           => null,
-        'show_admin_column'     => true,
-        'description'           => '',
-        'hierarchical'          => true,
-        'update_count_callback' => '',
-        'query_var'             => $taxonomy,
-        'rewrite'               => true,
-        'sort'                  => true,
-        '_builtin'              => false,
-    );
+    if (qtranxf_getLanguage() == 'en') {
+        $labels = array(
+            'name'                     => 'Рубрики', // основное название во множественном числе
+            'singular_name'            => 'Рубрики', // название единичного элемента таксономии
+            'menu_name'                => 'Рубрики', // Название в меню. По умолчанию: name.
+            'all_items'                => 'All categories',
+            'edit_item'                => 'Изменить рубрику',
+            'view_item'                => 'Просмотр рубрики', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+            'update_item'              => 'Обновить рубрику',
+            'add_new_item'             => 'Добавить рубрику',
+            'new_item_name'            => 'Название новой',
+            'parent_item'              => 'Родительская рубрика', // только для таксономий с иерархией
+            'parent_item_colon'        => 'Родительская рубрика:',
+            'search_items'             => 'Искать рубрику',
+            'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+            'separate_items_with_commas' => 'Разделяйте рубрики запятыми',
+            'add_or_remove_items'      => 'Добавить или удалить рубрику',
+            'choose_from_most_used'    => 'Выбрать из часто используемых рубрик',
+            'not_found'                => 'Рубрику не найдено',
+            'back_to_items'            => '← Назад к полам',
+        );
+        $args = array(
+            'labels'                => $labels,
+            'label'                 => 'Categories',
+            'public'                => true,
+            'publicly_queryable'    => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'show_in_nav_menus'     => true,
+            'show_in_rest'          => false,
+            'rest_base'             => 'url_rest',
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
+            'show_tagcloud'         => true,
+            'show_in_quick_edit'    => true,
+            'meta_box_cb'           => null,
+            'show_admin_column'     => true,
+            'description'           => '',
+            'hierarchical'          => true,
+            'update_count_callback' => '',
+            'query_var'             => $taxonomy,
+            'rewrite'               => true,
+            'sort'                  => true,
+            '_builtin'              => false,
+        );
+    } elseif (qtranxf_getLanguage() == 'ua') {
+        $labels = array(
+            'name'                     => 'Рубрики', // основное название во множественном числе
+            'singular_name'            => 'Рубрики', // название единичного элемента таксономии
+            'menu_name'                => 'Рубрики', // Название в меню. По умолчанию: name.
+            'all_items'                => 'Усі рубрики',
+            'edit_item'                => 'Изменить рубрику',
+            'view_item'                => 'Просмотр рубрики', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+            'update_item'              => 'Обновить рубрику',
+            'add_new_item'             => 'Добавить рубрику',
+            'new_item_name'            => 'Название новой',
+            'parent_item'              => 'Родительская рубрика', // только для таксономий с иерархией
+            'parent_item_colon'        => 'Родительская рубрика:',
+            'search_items'             => 'Искать рубрику',
+            'popular_items'            => 'Популярные категории', // для таксономий без иерархий
+            'separate_items_with_commas' => 'Разделяйте рубрики запятыми',
+            'add_or_remove_items'      => 'Добавить или удалить рубрику',
+            'choose_from_most_used'    => 'Выбрать из часто используемых рубрик',
+            'not_found'                => 'Рубрику не найдено',
+            'back_to_items'            => '← Назад к полам',
+        );
+        $args = array(
+            'labels'                => $labels,
+            'label'                 => 'Рубрики',
+            'public'                => true,
+            'publicly_queryable'    => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'show_in_nav_menus'     => true,
+            'show_in_rest'          => false,
+            'rest_base'             => 'url_rest',
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
+            'show_tagcloud'         => true,
+            'show_in_quick_edit'    => true,
+            'meta_box_cb'           => null,
+            'show_admin_column'     => true,
+            'description'           => '',
+            'hierarchical'          => true,
+            'update_count_callback' => '',
+            'query_var'             => $taxonomy,
+            'rewrite'               => true,
+            'sort'                  => true,
+            '_builtin'              => false,
+        );
+    } elseif (qtranxf_getLanguage() == 'ru') {
+        $labels = array(
+            'name' => 'Рубрики', // основное название во множественном числе
+            'singular_name' => 'Рубрики', // название единичного элемента таксономии
+            'menu_name' => 'Рубрики', // Название в меню. По умолчанию: name.
+            'all_items' => 'Все рубрики',
+            'edit_item' => 'Изменить рубрику',
+            'view_item' => 'Просмотр рубрики', // текст кнопки просмотра записи на сайте (если поддерживается типом)
+            'update_item' => 'Обновить рубрику',
+            'add_new_item' => 'Добавить рубрику',
+            'new_item_name' => 'Название новой',
+            'parent_item' => 'Родительская рубрика', // только для таксономий с иерархией
+            'parent_item_colon' => 'Родительская рубрика:',
+            'search_items' => 'Искать рубрику',
+            'popular_items' => 'Популярные категории', // для таксономий без иерархий
+            'separate_items_with_commas' => 'Разделяйте рубрики запятыми',
+            'add_or_remove_items' => 'Добавить или удалить рубрику',
+            'choose_from_most_used' => 'Выбрать из часто используемых рубрик',
+            'not_found' => 'Рубрику не найдено',
+            'back_to_items' => '← Назад к полам',
+        );
+        $args = array(
+            'labels'                => $labels,
+            'label'                 => 'Рубрики',
+            'public'                => true,
+            'publicly_queryable'    => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'show_in_nav_menus'     => true,
+            'show_in_rest'          => false,
+            'rest_base'             => 'url_rest',
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
+            'show_tagcloud'         => true,
+            'show_in_quick_edit'    => true,
+            'meta_box_cb'           => null,
+            'show_admin_column'     => true,
+            'description'           => '',
+            'hierarchical'          => true,
+            'update_count_callback' => '',
+            'query_var'             => $taxonomy,
+            'rewrite'               => true,
+            'sort'                  => true,
+            '_builtin'              => false,
+        );
+    }
     register_taxonomy('news-category', array('news'), $args);
 }
 
