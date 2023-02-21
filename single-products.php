@@ -177,12 +177,12 @@ $post_id = get_the_ID();
                         <h2 class="interest__title section-title">
                             <?php echo the_field("zagolovok_interesnye_reczepty", $post_id); ?>
                         </h2>
-                        <div class="interest__marker">
-                            молочні термостабільні
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>
-                            </svg>
-                        </div>
+<!--                        <div class="interest__marker">-->
+<!--                            молочні термостабільні-->
+<!--                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                <path d="M7.2776 0.886461L7.27763 2.14809L12.8918 2.14812L0.437911 14.602L1.33005 15.4941L13.7839 3.04026L13.7839 8.65436L15.0455 8.65439L15.0455 0.886431L7.2776 0.886461Z" fill="#B78D41"/>-->
+<!--                            </svg>-->
+<!--                        </div>-->
                     </div>
                     <div class="interest__list">
                         <?php
@@ -194,10 +194,14 @@ $post_id = get_the_ID();
                                 $postpers_id = get_the_ID();
                                 $image = get_field('kvadratne_zobrazhennya_dlya_czikavi_reczepty', $postpers_id);
                                 $desc = get_field('kratkoe_opysanye_na_rozvodyashhuyu', $postpers_id);
+                                $video = get_field('vydeo_na_razvodyashhuyu', $postpers_id);
                                 ?>
                                 <div class="interest__item">
                                     <div class="interest__item-image">
                                         <img src="<?php echo $image; ?>" alt="<?php the_title();?>">
+                                        <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo $image; ?>">
+                                            <source data-src="<?php echo $video ?>" type="video/mp4">
+                                        </video>
                                     </div>
                                     <div class="interest__item-content">
                                         <h3 class="interest__item-title">
