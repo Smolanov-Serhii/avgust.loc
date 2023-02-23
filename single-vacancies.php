@@ -112,9 +112,9 @@ $post_id = get_the_ID();
             </div>
             <div class="news__bottom">
                 <div class="news__button rotation">
-                    <a href="<?php echo get_home_url() . '/products'; ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
-                    </a>
+                    <span class="js-modal-file">
+                        <img src="<?php echo the_field('pechat_otpravit_zapros', 'option') ?>" alt="center">
+                    </span>
                 </div>
             </div>
         </section>

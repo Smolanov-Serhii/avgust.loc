@@ -125,4 +125,202 @@
       font-size: 20px;
     }
   }
+  &__fade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999;
+    &-modal{
+      display: block;
+      background-color: #FFFFFF;
+      padding: 60px 110px 60px;
+      position: relative;
+      max-width: 687px;
+      width: calc(100vw - 100px);
+      max-height: calc(100vh - 100px);
+      @media all and (max-width: 768px){
+        width: calc(100vw - 70px);
+        overflow: scroll;
+        padding: 98px 35px 80px 35px;
+      }
+      @media all and (max-width: 500px){
+        width: calc(100vw - 40px);
+        padding: 40px 20px 40px 20px;
+      }
+      h2{
+
+      }
+      .accept{
+        margin-top: 5.5rem;
+        font-weight: 400;
+        display: flex;
+        margin-bottom: 0;
+        font-size: 18px;
+        @media all and (max-width: 768px){
+          font-size: 16px;
+          margin-top: 30px;
+        }
+        @media all and (max-width: 500px){
+          margin-top: 20px;
+        }
+        br{
+          display: none;
+        }
+        .wpcf7-form-control-wrap{
+          margin-right: 20px;
+        }
+        .wpcf7-list-item{
+          margin-left: 0;
+        }
+        span{
+
+        }
+      }
+      .modal-text{
+        width: 100%;
+        p{
+          @media all and (max-width: 1400px){
+            margin-bottom: 2rem;
+          }
+          @media all and (max-width: 768px){
+            margin-bottom: 14px;
+          }
+        }
+      }
+      input[type="file"] {
+        display: none;
+      }
+      .custom-file-upload {
+        border: 1px solid #ccc;
+        width: auto;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        margin-bottom: 0;
+        br{
+          display: none;
+        }
+        @media all and (max-width: 768px){
+          margin-bottom: 0;
+        }
+      }
+      .modal-close{
+        position: absolute;
+        top: 4.3rem;
+        right: 4.3rem;
+        cursor: pointer;
+        @media all and (max-width: 500px){
+          top: 20px;
+          right: 20px;
+        }
+      }
+      label{
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 130%;
+        color: #191919;
+        margin-bottom: 7.3rem;
+        width: 100%;
+      }
+      input{
+        border: none;
+        border-bottom: 2px solid #191919;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #191919;
+        width: 100%;
+      }
+      textarea{
+        border: 2px solid #191919;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #191919;
+        width: 100%;
+        margin-top: 2.3rem;
+      }
+      .submit{
+        display: inline-flex;
+        align-items: center;
+        padding-left: 0;
+        margin-left: -6px;
+        p{
+          margin-bottom: 0;
+          line-height: 100%;
+        }
+        input{
+          padding-left: 0;
+        }
+        @media all and (max-width: 1024px){
+          p{
+            margin-bottom: 0;
+          }
+        }
+        .wpcf7-spinner{
+          display: none;
+          order: 3;
+          @media all and (max-width: 1024px){
+            display: none;
+          }
+        }
+        input{
+          order: 1;
+        }
+        &:after{
+          order: 2;
+          content: "";
+          display: block;
+          width: 15px;
+          height: 15px;
+          background-image: url('../../img/page-contacts/arow.svg');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      .wpcf7-submit{
+        background-color: transparent;
+        margin-right: 1.6rem;
+        font-family: 'Playfair Display';
+        font-size: 2.5rem;
+        line-height: 2.9rem;
+        color: #B78D41;
+        border-bottom: none;
+        text-decoration: underline;
+      }
+    }
+  }
+  .success-send{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    .active-popup{
+      display: flex!important;
+    }
+    &__container{
+      background-color: #FFFFFF;
+      padding: 40px;
+      font-size: 3rem;
+      @media all and (max-width: 1024px){
+        font-size: 2rem;
+      }
+    }
+  }
+}
+.js-modal-file, .js-modal-text{
+  cursor: pointer;
 }

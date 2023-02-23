@@ -134,6 +134,65 @@ $(document).ready(function () {
             $('#expect').toggleClass('checked');
         });
     }
+
+    if ($('.js-modal-text').length) {
+        $(".js-modal-text").click(function () {
+            $('body').addClass('locked');
+            $('.footer__fade').css("display", "flex")
+                .hide()
+                .fadeIn();
+            $('#modal-text').css("display", "flex")
+                .hide()
+                .fadeIn();
+        });
+        $(".modal-close").click(function () {
+            $('body').removeClass('locked');
+            $(this).closest('.footer__fade-modal').fadeOut(300);
+            $('.footer__fade').fadeOut(300);
+        });
+    }
+    if ($('.js-modal-file').length) {
+        $(".js-modal-file").click(function () {
+            $('body').addClass('locked');
+            $('.footer__fade').css("display", "flex")
+                .hide()
+                .fadeIn();
+            $('#modal-file').css("display", "flex")
+                .hide()
+                .fadeIn();
+        });
+        $(".modal-close").click(function () {
+            $('body').removeClass('locked');
+            $(this).closest('.footer__fade-modal').fadeOut(300);
+            $('.footer__fade').fadeOut(300);
+        });
+    }
+
+    function getFile() {
+        document.getElementById("file-upload").click();
+    }
+
+    function sub(obj) {
+        var file = obj.value;
+        var fileName = file.split("\\");
+        document.getElementById("custom-file-upload").innerHTML = fileName[fileName.length - 1];
+        document.myForm.submit();
+        event.preventDefault();
+    }
+    $("#file-upload").change(function(){
+        sub(this);
+    });
+
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        $('body').removeClass('locked');
+        $(this).closest('.footer__fade-modal').fadeOut(300);
+        $('.footer__fade').fadeOut(300);
+        $('.wpcf7-response-output').empty();
+        $('#success-send').addClass('active-popup');
+        setTimeout(function (){
+            $('#success-send').removeClass('active-popup');
+        }, 2000);
+    }, false );
 //
     $(".header__burger").click(function () {
         var HeaderHeight = $('#header').outerHeight();

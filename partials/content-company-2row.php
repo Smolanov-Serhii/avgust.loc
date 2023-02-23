@@ -40,9 +40,9 @@
         </div>
         <div class="news__bottom">
             <div class="news__button rotation">
-                <a href="<?php echo get_home_url() . '/products'; ?>">
-                    <img src="https://avgust.front-end-dev.com.ua/wp-content/themes/avgust/img/news/shtamp.svg" alt="center">
-                </a>
+                <span class="js-modal-text">
+                     <img src="<?php echo the_field('pechat_otpravit_zapros', 'option') ?>" alt="center">
+                </span>
             </div>
         </div>
     </div>

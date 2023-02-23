@@ -37,6 +37,35 @@
                 <p><?php echo the_field('adress', 'option') ?></p>
             </div>
         </div>
+        <div class="footer__fade" style="display: none">
+            <div class="footer__fade-modal" id="modal-text" style="display: none">
+                <div class="modal-close">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.8984 1L0.999584 16.8989" stroke="black" stroke-width="1.3" stroke-linecap="square"/>
+                        <path d="M1 1L16.8989 16.8989" stroke="black" stroke-width="1.3" stroke-linecap="square"/>
+                    </svg>
+                </div>
+                <div class="modal-text">
+                    <?php echo do_shortcode( '[contact-form-7 id="383" title="Заявка"]' ); ?>
+                </div>
+            </div>
+            <div class="footer__fade-modal" id="modal-file" style="display: none">
+                <div class="modal-close">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.8984 1L0.999584 16.8989" stroke="black" stroke-width="1.3" stroke-linecap="square"/>
+                        <path d="M1 1L16.8989 16.8989" stroke="black" stroke-width="1.3" stroke-linecap="square"/>
+                    </svg>
+                </div>
+                <div class="modal-text">
+                    <?php echo do_shortcode( '[contact-form-7 id="388" title="Заявка с файлом"]' ); ?>
+                </div>
+            </div>
+        </div>
+        <div class="success-send" id="success-send" style="display: none">
+            <div class="success-send__container">
+                Сообщение отправлено
+            </div>
+        </div>
 	</footer>
 
 <?php wp_footer(); ?>
