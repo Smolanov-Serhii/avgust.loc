@@ -122,7 +122,7 @@
     top: 61vw * $px;
     right: 50%;
     @media all and (max-width: 500px){
-      top: auto;
+      top: auto!important;
       bottom: -94px;
       right: 20px;
     }
