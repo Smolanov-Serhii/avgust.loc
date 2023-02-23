@@ -10,7 +10,7 @@ $post_id = get_the_ID();
             <div class="recipes-single__container">
                 <div class="recipes-single__header main-container">
                     <div class="product__w50">
-                        <a class="about__marker" href="https://avgust.front-end-dev.com.ua/ru/novyny/">
+                        <a class="about__marker" href="<?php echo get_home_url() . '/news'; ?>">
                             <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.21097 11L6.05729 10.1067L2.29119 6.13165L19 6.13165L19 4.86831L2.29119 4.86831L6.05729 0.893307L5.21097 1.20547e-06L-4.80823e-07 5.50002L5.21097 11Z" fill="#B78D41"/>
                             </svg>
