@@ -308,7 +308,8 @@
     background-color: rgba(0,0,0,0.8);
     align-items: center;
     justify-content: center;
-    .active-popup{
+    z-index: 999;
+    &.active-popup{
       display: flex!important;
     }
     &__container{
