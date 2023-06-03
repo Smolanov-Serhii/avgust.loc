@@ -50,6 +50,12 @@ body.home{
     }
   }
 }
+.js-modal-file, .js-modal-text{
+  z-index: 2;
+}
+.sf-field-submit{
+  display: none!important;
+}
 .name-gold{
   font-family: "Playfair Display";
   font-size: 2.5rem;

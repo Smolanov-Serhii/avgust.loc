@@ -1,4 +1,4 @@
-.post-type-archive-news, .tax-news-category{
+.post-type-archive-news, .tax-news-category, .tax-recipes-category, .post-type-archive-recipes{
     .main{
         display: flex;
         flex-direction: column;
@@ -6,7 +6,7 @@
             flex: 1;
         }
     }
-    .news__lnk{
+    .news__lnk, .interest__marker{
         ul{
             background-color: #FEF4E3;
         }
@@ -17,6 +17,10 @@
             option{
 
             }
+        }
+        li{
+            font-style: normal;
+            font-family: 'FuturaPT-Book', sans-serif;
         }
     }
 }

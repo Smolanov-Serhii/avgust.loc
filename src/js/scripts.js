@@ -36,7 +36,15 @@ $(document).ready(function () {
     });
 
     $('#qtranxs_select_qtranslate-chooser').selectric();
-    // $('.news__lnk select').selectric();
+    if ($('.news__lnk, .page-recipes').length) {
+        $('.news__lnk select, .page-recipes select').selectric();
+        $( ".news__lnk select, .page-recipes select" )
+            .on( "change", function() {
+                $( ".sf-field-submit input" ).trigger( "click" );
+                $('.news__lnk select, .page-recipes select').selectric();
+            } )
+    }
+
 
     if ($('section.banner').length) {
         var SwiperLb = new Swiper("#swiper__lb", {
@@ -197,7 +205,6 @@ $(document).ready(function () {
     $(".header__burger").click(function () {
         var HeaderHeight = $('#header').outerHeight();
         $('.header__mob-menu').toggleClass('show');
-        console.log(HeaderHeight);
         $(this).toggleClass('active');
         $('body').toggleClass('locked');
         $('#header').toggleClass('menu-show');
@@ -318,5 +325,61 @@ $(document).ready(function () {
 //         }).eq(0).addClass("active");
 //         $(".tabs-elements .tabs-content-item").eq(0).addClass("active");
 //     }
+
+
+    //es5 for max browser compatible, works with mutliple videos on a page. No resize event.
+
+//get all vids
+    var video =  document.querySelectorAll('video')
+
+//add source to video tag
+    function addSourceToVideo(element, src) {
+        var source = document.createElement('source');
+        source.src = src;
+        source.type = 'video/mp4';
+        element.appendChild(source);
+
+    }
+
+//determine screen size and select mobile or desktop vid
+    function whichSizeVideo(element, src) {
+        var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+        if (windowWidth > 1400 ) {
+            addSourceToVideo( element, src.dataset.desktopVid);
+        } else if (windowWidth <= 1400 && windowWidth > 768){
+            addSourceToVideo( element, src.dataset.tabletVid);
+        } else {
+            addSourceToVideo( element, src.dataset.mobileVid);
+        }
+    }
+
+//init only if page has videos
+    function videoSize() {
+        if (video !== undefined) {
+            video.forEach(function(element, index) {
+                whichSizeVideo(
+                    element, //element
+                    element  //src locations
+                );
+            });
+        }
+    }
+    videoSize();
+
+    $( ".lazy-video" ).each(function() {
+        $(this).mouseenter(
+            function()
+            {
+                $(this).get(0).play();
+            }
+        );
+        $(this).mouseout(
+            function()
+            {
+                $(this).get(0).pause();
+            }
+    );
+    });
+
 });
 

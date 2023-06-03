@@ -38,9 +38,15 @@
                     <span class="products__item-prev">
                         <img class="products__item-bg" src="<?php echo $image; ?>" alt="<?php the_title();?>">
                         <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="<?php the_title();?>">
-                        <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo the_field("kartynka_v_banner", $post_id); ?>">
-                             <source data-src="<?php echo the_field("vydeo_dlya_razvodashhyh_mp4", $postpers_id); ?>" type="video/mp4">
-                        </video>
+                        <?php
+                            if(get_field("vydeo_dlya_razvodashhyh_mp4", $postpers_id)){
+                                ?>
+                                <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo the_field("kartynka_v_banner", $post_id); ?>" src="<?php echo the_field("vydeo_dlya_razvodashhyh_mp4", $postpers_id); ?>" type="video/mp4">
+
+                                </video>
+                                <?php
+                            }
+                        ?>
                     </span>
                         <h3 class="products__item-title"><?php the_title();?></h3>
                     </a>

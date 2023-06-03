@@ -247,6 +247,8 @@
         color: #191919;
         width: 100%;
         margin-top: 2.3rem;
+        max-height: 126px;
+        resize: none;
       }
       .submit{
         display: inline-flex;
@@ -285,6 +287,7 @@
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          transform: translateY(4px);
         }
       }
       .wpcf7-submit{

@@ -1,41 +1,41 @@
+<?php
+$post_id = get_the_ID();
+?>
 <section class="content-company-2row">
     <div class="content-company-2row__container main-container">
         <h2 class="content-company-2row__title big-title">
-            <span>Преимущества</span>
-            <span>компании</span>
+            <?php echo the_field("zagolovok_bloka_preimushhestva", $post_id); ?>
         </h2>
         <div class="content-company-2row__wrapper">
             <ul class="content-company-2row__list">
-                <li class="content-company-2row__item">
-                    <h3 class="content-company-2row__item-title">
-                        Ми виробляємо великий
-                    </h3>
-                    <p>ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів для кондитерської, хлібопекарської, молочної промисловості та виробництва морозива.</p>
-                </li>
-                <li class="content-company-2row__item">
-                    <h3 class="content-company-2row__item-title">
-                        Ми виробляємо великий
-                    </h3>
-                    <p>ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів для кондитерської, хлібопекарської, молочної промисловості та виробництва морозива.</p>
-                </li>
-                <div class="content-company-2row__item padding-left padding-right content-company-2row__item-else">
-                    <img class="content-company-2row__item-img" src="<?php echo get_template_directory_uri() . '/img/content-company-2row/top.jpg' ?>" alt="main">
-                </div>
-                <div class="content-company-2row__item padding-right content-company-2row__item-else">
-                    <img class="content-company-2row__item-img" src="<?php echo get_template_directory_uri() . '/img/content-company-2row/bottom.jpg' ?>" alt="main">
-                </div>
-                <li class="content-company-2row__item">
-                    <h3 class="content-company-2row__item-title">
-                        Ми виробляємо великий
-                    </h3>
-                    <p>ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів для кондитерської, хлібопекарської, молочної промисловості та виробництва морозива.</p>
-                </li>
-                <li class="content-company-2row__item">
-                    <h3 class="content-company-2row__item-title">
-                        Ми виробляємо великий
-                    </h3>
-                    <p>ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів для кондитерської, хлібопекарської, молочної промисловості та виробництва морозива.</p>
-                </li>
+                <?php
+                    $counter = 1;
+                    if( have_rows('perechen_preimushhestv') ):
+                        while( have_rows('perechen_preimushhestv') ) : the_row();
+                            $title = get_sub_field('zagolovok_preimushhestva');
+                            $content = get_sub_field('opisanie_preimushhestva');
+                            ?>
+                            <li class="content-company-2row__item">
+                                <h3 class="content-company-2row__item-title">
+                                    <?php echo $title;?>
+                                </h3>
+                                <p> <?php echo $content;?></p>
+                            </li>
+                            <?php
+                            if ($counter == 2){
+                                ?>
+                                <div class="content-company-2row__item padding-left padding-right content-company-2row__item-else">
+                                    <img class="content-company-2row__item-img" src="<?php echo the_field("verhnyaya_fotografiya", $post_id); ?>" alt="main">
+                                </div>
+                                <div class="content-company-2row__item padding-right content-company-2row__item-else">
+                                    <img class="content-company-2row__item-img" src="<?php echo the_field("nizhnyaya_fotografiya", $post_id); ?>" alt="main">
+                                </div>
+                                <?php
+                            }
+                            $counter++;
+                        endwhile;
+                    endif;
+                ?>
             </ul>
         </div>
         <div class="news__bottom">

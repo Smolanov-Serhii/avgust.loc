@@ -117,6 +117,7 @@
     }
   }
   &__lnk{
+    z-index: 2;
     display: inline-block;
     position: absolute;
     top: 61vw * $px;

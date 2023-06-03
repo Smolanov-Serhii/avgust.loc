@@ -55,7 +55,8 @@
       margin-right: -169px;
       a{
         display: block;
-        height: 745vw * $px;
+        max-height: 745vw * $px;
+        height: auto;
         width: 100%;
       }
       @media all and (max-width: 500px){

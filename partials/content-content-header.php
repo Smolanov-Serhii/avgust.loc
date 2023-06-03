@@ -15,8 +15,9 @@
                     if (get_field("vydeo_esly_est", $post_id)){
                         ?>
                             <div class="content-header__image-main">
-                                <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo the_field("kartynka_v_banner", $post_id); ?>" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">
-                                    <source data-src="<?php echo the_field("vydeo_esly_est", $post_id); ?>" type="video/mp4">
+                                <video class="" autoplay muted loop playsinline poster="<?php echo the_field("kartynka_v_banner", $post_id); ?>" data-desktop-vid="<?php echo the_field("vydeo_esly_est", $post_id); ?>" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200"
+                                    data-tablet-vid="<?php echo the_field('video_esli_est_planshet', $post_id) ?>"
+                                    data-mobile-vid="<?php echo the_field('video_esli_est_mobajl', $post_id) ?>">
                                 </video>
                             </div>
                         <?php

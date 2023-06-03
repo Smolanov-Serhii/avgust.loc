@@ -3,9 +3,10 @@
         <?php
             if(get_field('vydeo_fajl', $post_id)){
                 ?>
-                    <video autoplay="" muted="" loop="" id="myVideo">
-                        <source src="<?php echo the_field('vydeo_fajl', $post_id) ?>" type="video/mp4">
-                    </video>
+                <video autoplay="" muted="" loop="" id="myVideo" data-desktop-vid="<?php echo the_field('vydeo_fajl', $post_id) ?>"
+                       data-tablet-vid="<?php echo the_field('vydeo_fajl_tablet', $post_id) ?>"
+                       data-mobile-vid="<?php echo the_field('vydeo_fajl_mobail', $post_id) ?>">
+                </video>
                 <?php
             } else {
                 ?>
@@ -18,3 +19,4 @@
         </a>
     </div>
 </section>
+
