@@ -58,6 +58,9 @@
         max-height: 745vw * $px;
         height: auto;
         width: 100%;
+        @media all and (max-width: 500px){
+          max-height: none;
+        }
       }
       @media all and (max-width: 500px){
         width: 100%;

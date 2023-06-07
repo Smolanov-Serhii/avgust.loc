@@ -366,7 +366,7 @@ $(document).ready(function () {
     }
     videoSize();
 
-    $( ".lazy-video" ).each(function() {
+    $( "body:not(.home) .lazy-video" ).each(function() {
         $(this).mouseenter(
             function()
             {
