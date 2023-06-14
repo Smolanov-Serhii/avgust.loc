@@ -69,15 +69,25 @@
     @media all and (max-width: 768px){
       display: none;
     }
+    video{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
   &__br{
     right: 0;
     bottom: 164vw * $px;
-    width: 207vw * $px;
+    width: 169vw * $px;
     height: 207vw * $px;
     z-index: 2;
     @media all and (max-width: 768px){
       display: none;
+    }
+    video{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
   &__image{

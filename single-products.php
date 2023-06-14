@@ -251,10 +251,13 @@ $post_id = get_the_ID();
                                     <?php
                                     $postpers_id = get_the_ID();
                                     $image = get_field('kartinka_na_rozvoryashhuyu_kvadratnaya', $postpers_id);
+                                    $video = get_field('vydeo_fajl_mp4', $postpers_id);
                                     ?>
                                     <div class="popular__item swiper-slide">
-                                        <a href="<?php the_permalink();?>>">
-                                            <img class="popular__item-img" src="<?php echo $image; ?>" alt="<?php the_title();?>">
+                                        <a href="<?php the_permalink();?>">
+                                            <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo $image; ?>">
+                                                <source data-src="<?php echo $video ?>" type="video/mp4">
+                                            </video>
                                             <h3 class="popular__item-title"><?php the_title();?></h3>
                                         </a>
                                     </div>
