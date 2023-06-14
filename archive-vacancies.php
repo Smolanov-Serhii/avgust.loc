@@ -140,7 +140,7 @@ $post_id = 112;
                     if ( $MY_QUERY->have_posts() ) {
                         while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post();
                             ?>
-                            <a href="<?php the_permalink(); ?>" class="vacancies__item" target="_blank"><?php the_title(); ?></a>
+                            <a href="<?php the_permalink(); ?>" class="vacancies__item"><?php the_title(); ?></a>
                         <?php endwhile;
                         } else {
                         ?>

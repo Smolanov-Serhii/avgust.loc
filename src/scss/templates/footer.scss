@@ -136,14 +136,28 @@
     height: 100%;
     background-color: rgba(0,0,0,0.8);
     z-index: 999;
+    //&-container{
+    //  padding-right: 20px;
+    //  overflow-y: scroll;
+    //}
+    .wpcf7-form-control-wrap{
+      position: relative;
+      .wpcf7-not-valid-tip{
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        font-size: 14px;
+      }
+    }
     &-modal{
       display: block;
       background-color: #FFFFFF;
-      padding: 60px 110px 60px;
+      padding: 40px 60px 40px 60px;
       position: relative;
-      max-width: 687px;
+      max-width: 600px;
+      //max-width: 687px;
       width: calc(100vw - 100px);
-      max-height: calc(100vh - 100px);
+      max-height: calc(100vh - 40px);
       @media all and (max-width: 768px){
         width: calc(100vw - 70px);
         overflow: scroll;
@@ -154,10 +168,11 @@
         padding: 40px 20px 40px 20px;
       }
       h2{
-
+        margin-bottom: 20px;
       }
       .accept{
-        margin-top: 5.5rem;
+        margin-top: 20px;
+        //margin-top: 5.5rem;
         font-weight: 400;
         display: flex;
         margin-bottom: 0;
@@ -212,8 +227,8 @@
       }
       .modal-close{
         position: absolute;
-        top: 4.3rem;
-        right: 4.3rem;
+        top: 2.3rem;
+        right: 2.3rem;
         cursor: pointer;
         @media all and (max-width: 500px){
           top: 20px;

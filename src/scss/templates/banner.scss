@@ -78,6 +78,10 @@
     display: flex;
     justify-content: center;
     z-index: 0;
+    .swiper-slide{
+      max-height: 80vh;
+      align-items: flex-start;
+    }
     @media all and (max-width: 1024px){
       position: static;
       margin: auto;

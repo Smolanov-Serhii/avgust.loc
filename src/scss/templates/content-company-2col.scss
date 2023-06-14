@@ -12,12 +12,20 @@
   }
   &__col{
     width: 50%;
+    height: 759vw * $px;
+    max-height: 759px;
     @media all and (max-width: 1024px){
       width: 100%;
+      height: auto;
     }
     img{
       width: 100%;
       height: auto;
+      @media all and (min-width: 1025px){
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
     &.padding-left{
       padding-top: 70vw * $px;
@@ -30,7 +38,6 @@
         padding-left: 50vw * $px;
         position: relative;
         margin-bottom: 57vw * $px;
-        font-family: 'Futura PT';
         font-style: normal;
         font-weight: 400;
         font-size: 1.6rem;

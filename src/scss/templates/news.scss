@@ -50,6 +50,11 @@
   &__item{
     padding: 42vw * $px 0;
     position: relative;
+    @media all and (min-width: 769px){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     @media all and (max-width: 768px){
       padding: 50px 0;
     }
@@ -94,6 +99,9 @@
       margin-bottom: 19vw * $px;
       z-index: 1;
       position: relative;
+      @media all and (min-width: 769px){
+        margin-bottom: 0;
+      }
       @media all and (max-width: 768px){
         margin-bottom: 29px;
       }
@@ -110,7 +118,7 @@
       }
     }
     &-excerpt{
-      font-family: 'Futura PT';
+      //font-family: 'Futura PT';
       font-style: normal;
       font-weight: 400;
       font-size: 1.6rem;
@@ -125,12 +133,16 @@
       }
     }
     &-param{
-      position: absolute;
+      //position: absolute;
       right: 0;
       top: 50vw * $px;
       display: flex;
-      flex-direction: column;
+      //flex-direction: column;
       z-index: 1;
+      @media all and (min-width: 769px){
+        display: flex;
+        align-items: center;
+      }
       @media all and (max-width: 768px){
         position: static;
         flex-direction: row-reverse;
@@ -140,7 +152,7 @@
       }
     }
     &-date{
-      font-family: 'Futura PT';
+      //font-family: 'Futura PT';
       font-style: normal;
       font-weight: 500;
       font-size: 1.4rem;
@@ -151,6 +163,10 @@
       text-align: right;
       transition: $transition;
       z-index: 1;
+      @media all and (min-width: 769px){
+       margin-right: 20px;
+        margin-bottom: 0;
+      }
       @media all and (max-width: 768px){
         margin-left: 20px;
         margin-bottom: 0;
@@ -168,6 +184,10 @@
       transition: $transition;
       z-index: 1;
       text-decoration: none;
+      min-width: 100px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       @media all and (max-width: 768px){
         font-size: 14px;
       }
@@ -193,6 +213,37 @@
     @media all and (max-width: 500px){
       width: 114px;
       height: 114px;
+    }
+  }
+}
+.home {
+  .news{
+    &__item{
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 200px;
+      @media all and (max-width: 500px){
+        padding-right: 0;
+      }
+      &-param{
+        position: absolute;
+        @media all and (max-width: 768px){
+          flex-direction: column-reverse;
+        }
+        @media all and (max-width: 500px){
+          position: static;
+          flex-direction: row-reverse;
+        }
+      }
+      &-date{
+        @media all and (max-width: 768px){
+          margin-right: 20px;
+          margin-top: 20px;
+        }
+        @media all and (max-width: 500px){
+          margin-top: 0;
+        }
+      }
     }
   }
 }
