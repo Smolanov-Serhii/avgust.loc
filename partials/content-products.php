@@ -37,7 +37,7 @@
                     <a href="<?php the_permalink();?>" class="products__item <?php if(the_field("vydeo_dlya_razvodashhyh_mp4", $postpers_id)) {echo 'video-has';}?>">
                     <span class="products__item-prev">
                         <img class="products__item-bg" src="<?php echo $image; ?>" alt="<?php the_title();?>">
-                        <img class="products__item-shtamp" src="<?php echo get_template_directory_uri() . '/img/products/shtamp.svg' ?>" alt="<?php the_title();?>">
+<!--                        <img class="products__item-shtamp" src="--><?php //echo get_template_directory_uri() . '/img/products/shtamp.svg' ?><!--" alt="--><?php //the_title();?><!--">-->
                         <?php
                             if(get_field("vydeo_dlya_razvodashhyh_mp4", $postpers_id)){
                                 ?>
@@ -69,9 +69,9 @@
     </div>
     <div class="news__bottom">
         <div class="news__button rotation">
-            <a href="<?php echo get_home_url() . '/products'; ?>">
-                <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
-            </a>
+                <span class="js-modal-text">
+                     <img src="<?php echo the_field('pechat_otpravit_zapros', 'option') ?>" alt="center">
+                </span>
         </div>
     </div>
 </section>

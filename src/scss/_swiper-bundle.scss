@@ -17,7 +17,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #b78d41;
 }
 .swiper-container {
   margin-left: auto;
@@ -210,6 +210,8 @@
   */
 }
 .swiper-pagination {
+  position: absolute;
+  bottom: 40px;
   margin-top: 47px;
   text-align: center;
   transition: 300ms opacity;
@@ -223,9 +225,12 @@
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 10px;
+  bottom: 40px;
   left: 0;
   width: 100%;
+  @media all and (max-width: 768px){
+    bottom: 20px;
+  }
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
@@ -277,7 +282,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #00CFFD;
+  background: #b78d41;
   width: 31px;
   height: 10px;
 }
@@ -542,7 +547,7 @@ button.swiper-pagination-bullet {
 }
 .pets .swiper-button-next:after{
   content: "";
-  background-image: url('image/next-swiper.svg');
+  //background-image: url('image/next-swiper.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -552,7 +557,7 @@ button.swiper-pagination-bullet {
 }
 .pets .swiper-button-prev:after{
   content: "";
-  background-image: url('image/prev-swiper.svg');
+  //background-image: url('image/prev-swiper.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -571,7 +576,7 @@ button.swiper-pagination-bullet {
 
 .awards .swiper-button-next:after{
   content: "";
-  background-image: url('image/awards-next.svg');
+  //background-image: url('image/awards-next.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -581,7 +586,7 @@ button.swiper-pagination-bullet {
 }
 .awards .swiper-button-prev:after{
   content: "";
-  background-image: url('image/award-prev.svg');
+  //background-image: url('image/award-prev.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

@@ -23,7 +23,40 @@ $post_id = get_the_ID();
                 </div>
 
                 <div class="recipes__banner big-container">
-                    <?php the_post_thumbnail();?>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <?php
+                                if( have_rows('banner-slider') ):
+                                    while( have_rows('banner-slider') ) : the_row();
+                                        $type = get_sub_field('typ_fajla');
+                                        $file = get_sub_field('slide-file');
+                                        $alt = get_sub_field('slide-alt');
+                                        ?>
+                                        <div class="swiper-slide">
+                                            <?php
+                                                if($type == 'video'){
+                                                    ?>
+                                                    <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo $file;?>" alt="<?php echo $alt;?>">
+                                                        <source data-src="<?php echo $file ?>" type="video/mp4">
+                                                    </video>
+                                                    <?php
+                                                } else {
+                                                    ?>
+                                                        <img src="<?php echo $file ?>" alt="<?php echo $alt;?>">
+                                                    <?php
+                                                }
+                                            ?>
+                                        </div>
+                                        <?php
+                                    endwhile;
+                                endif;
+                            ?>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                     <a href="<?php echo get_home_url() . '/products'; ?>" class="recipes__lnk rotation">
                         <img src="<?php echo get_template_directory_uri() . '/img/page-recipes/shtamp.svg' ?>" alt="center">
                     </a>
@@ -67,11 +100,14 @@ $post_id = get_the_ID();
                             $postpers_id = get_the_ID();
                             $image = get_field('kvadratne_zobrazhennya_dlya_czikavi_reczepty', $postpers_id);
                             $name = get_field('produkt_dlya_reczeptu', $postpers_id);
+                            $video = get_field('vydeo_na_razvodyashhuyu', $postpers_id);
 //                            $services = get_the_terms( $postpers_id, 'trenirovki' );
                             ?>
                             <div class="interest__item">
                                 <div class="interest__item-image">
-                                    <img src="<?php echo $image;?>" alt="<?php echo $name;?>">
+                                    <video class="lazy lazy-video" autoplay muted loop playsinline poster="<?php echo $image;?>" alt="<?php echo $name;?>">
+                                        <source data-src="<?php echo $video ?>" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="interest__item-content">
                                     <h3 class="interest__item-title">

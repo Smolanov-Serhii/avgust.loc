@@ -49,8 +49,10 @@ $post_id = get_the_ID();
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                         <?php endif; ?>
                     </div>
-                    <div href="<?php echo get_home_url() . '/products'; ?>" class="products-single__lnk rotation js-modal-text">
-                        <img src="<?php echo the_field('pechat_otpravit_zapros', 'option') ?>" alt="center">
+                    <div class="products-single__lnk rotation">
+                        <span class="js-modal-file">
+                            <img src="<?php echo the_field('pechat_otpravit_zapros', 'option') ?>" alt="center">
+                        </span>
                     </div>
                 </div>
             </div>

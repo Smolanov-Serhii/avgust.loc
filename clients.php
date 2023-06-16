@@ -70,6 +70,11 @@ $post_id = get_the_ID();
                         <img src="<?php echo the_field("kartinka_pod_zagolovkom", $post_id); ?>" alt="center">
                         <div class="wrapper">
                             <?php echo the_field("pervoe_opisanie", $post_id); ?>
+                            <div class="products-single__lnk rotation">
+                                <span class="js-modal-file">
+                                    <img src="<?php echo the_field('pechat_otpravit_zapros', 'option') ?>" alt="center">
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

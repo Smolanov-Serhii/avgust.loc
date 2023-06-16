@@ -66,9 +66,9 @@ $post_id = 112;
                 </div>
             </div>
             <div class="banner__button rotation">
-                <a href="<?php echo get_home_url() . '/products'; ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/img/banner/button.svg' ?>" alt="center">
-                </a>
+                    <span class="js-modal-file">
+                        <img src="<?php echo the_field('pechat_otpravit_zapros', 'option') ?>" alt="center">
+                    </span>
             </div>
             <div class="banner__center" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="300">
                 <div class="swiper-container mouse-parallax-bg" id="swiper__ct" data-xset="5" data-yset="5">

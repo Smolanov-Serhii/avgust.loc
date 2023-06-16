@@ -104,6 +104,23 @@ $(document).ready(function () {
         }
     }
 
+    if ($('.recipes-single').length) {
+        var SwiperBanner = new Swiper(".recipes__banner .swiper-container", {
+            slidesPerView: 1,
+            loop: false,
+            spaceBetween: 20,
+            pagination: {
+                el: ".recipes-single .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.recipes-single .swiper-button-next',
+                prevEl: '.recipes-single .swiper-button-prev',
+            },
+
+        });
+    }
+
 //
 //     var $menu = $(".header");
 //     $(window).scroll(function () {
