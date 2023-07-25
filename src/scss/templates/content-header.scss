@@ -119,6 +119,9 @@
     @media all and (max-width: 900px){
       font-size: 60px;
     }
+    @media all and (max-width: 440px){
+      font-size: 48px;
+    }
     span{
       text-align: left;
       &:first-child{
