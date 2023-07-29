@@ -3,6 +3,10 @@
   .news__bottom{
     padding-bottom: 104vw * $px;
   }
+  .product__block-item a, .product__block-item p{
+    color: #000000;
+    font-size: 14px;
+  }
   &__banner{
     padding-top: 228vw * $px;
     padding-bottom: 235vw * $px;
