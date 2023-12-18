@@ -61,6 +61,8 @@
       }
       input{
         font-size: 16px;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
       }
     }
     .header__right{
@@ -109,6 +111,8 @@
       line-height: 2.1rem;
       color: #191919;
       background-color: transparent;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
     }
     button{
       border: none;
@@ -233,7 +237,6 @@
               }
               @media all and (min-width: 1025px){
                 white-space: nowrap;
-                font-family: 'FuturaPT-Book';
                 color: #191919;
                 line-height: 237%;
                 font-weight: 400;
@@ -251,8 +254,8 @@
         font-size: 1.6rem;
         line-height: 2.1rem;
         color: #191919;
-        font-family: 'FuturaPT-Demi';
         padding: 8px 0;
+        font-style: italic;
       }
     }
   }
@@ -260,6 +263,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    font-style: italic;
     @media all and (max-width: 1024px){
       display: none;
     }
@@ -303,6 +307,7 @@
         margin-left: 0;
         text-transform: uppercase;
         margin-right: 19px;
+        font-style: italic;
       }
     }
     .selectric-items{
@@ -310,7 +315,6 @@
       box-shadow: none;
       background-color: transparent;
       li{
-        font-family: "FuturaPT-Book";
         font-style: normal;
         font-weight: 500;
         font-size: 1.6rem;

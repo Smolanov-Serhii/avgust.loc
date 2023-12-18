@@ -58,8 +58,7 @@
         }
       }
       a{
-        font-family: 'FuturaPT-Demi';
-        font-style: normal;
+        font-style: italic;
         font-weight: 600;
         font-size: 1.6rem;
         line-height: 3.05rem;
@@ -82,8 +81,7 @@
     }
 
     p{
-      font-family: 'FuturaPT-Demi';
-      font-style: normal;
+      font-style: italic;
       font-weight: 600;
       font-size: 1.6rem;
       line-height: 3rem;
@@ -96,10 +94,13 @@
         margin-bottom: 2rem;
       }
     }
+    a{
+      font-style: italic;
+    }
   }
   &__done{
     font-family: 'Futura PT';
-    font-style: normal;
+    font-style: italic;
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 3rem;

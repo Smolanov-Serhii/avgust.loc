@@ -161,13 +161,12 @@
     }
   }
   &__columns{
-    width: 50%;
+    width: calc(50% - 15px);
     @media all and (max-width: 1024px){
       width: 100%;
     }
   }
   &__title{
-    font-family: 'Playfaic';
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
@@ -184,7 +183,6 @@
     }
   }
   &__mail{
-    font-family: 'Futura PT';
     font-style: normal;
     font-weight: 500;
     font-size: 1.6rem;
@@ -215,7 +213,6 @@
   }
   &__tel{
     margin-bottom: 1.4rem;
-    font-family: 'Futura PT';
     font-style: normal;
     font-weight: 500;
     font-size: 1.6rem;

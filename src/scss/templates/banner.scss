@@ -138,6 +138,10 @@
     bottom: 192vw * $px;
     left: 0;
     width: 100%;
+    @media all and (max-width: 1024px){
+      z-index: 2;
+
+    }
     @media all and (max-width: 500px){
       bottom: 37%;
     }

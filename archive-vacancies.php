@@ -127,7 +127,7 @@ $post_id = 112;
         <section class="vacancies">
             <div class="vacancies__container main-container">
                 <h2 class="about__title section-title">
-                    Вакансії
+                    <?php echo the_field('slovo_vakansyy', 'options') ?>
                 </h2>
                 <div class="vacancies__list">
                     <?php

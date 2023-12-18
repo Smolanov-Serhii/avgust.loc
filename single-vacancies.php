@@ -89,7 +89,7 @@ $post_id = get_the_ID();
         <section class="vacancies">
             <div class="vacancies__container main-container">
                 <h2 class="about__title section-title">
-                    Інші вакансії
+                    <?php echo the_field('nadpys_drugye_vakansyy', 'options') ?>
                 </h2>
                 <div class="vacancies__list">
                     <?php

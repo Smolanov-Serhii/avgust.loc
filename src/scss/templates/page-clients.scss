@@ -124,6 +124,9 @@
             display: none;
           }
         }
+        li{
+          font-style: italic;
+        }
         h2{
           padding-top: 254vw * $px;
           font-family: 'Playfair Display';
@@ -223,6 +226,7 @@
           margin-bottom: 0;
           color: #B78D41;
           padding-left: 22px;
+          font-style: italic;
           @media all and (max-width: 1024px){
             font-size: 14px;
           }
@@ -286,6 +290,7 @@
           margin-bottom: 0;
           color: #B78D41;
           padding-left: 22px;
+          font-style: italic;
           @media all and (max-width: 1024px){
             font-size: 14px;
           }
@@ -378,6 +383,7 @@
           margin-bottom: 0;
           color: #B78D41;
           padding-left: 22px;
+          font-style: italic;
           @media all and (max-width: 1024px){
             font-size: 14px;
           }

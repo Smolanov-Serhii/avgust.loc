@@ -119,7 +119,7 @@
                 var ul = document.querySelector('.news__list');
                 for (var i = ul.children.length; i >= 0; i--) {
                     ul.appendChild(ul.children[Math.random() * i | 0]);
-                }
+                };
             </script>
             <div class="news__bottom">
                 <div class="news__button rotation">

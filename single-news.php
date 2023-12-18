@@ -28,7 +28,7 @@ $post_id = get_the_ID();
                     <div class="recipes-single__content-left product__w50">
                         <div class="media-soc-lnk">
                             <h2 class="block-title">
-                                Поділитись:
+                                <?php echo the_field("nadpys_podelytsya", 'option')?>
                             </h2>
                             <!-- Facebook -->
                             <a target="_blank" rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>">
@@ -56,7 +56,22 @@ $post_id = get_the_ID();
                         <div class="recipes-single__content-column recipes-single__first-block">
                             <?php echo the_field("opysanye_stranycz", $post_id); ?>
                         </div>
-                        <img src="<?php echo the_field("vtoroe_yzobrazhenye", $post_id)?>" alt="<?php echo the_field("zagolovok_stranycz", $post_id); ?>">
+                        <?php
+                            if (get_field("vtoroe_yzobrazhenye", $post_id)){
+                                ?>
+                                <img src="<?php echo the_field("vtoroe_yzobrazhenye", $post_id)?>" alt="<?php echo the_field("zagolovok_stranycz", $post_id); ?>">
+                                <?php
+                            }
+                        ?>
+                        <?php
+                        if (get_field("sslka_na_yutub", $post_id)){
+                            ?>
+                            <div class="video-container">
+                                <?php echo the_field("sslka_na_yutub", $post_id)?>
+                            </div>
+                            <?php
+                        }
+                        ?>
                         <div class="recipes-single__content-column">
                             <?php echo the_field("vtoroj_blok_opysanye", $post_id); ?>
                         </div>

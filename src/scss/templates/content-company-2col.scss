@@ -38,11 +38,11 @@
         padding-left: 50vw * $px;
         position: relative;
         margin-bottom: 57vw * $px;
-        font-style: normal;
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 2.2rem;
         color: #191919;
+        font-style: italic;
         @media all and (max-width: 1024px){
           padding-left: 50px;
         }

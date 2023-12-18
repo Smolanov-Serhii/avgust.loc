@@ -725,7 +725,7 @@ if( function_exists('acf_add_options_page') ) {
     ));
     acf_add_options_sub_page(array(
         'page_title' 	=> 'Параметры Контакты',
-        'menu_title'	=> 'Контакты',
+        'menu_title'	=> 'Контакт',
         'parent_slug'	=> 'theme-general-settings',
     ));
 

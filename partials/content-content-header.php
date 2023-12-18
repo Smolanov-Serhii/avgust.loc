@@ -53,7 +53,6 @@
             </div>
             <div class="about__desc">
                 <?php echo the_field("opysanye_bloka_baner", $post_id); ?>
-                <p><img src="<?php echo get_template_directory_uri() . '/img/about/about-digits.svg' ?>" alt="center"></p>
             </div>
         </div>
     </div>

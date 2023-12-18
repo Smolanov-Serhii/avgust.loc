@@ -36,8 +36,7 @@ $post_id = get_the_ID();
                                 </video>
                             </a>
                             <div class="producttitle__desc" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
-                                <p>ТМ АВГУСТ — український виробник широкого асортименту харчових інгредієнтів для кондитерської, хлібопекарської, молочної промисловості та виробництва морозива.</p>
-                                <p>Компанія була заснована в 1998 році як підприємство європейського зразка для випуску високоякісних інгредієнтів для харчової промисловості.</p>
+                                <?php echo the_field("opysanye_kondyterska_hlibopekarska_molochna", $post_id); ?>
                             </div>
                             <?php
                         }
