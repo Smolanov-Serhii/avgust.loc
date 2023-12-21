@@ -337,5 +337,8 @@
 .post-type-archive-news{
   .header__nav .menu li.menu-item-has-children .sub-menu{
     background-color: #FFFFFF;
+    @media all and (max-width: 1024px){
+      background-color: transparent;
+    }
   }
 }
