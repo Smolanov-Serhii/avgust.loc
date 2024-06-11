@@ -20,7 +20,7 @@ $post_id = get_the_ID();
                             <?php echo the_field("zagolovok_produktu", $post_id); ?>
                         </h1>
                         <div class="products-single__list">
-                            <?php echo the_field("perechen_typov", $post_id); ?>
+                            <p><?php echo the_field("perechen_typov", $post_id); ?></p>
                         </div>
                         <div class="products-single__sostav">
                             <?php
@@ -66,9 +66,16 @@ $post_id = get_the_ID();
                             </a>
                         </div>
                         <div class="product-else__wrapper product__w50">
-                            <h2 class="product__block-title block-title">
-                                <?php echo the_field("zagolovok_bloku_smaky", $post_id); ?>
-                            </h2>
+                            <?php
+                                if (get_field("zagolovok_bloku_smaky", $post_id)){
+                                    ?>
+                                    <h2 class="product__block-title block-title">
+                                        <?php echo the_field("zagolovok_bloku_smaky", $post_id); ?>
+                                    </h2>
+                                    <?php
+                                }
+                            ?>
+
                             <div class="product__block">
                                 <?php
                                 if( have_rows('perelik_smakiv') ):
@@ -117,13 +124,19 @@ $post_id = get_the_ID();
                     <div class="product-about__container main-container">
                         <div class="product__w50">
                             <a href="" class="about__marker">
-                                <?php echo the_field("zagolovok_bloku_smaky", $post_id); ?>
+                                <?php echo the_field("nadpis_sleva_ot_bloka_opisanie", $post_id); ?>
                             </a>
                         </div>
                         <div class="product-else__wrapper product__w50">
-                            <h2 class="product__block-title block-title">
-                                <?php echo the_field("zagolovok_opys_produktu", $post_id); ?>
-                            </h2>
+                            <?php
+                            if (get_field("zagolovok_opys_produktu", $post_id)){
+                                ?>
+                                <h2 class="product__block-title block-title">
+                                    <?php echo the_field("zagolovok_opys_produktu", $post_id); ?>
+                                </h2>
+                                <?php
+                            }
+                            ?>
                             <div class="product-about__block product__block-column">
                                 <?php echo the_field("opys_v_dvi_kolonky_opys_produktu", $post_id); ?>
                             </div>

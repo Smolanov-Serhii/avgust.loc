@@ -11,7 +11,7 @@ $post_id = get_the_ID();
         <div class="producttitle__content">
                 <?php
                 $counter = 1;
-                $post_objects = get_field('vberyte_try_tovara_dlya_otobrazhenyya', $post_id);
+                $post_objects = get_field('toar_dlya_tboka', $post_id);
                 if( $post_objects ): ?>
                     <?php foreach( $post_objects as $post): ?>
                         <?php setup_postdata($post); ?>

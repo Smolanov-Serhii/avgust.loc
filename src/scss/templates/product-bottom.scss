@@ -34,15 +34,35 @@
       @media all and (max-width: 900px){
         margin-bottom: 76px;
       }
+      h1,h2,h3,h4,h5{
+        color: #191919;
+        font-family: "Playfair Display";
+        font-size: 18px;
+      }
+      ul, ol{
+        margin-left: 2em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+      }
+      li{
+        font-family: 'Futura PT';
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 138.52%;
+        color: #000;
+        margin-bottom: 0;
+        list-style: disc;
+      }
     }
     &-pluses{
       margin-top: 140vw * $px;
       @media all and (max-width: 500px){
-        margin-right: -20px;
-        margin-left: -20px;
-        width: calc(100% + 40px);
+        //margin-right: -20px;
+        //margin-left: -20px;
+        //width: calc(100% + 40px);
       }
       ul, ol{
+        margin-top: 2em;
         margin-bottom: 0;
         background-color: #FFFFFF;
         padding: 3.1rem 2.9rem 3.1rem 2.9rem;

@@ -99,6 +99,7 @@
       margin-bottom: 19vw * $px;
       z-index: 1;
       position: relative;
+      text-transform: uppercase;
       @media all and (min-width: 769px){
         margin-bottom: 0;
       }

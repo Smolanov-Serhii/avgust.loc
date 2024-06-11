@@ -47,8 +47,8 @@ get_header();
                                     </div>
                                     <div class="news__item-param">
                                         <div class="news__item-date">
-<!--                                            --><?php //the_date('d F');?>
-                                            27 січня 2023
+                                            <?php the_date('d F');?>
+
                                         </div>
                                         <span class="news__item-tag">
                                             <?php

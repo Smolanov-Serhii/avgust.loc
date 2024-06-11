@@ -1,11 +1,24 @@
 .product{
   &-about{
     padding-bottom: 90vw * $px;
+    position: relative;
     &__container{
       display: flex;
       @media all and (max-width: 768px){
         flex-wrap: wrap;
       }
+    }
+    ul{
+      margin-left: 2em;
+      margin-bottom: 2em;
+    }
+    li{
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 138.52%;
+      color: #000;
+      margin-bottom: 0;
+      list-style: disc;
     }
   }
   &__block{
@@ -24,6 +37,11 @@
       }
       p{
         margin-bottom: 1em;
+      }
+      h1,h2,h3,h4,h5{
+        color: #191919;
+        font-family: "Playfair Display";
+        font-size: 18px;
       }
     }
   }
