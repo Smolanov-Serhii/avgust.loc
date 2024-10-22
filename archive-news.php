@@ -34,6 +34,8 @@ get_header();
                                 $postpers_id = get_the_ID();
                                 $category = get_the_terms( $postpers_id, 'news-category' );
                                 $image = get_field('kartinka_na_rozvoryashhuyu_kvadratnaya', $postpers_id);
+                                $visibleOn = get_field('otobrazhat_ly_na_stranycze_truefalse', $postpers_id);
+                                if ($visibleOn != "false"){
                                 ?>
 
                                 <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
@@ -43,7 +45,7 @@ get_header();
                                         </a>
                                     </h3>
                                     <div class="news__item-excerpt">
-                                        <?php echo $excerpt;?>
+                                        <?php the_excerpt();?>
                                     </div>
                                     <div class="news__item-param">
                                         <div class="news__item-date">
@@ -64,6 +66,7 @@ get_header();
                                 </li>
 
                             <?php }
+                                }
                         }
                         wp_reset_query(); ?>
                     </ul>

@@ -37,6 +37,8 @@ $post_id = get_the_ID();
                             $postpers_id = get_the_ID();
                             $excerpt = get_field('kratkoe_opysanye_na_rozvodyashhuyu', $postpers_id);
                             $post_type = get_post_type( $postpers_id );
+                            $visibleOn = get_field('otobrazhat_ly_na_stranycze_truefalse', $postpers_id);
+                            if ($visibleOn != "false"){
                             ?>
                             <div class="interest__item">
                                 <div class="interest__item-image">
@@ -60,7 +62,8 @@ $post_id = get_the_ID();
                                     </a>
                                 </div>
                             </div>
-                        <?php endwhile;
+                            <?php }
+                            endwhile;
                     endif;
                     ?>
                     <div class="pagination">

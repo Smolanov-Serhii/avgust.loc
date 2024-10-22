@@ -32,6 +32,8 @@
                     $my_query->the_post();
                     $postpers_id = get_the_ID();
                     $image = get_field('kartinka_na_rozvoryashhuyu_kvadratnaya', $postpers_id);
+                    $visibleOn = get_field('otobrazhat_ly_na_stranycze_truefalse', $postpers_id);
+                    if ($visibleOn != "false"){
                     ?>
 
                     <a href="<?php the_permalink();?>" class="products__item <?php if(the_field("vydeo_dlya_razvodashhyh_mp4", $postpers_id)) {echo 'video-has';}?>">
@@ -52,6 +54,7 @@
                     </a>
 
                 <?php }
+                }
             }
             wp_reset_query(); ?>
 <!--            <div class="products__item add-item"></div>-->
