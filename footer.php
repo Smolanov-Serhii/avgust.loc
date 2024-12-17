@@ -66,8 +66,8 @@
             </div>
         </div>
         <div class="success-send" id="success-send" style="display: none">
-            <div class="success-send__container">
-                Сообщение отправлено
+            <div class="success-send__container" style="text-align: center">
+                <?php echo the_field('nadpys_spasybo_vash_zapros_otpravlen_uspeshno_m_skoro_s_vamy_svyazhemsya', 'option') ?>
             </div>
         </div>
 	</footer>
