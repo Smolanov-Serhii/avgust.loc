@@ -30,7 +30,7 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p class="section-title">За вашим запитом нічого не <i>знайдено</i>.</p>
+			<p class="section-title"><?php echo the_field('tekst_za_vashym_zapytom_nichogo_ne_znajdeno', 'option'); ?></p>
             <form role="search" method="get" id="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="input-group mb-3">
                 <div class="header__search-group">
                     <input type="search" class="form-control border-0" placeholder="Пошук" aria-label="search nico" name="s" id="search-input" value="<?php echo esc_attr( get_search_query() ); ?>">

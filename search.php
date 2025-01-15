@@ -15,7 +15,7 @@ get_header();
             <div class="news__container main-container">
                 <div class="news__header" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                     <h2 class="news__title">
-                        Пошук
+                        <?php echo the_field('slovo_poysk', 'option'); ?>
                     </h2>
                 </div>
                 <div class="news__content">
@@ -23,7 +23,7 @@ get_header();
                         <div class="search__container">
                             <?php if ( have_posts() ) : ?>
                                 <h2 class="news__title">
-                                    за вашим запитом <i>знайдено:</i>
+                                    <?php echo the_field('tekst_za_vashym_zapytom_iznajdenoi', 'option'); ?>
                                 </h2>
                                 <?php
                                 while ( have_posts() ) :

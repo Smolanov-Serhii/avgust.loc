@@ -114,13 +114,15 @@ $post_id = get_the_ID();
                                 ?>
 
                                 <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
-                                    <h3 class="news__item-title">
-                                        <a href="<?php the_permalink();?>">
-                                            <?php the_title();?>
-                                        </a>
-                                    </h3>
-                                    <div class="news__item-excerpt">
-                                        <?php echo $excerpt;?>
+                                    <div class="news__item-inner">
+                                        <h3 class="news__item-title">
+                                            <a href="<?php the_permalink();?>">
+                                                <?php the_title();?>
+                                            </a>
+                                        </h3>
+                                        <div class="news__item-excerpt">
+                                            <?php echo $excerpt;?>
+                                        </div>
                                     </div>
                                     <div class="news__item-param">
                                         <div class="news__item-date">
@@ -140,7 +142,7 @@ $post_id = get_the_ID();
                     <div class="news__bottom">
                         <div class="news__button rotation">
                             <a href="<?php echo get_home_url() . '/products'; ?>">
-                                <img src="<?php echo get_template_directory_uri() . '/img/news/shtamp.svg' ?>" alt="center">
+                                <img src="<?php echo the_field('pechat_perejty_v_katalog', 'option') ?>" alt="center">
                             </a>
                         </div>
                     </div>

@@ -31,13 +31,15 @@
                         ?>
 
                         <li class="news__item"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
-                            <h3 class="news__item-title">
-                                <a href="<?php the_permalink();?>">
-                                    <?php the_title();?>
-                                </a>
-                            </h3>
-                            <div class="news__item-excerpt">
-                                <?php echo $excerpt;?>
+                            <div class="news__item-inner">
+                                <h3 class="news__item-title">
+                                    <a href="<?php the_permalink();?>">
+                                        <?php the_title();?>
+                                    </a>
+                                </h3>
+                                <div class="news__item-excerpt">
+                                    <?php echo $excerpt;?>
+                                </div>
                             </div>
                             <div class="news__item-param">
                                 <div class="news__item-date">

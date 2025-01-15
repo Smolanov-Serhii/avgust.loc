@@ -136,17 +136,29 @@ $post_id = 112;
                         'order' 	 => 'DESC',
                         'post_type' 	 => 'vacancies',
                     );
+                    $counter = 0;
                     $MY_QUERY = new WP_Query( $args );
                     if ( $MY_QUERY->have_posts() ) {
                         while ( $MY_QUERY->have_posts() ) : $MY_QUERY->the_post();
-                            ?>
-                            <a href="<?php the_permalink(); ?>" class="vacancies__item"><?php the_title(); ?></a>
-                        <?php endwhile;
+                            $postpers_id = get_the_ID();
+                            $visibleOn = get_field('otobazhat_ly_na_stranycze_truefalse', $postpers_id);
+                            if ($visibleOn != "false"){
+                                ?>
+                                    <a href="<?php the_permalink(); ?>" class="vacancies__item"><?php the_title(); ?></a>
+                                <?php
+                                $counter ++;
+                            }
+                            endwhile;
                         } else {
                         ?>
                         <h2 class="no-vacancies"><?php echo the_field('nadpys_na_dannj_moment_net_svobodnh_vakansyj', 'options') ?></h2>
                         <?php
                         }
+                    if ($counter == 0){
+                        ?>
+                        <h2 class="no-vacancies"><?php echo the_field('nadpys_na_dannj_moment_net_svobodnh_vakansyj', 'options') ?></h2>
+                        <?php
+                    }
                     ?>
                 </div>
             </div>
