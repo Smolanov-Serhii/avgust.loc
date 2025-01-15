@@ -43,7 +43,7 @@
                             </div>
                             <div class="news__item-param">
                                 <div class="news__item-date">
-                                    <?php the_date('d F');?>
+                                    <?php echo get_the_date('d F');?>
                                 </div>
                                 <?php
                                 if($post_type == "news"){
